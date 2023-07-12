@@ -16,4 +16,19 @@ class Home(HomeTemplate):
     """This method is called when the button is clicked"""
     alert(f'Hello {self.text_box_1.text}!')
 
+  def repeating_panel_1_show(self, **event_args):
+    """This method is called when the RepeatingPanel is shown on the screen"""
+    pass
+
+  def form_refreshing_data_bindings(self, **event_args):
+    """This method is called when refreshing_data_bindings is called"""
+    pass
+
+  def link_2_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    pass
+
+
+
+
 
