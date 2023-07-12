@@ -9,11 +9,6 @@ components:
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
-- type: ColumnPanel
-  properties: {col_widths: '{}'}
-  name: column_panel_1
-  layout_properties: {slot: default}
-  components: []
 - type: RichText
   properties: {}
   name: Headline
@@ -50,3 +45,22 @@ components:
     name: Equity_Markets
     layout_properties: {grid_position: 'ZKHZWY,WYGQDE'}
     event_bindings: {click: link_2_click}
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: column_panel_1
+  layout_properties: {slot: default}
+  components:
+  - type: RichText
+    properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+      foreground: '', visible: true, font_size: null, content: Various indicators of the U.S.Economy,
+      font: '', spacing_above: small, spacing_below: small, data: null, background: '',
+      format: markdown}
+    name: rich_text_1
+    layout_properties: {grid_position: 'AGLTFA,TKQJCN'}
+  - type: RichText
+    properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+      foreground: '', visible: true, font_size: null, content: 'Pelase select the
+        Economic indicator you would like to see:', font: '', spacing_above: small,
+      spacing_below: small, data: null, background: '', format: markdown}
+    name: rich_text_2
+    layout_properties: {grid_position: 'ZGABRF,VPPTZR'}
