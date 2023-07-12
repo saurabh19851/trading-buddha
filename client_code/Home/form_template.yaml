@@ -1,0 +1,32 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {col_widths: '{"FHEBVS":25,"EBELTT":35}'}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - type: TextBox
+    properties: {}
+    name: text_box_1
+    layout_properties: {grid_position: 'AXQJOZ,FHEBVS', slot: title}
+    event_bindings: {show: text_box_1_show}
+  - type: Button
+    properties: {role: filled-button, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Hello, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: button_1
+    layout_properties: {grid_position: 'AXQJOZ,EBELTT'}
+    data_bindings: []
+    event_bindings: {click: button_1_click}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+- type: ColumnPanel
+  properties: {role: outlined-card}
+  name: outlined_card_2
+  layout_properties: {slot: left-nav}
