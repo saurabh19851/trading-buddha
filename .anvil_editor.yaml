@@ -5,7 +5,8 @@ unique_ids:
     Home.Macro: '1689132954786513866298041.8023'
     Home.RowTemplate1: '1689194925951546467926484.84955'
   modules: {}
-  server_modules: {}
+  server_modules:
+    ServerModule1: '1689214700627282090435994.1343'
   assets:
     standard-page.html: GECHQGLVX6GGGSLTQKBZ3ATCWM2OVX6Y
     theme.css: ITRUOUXTRFHAURAPEJIZ7KPSXV57SJ5Y
