@@ -11,6 +11,7 @@ class Form1(Form1Template):
     self.init_components(**properties)
     #anvil.server.call('pack_import')
     anvil.server.call('test')
+    anvil.server.call('import_data')
 
     # Any code you write here will run before the form opens.
 
