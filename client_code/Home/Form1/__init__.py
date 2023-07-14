@@ -9,7 +9,17 @@ class Form1(Form1Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    anvil.server.call('pack_import')
+    #anvil.server.call('pack_import')
     anvil.server.call('test')
 
     # Any code you write here will run before the form opens.
+
+  def form_refreshing_data_bindings(self, **event_args):
+    """This method is called when refreshing_data_bindings is called"""
+    pass
+
+  def form_show(self, **event_args):
+    a= anvil.server.call('test')
+    pass
+
+

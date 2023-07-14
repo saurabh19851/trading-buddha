@@ -2,11 +2,22 @@ is_package: true
 container:
   type: HtmlTemplate
   properties: {html: '@theme:standard-page.html'}
+  event_bindings: {refreshing_data_bindings: form_refreshing_data_bindings, show: form_show}
 components:
 - type: ColumnPanel
-  properties: {}
+  properties: {col_widths: '{}'}
   name: content_panel
   layout_properties: {slot: default}
+  components:
+  - type: DataGrid
+    properties:
+      columns:
+      - {id: HKBQPD, title: Column 1, data_key: column_1}
+      - {id: BGCJTA, title: Column 2, data_key: column_2}
+      - {id: UGPLMV, title: Column 3, data_key: column_3}
+    name: data_grid_1
+    layout_properties: {grid_position: 'PGWPPA,ZLFHTB'}
+    components: []
 - type: FlowPanel
   properties: {}
   name: navbar_links

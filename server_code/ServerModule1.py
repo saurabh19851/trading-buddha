@@ -12,6 +12,6 @@ import anvil.server
 #
 @anvil.server.callable
 def say_hello(name):
-   anvil.server.call('test')
+   a= anvil.server.call('test')
    
 #
