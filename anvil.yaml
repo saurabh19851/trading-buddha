@@ -1,8 +1,8 @@
 dependencies: []
 services:
 - source: /runtime/services/tables.yml
-  client_config: {}
-  server_config: {}
+  client_config: {enable_v2: true}
+  server_config: {auto_create_missing_columns: true}
 startup: {type: form, module: Home.Form1}
 package_name: Trading_Buddha
 allow_embedding: false
@@ -12,13 +12,15 @@ runtime_options: {version: 2, client_version: '3', server_version: python3-sandb
 metadata: {title: Trading Buddha, description: Website for finding best investment opportunities across asset classes}
 startup_form: null
 db_schema:
-  people:
+  table_2:
+    client: none
+    server: full
+    columns: []
+    title: Table 2
+  table1:
     client: full
     server: full
-    columns:
-    - name: name
-      admin_ui: {order: 0, width: 200}
-      type: string
+    columns: []
     title: Table 1
 uplink_visible: true
 renamed: true
