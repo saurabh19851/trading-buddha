@@ -22,6 +22,11 @@ components:
     properties: {}
     name: plot_1
     layout_properties: {grid_position: 'MLGCTF,KANYJG'}
+  - type: TextBox
+    properties: {}
+    name: text_box_1
+    layout_properties: {grid_position: 'LYRYMH,NGSPBA'}
+    event_bindings: {show: text_box_1_show}
 - type: FlowPanel
   properties: {}
   name: navbar_links
