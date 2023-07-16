@@ -1,6 +1,4 @@
-dependencies:
-- app_id: iFrame Component
-  version: {dev: false}
+dependencies: []
 services:
 - source: /runtime/services/tables.yml
   client_config: {enable_v2: true}

@@ -5,7 +5,8 @@ unique_ids:
     Home.Form1.RowTemplate2: '1689310189422362578742366.2317'
     Home.Macro: '1689132954786513866298041.8023'
     Home.RowTemplate1: '1689194925951546467926484.84955'
-  modules: {}
+  modules:
+    Home.Form1.Module1: '1689481317598736104783111.5773'
   server_modules:
     ServerModule1: '1689214700627282090435994.1343'
   assets:
