@@ -1,5 +1,5 @@
 dependencies:
-- app_id: iframe
+- app_id: iFrame Component
   version: {dev: false}
 services:
 - source: /runtime/services/tables.yml
