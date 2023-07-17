@@ -37,6 +37,11 @@ class Home(HomeTemplate):
   def link_2_click(self, **event_args):
    open_form('Home.Form1')
 
+  def outlined_1_pressed_enter(self, **event_args):
+    """This method is called when the user presses Enter in this text box"""
+    pass
+
+
 
 
 
