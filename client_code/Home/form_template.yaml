@@ -62,6 +62,7 @@ components:
     properties: {}
     name: link_2
     layout_properties: {grid_position: 'POFGOT,DHCDTL'}
+    event_bindings: {click: link_2_click}
 - type: ColumnPanel
   properties: {col_widths: '{}'}
   name: column_panel_1
