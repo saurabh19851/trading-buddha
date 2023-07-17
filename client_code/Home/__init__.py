@@ -35,8 +35,7 @@ class Home(HomeTemplate):
     pass
 
   def link_2_click(self, **event_args):
-    """This method is called when the link is clicked"""
-    pass
+   open_form('Home.Form1')
 
 
 
