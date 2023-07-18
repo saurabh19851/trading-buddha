@@ -15,3 +15,7 @@ import anvil.server
 #   print("Hello, " + name + "!")
 #   return 42
 #
+@anvil.server.callable
+def stock_info_graph(stock):
+  
+

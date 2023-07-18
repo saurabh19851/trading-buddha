@@ -7,8 +7,11 @@ startup: {type: form, module: Home}
 package_name: Trading_Buddha
 allow_embedding: false
 name: Trading Buddha
-runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
-  server_spec: null}
+runtime_options:
+  version: 2
+  client_version: '3'
+  server_version: python3-sandbox
+  server_spec: {base: python310-standard}
 metadata: {title: Trading Buddha, description: Website for finding best investment opportunities across asset classes}
 startup_form: null
 db_schema:
