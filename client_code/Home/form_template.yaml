@@ -11,9 +11,10 @@ components:
   layout_properties: {slot: nav-right}
   components:
   - type: TextBox
-    properties: {role: outlined}
-    name: outlined_1
+    properties: {}
+    name: text_box_1
     layout_properties: {}
+    event_bindings: {pressed_enter: text_box_1_pressed_enter}
 - type: RichText
   properties: {}
   name: Headline

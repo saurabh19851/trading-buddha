@@ -29,7 +29,10 @@ def session_api_key():
 
 @anvil.server.callable
 def stock_info_graph(ticker):
-  company_profile=fmpsdk.company_profile(apikey=api_key(),symbol=ticker)
+  company_profile=fmpsdk.company_profile(apikey=api_key(),symbol=ticker)[0]
+  sector=company_profile['sector']
+  industry=company_profile['industry']
+  
   
   
   
