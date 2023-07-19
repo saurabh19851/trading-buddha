@@ -22,17 +22,30 @@ def api_key():
   fmp_api_key='622f44c679bbfc88f813b6d43f217749'
   return fmp_api_key
 
+'''
 @anvil.server.callable
 def session_api_key():
   api_key=anvil.server.session.get('api_key','622f44c679bbfc88f813b6d43f217749')
   anvil.server.session['api_key']=api_key
+'''
 
 @anvil.server.callable
-def stock_info_graph(ticker):
+def stock_info(ticker):
   company_profile=fmpsdk.company_profile(apikey=api_key(),symbol=ticker)[0]
-  sector=company_profile['sector']
-  industry=company_profile['industry']
+  return company_profile
   
+@anvil.server.callable
+def price_chart(ticker):
+  prices=fmpsdk.historical_price_full(apikey=api_key(),symbol=ticker,series_type='line')
+  dates=[]
+  closes=[]
+  for x in prices:
+    date=x['date']
+    close=x['close']
+    dates.append(date)
+    closes.append(close)
+  return dates,closes
+    
   
   
   

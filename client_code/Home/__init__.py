@@ -5,6 +5,8 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
+from .. import Globals
+from ..Form1_copy import Form1_copy
 
 class Home(HomeTemplate):
   def __init__(self, **properties):
@@ -35,15 +37,12 @@ class Home(HomeTemplate):
     pass
 
   def link_2_click(self, **event_args):
-   open_form('Home.Form1')
-
-  def outlined_1_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    pass
+   pass
 
   def text_box_1_pressed_enter(self, **event_args):
     """This method is called when the user presses Enter in this text box"""
-    open.form(Form1_copy)
+    Globals.ticker=self.ticker_search.text
+    open_form('Form1_copy')
 
 
 

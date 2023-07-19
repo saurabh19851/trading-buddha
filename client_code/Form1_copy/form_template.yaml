@@ -20,7 +20,7 @@ components:
     components:
     - type: Plot
       properties: {height: 334}
-      name: plot_1
+      name: price_chart
       layout_properties: {row: BFIQKW, width_xs: 6, col_xs: 0}
     - type: GridPanel
       properties: {}
@@ -37,7 +37,7 @@ components:
         components:
         - type: Label
           properties: {}
-          name: label_5
+          name: sector
           layout_properties: {slot: label}
       - type: RichText
         properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
@@ -49,7 +49,7 @@ components:
         components:
         - type: Label
           properties: {}
-          name: label_6
+          name: industry
           layout_properties: {slot: label}
       - type: RichText
         properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
