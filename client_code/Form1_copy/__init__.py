@@ -7,6 +7,7 @@ from anvil.tables import app_tables
 import anvil.server
 from .. import Globals
 
+
 class Form1_copy(Form1_copyTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
@@ -16,8 +17,13 @@ class Form1_copy(Form1_copyTemplate):
     company_profile=anvil.server.call('stock_info',ticker)
     self.sector.text=company_profile['sector']
     self.industry.text=company_profile['industry']
-    dates,closes=anvil.server.call('price_chart',ticker)
+    dates,closes,std=anvil.server.call('price_chart',ticker)
     self.price_chart.data=go.Scatter(x=dates,y=closes,mode='lines')
+    self.last_close.text=closes[0]
+    self.high_52weeks.tet=max(closes[0:259])
+    self.low_52weeks.text=min(closes[0:259])
+    self.std.text=std
+    
     
 
   def form_refreshing_data_bindings(self, **event_args):

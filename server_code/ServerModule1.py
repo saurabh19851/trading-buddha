@@ -3,6 +3,8 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
 import fmpsdk
+import pandas as pd
+import numpy as np
 
 # This is a server module. It runs on the Anvil server,
 # rather than in the user's browser.
@@ -44,9 +46,11 @@ def price_chart(ticker):
     close=x['close']
     dates.append(date)
     closes.append(close)
-  return dates,closes
+  std=np.std(closes[0:259])
+  mkt_cap=fmpsdk.
+  return dates,closes,int(std)
     
-  
+
   
   
 

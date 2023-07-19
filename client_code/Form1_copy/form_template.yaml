@@ -53,15 +53,15 @@ components:
           layout_properties: {slot: label}
       - type: RichText
         properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
-          foreground: '', visible: true, font_size: null, content: 'Last Close {label}',
+          foreground: '', visible: true, font_size: null, content: 'Last Close: {label}',
           font: '', spacing_above: small, spacing_below: small, data: null, background: '',
           format: markdown}
         name: rich_text_2
-        layout_properties: {row: BZCLCC, width_xs: 5, col_xs: 0, width: 153.516}
+        layout_properties: {row: BZCLCC, width_xs: 5, col_xs: 0, width: 97.4688}
         components:
         - type: Label
           properties: {}
-          name: label_1
+          name: last_close
           layout_properties: {slot: label}
       - type: RichText
         properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
@@ -76,7 +76,7 @@ components:
             visible: true, text: '', font_size: 10, font: '', spacing_above: small,
             icon_align: left, spacing_below: small, italic: false, background: '',
             bold: false, underline: false, icon: ''}
-          name: label_2
+          name: std
           layout_properties: {slot: label}
       - type: RichText
         properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
@@ -88,7 +88,7 @@ components:
         components:
         - type: Label
           properties: {}
-          name: label_3
+          name: high_52weeks
           layout_properties: {slot: label}
       - type: RichText
         properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
@@ -100,7 +100,7 @@ components:
         components:
         - type: Label
           properties: {}
-          name: label_4
+          name: low_52weeks
           layout_properties: {slot: label}
       - type: RichText
         properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
