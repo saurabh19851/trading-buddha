@@ -34,7 +34,11 @@ def session_api_key():
 @anvil.server.callable
 def stock_info(ticker):
   company_profile=fmpsdk.company_profile(apikey=api_key(),symbol=ticker)[0]
-  return company_profile
+  quote=fmpsdk.quote(api_key(),ticker)[0]
+  mkt_cap=quote['marketCap']
+  avg_volume=quote['avgVolume']
+  pe=quote['pe']
+  return company_profile,mkt_cap,avg_volume,pe
   
 @anvil.server.callable
 def price_chart(ticker):
@@ -47,7 +51,6 @@ def price_chart(ticker):
     dates.append(date)
     closes.append(close)
   std=np.std(closes[0:259])
-  mkt_cap=fmpsdk.
   return dates,closes,int(std)
     
 
