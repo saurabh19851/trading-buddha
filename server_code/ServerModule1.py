@@ -16,13 +16,20 @@ import fmpsdk
 #   print("Hello, " + name + "!")
 #   return 42
 #
-@anvil.server.callable
+api_key='622f44c679bbfc88f813b6d43f217749'
+
 def api_key():
+  fmp_api_key='622f44c679bbfc88f813b6d43f217749'
+  return fmp_api_key
+
+@anvil.server.callable
+def session_api_key():
   api_key=anvil.server.session.get('api_key','622f44c679bbfc88f813b6d43f217749')
   anvil.server.session['api_key']=api_key
 
 @anvil.server.callable
-def stock_info_graph(stock):
+def stock_info_graph(ticker):
+  company_profile=fmpsdk.company_profile(apikey=api_key(),symbol=ticker)
   
   
   
