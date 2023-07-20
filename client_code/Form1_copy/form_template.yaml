@@ -154,7 +154,7 @@ components:
             layout_properties: {slot: label}
         - type: RichText
           properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
-            foreground: '', visible: true, font_size: null, content: 'P/B: {label}',
+            foreground: '', visible: true, font_size: null, content: 'Beta: {label}',
             font: '', spacing_above: small, spacing_below: small, data: null, background: '',
             format: markdown}
           name: rich_text_10
@@ -162,7 +162,7 @@ components:
           components:
           - type: Label
             properties: {}
-            name: label_10
+            name: beta
             layout_properties: {slot: label}
 - type: FlowPanel
   properties: {}

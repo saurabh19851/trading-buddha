@@ -20,6 +20,8 @@ class Form1_copy(Form1_copyTemplate):
     self.logo.source=company_profile['image']
     self.name.text=company_profile['companyName']
     self.name.url=company_profile['website']
+    beta=company_profile['beta']
+    self.beta.text=f'{beta:.2f}'
     self.mkt_cap.text=f'{mkt_cap/1000000:,.2f}'
     self.volume.text=f'{int(avg_volume/1000):,}'
     self.pe.text=pe

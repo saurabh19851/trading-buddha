@@ -12,11 +12,12 @@ class Home(HomeTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    ''' 
     sp500,dowjones,nasdaq=anvil.server.call('sp500_dowjones_nasdaq_graph')
     self.plot_1.figure=sp500
     self.plot_2.figure=dowjones
     self.plot_3.figure=nasdaq
-    
+    ''' 
 
     # Any code you write here will run before the form opens.
 
