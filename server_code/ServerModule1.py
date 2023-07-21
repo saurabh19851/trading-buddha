@@ -54,25 +54,43 @@ def price_chart(ticker):
   return dates,closes,int(std)
 
 def returns(ticker):
-  prices=fmpsdk.historical_price_full(apikey=api_key(),symbol=ticker,series_type='line')
-  dates=[]
-  closes=[]
+  prices = fmp.historical_price_full(apikey=api_key(), symbol=ticker, series_type='line')
+  dates = []
+  closes = []
   for x in prices:
-    date=x['date']
-    close=x['close']
+    date = x['date']
+    close = x['close']
     dates.append(date)
     closes.append(close)
-  dates=pd.to_datetime(dates)
-  closes=pd.DataFrame(data=close,index=dates)
-  today=datetime.date.today()
+  dates = pd.to_datetime(dates)
+  closes = pd.DataFrame(data=closes, index=dates)
+  closes.sort_index(ascending=False, inplace=True)
+  today = datetime.date.today()
   start = datetime.date(today.year-10, today.month, today.day)
   end = datetime.date.today()
-  bus_day_D=pd.bdate_range(start, end, freq='B')
-  bus_day_W=pd.bdate_range(start, end, freq='W')
-  bus_day_M=pd.bdate_range(start, end, freq='BM')
-  bus_day_Q=pd.date_range(start, end, freq='BQ')
-  bus_day_HY=pd.date_range(start, end, freq='2BQ')
-  bus_day_Y=pd.date_range(start, end, freq='BY')
-  bus_day_3Y=pd.date_range(start, end, freq='3BY')
-  bus_day_5Y=pd.date_range(start, end, freq='5BY')
-  bus_day_10Y=pd.date_range(start, end, freq='10BY')
+  bus_day_2D = pd.bdate_range(start, end, freq='2B').sort_values(ascending=False)
+  bus_day_W = pd.bdate_range(start, end, freq='W-Fri').sort_values(ascending=False)
+  bus_day_M = pd.bdate_range(start, end, freq='BM').sort_values(ascending=False)
+  bus_day_Q = pd.bdate_range(start, end, freq='BQ').sort_values(ascending=False)
+  bus_day_HY = pd.bdate_range(start, end, freq='2BQ').sort_values(ascending=False)
+  bus_day_Y = pd.bdate_range(start, end, freq='BY').sort_values(ascending=False)
+  bus_day_3Y = pd.bdate_range(start, end, freq='3BY').sort_values(ascending=False)
+  bus_day_5Y = pd.bdate_range(start, end, freq='5BY').sort_values(ascending=False)
+  bus_day_10Y = pd.bdate_range(start, end, freq='10BY').sort_values(ascending=False)
+  closes_2D = closes.filter(items=bus_day_D, axis=0)
+  closes_1W = closes.filter(items=bus_day_W, axis=0)
+  closes_1M = closes.filter(items=bus_day_M, axis=0)
+  closes_1Q = closes.filter(items=bus_day_Q, axis=0)
+  closes_HY = closes.filter(items=bus_day_HY, axis=0)
+  closes_1Y = closes.filter(items=bus_day_Y, axis=0)
+  closes_3Y = closes.filter(items=bus_day_3Y, axis=0)
+  closes_5Y = closes.filter(items=bus_day_5Y, axis=0)
+  closes_10Y = closes.filter(items=bus_day_10Y, axis=0)
+  pct_chng_1D = (closes.iloc[0,0]-closes_2D.iloc[0,0])/closes.iloc[0,0]
+  pct_chng_1W = (closes.iloc[0,0]-closes_1W.iloc[0,0])/closes.iloc[0,0]
+  pct_chng_1Q = (closes.iloc[0,0]-closes_1Q.iloc[0,0])/closes.iloc[0,0]
+  pct_chng_HY = (closes.iloc[0,0]-closes_HY.iloc[0,0])/closes.iloc[0,0]
+  pct_chng_1Y = (closes.iloc[0,0]-closes_1Y.iloc[0,0])/closes.iloc[0,0]
+  pct_chng_3Y = (closes.iloc[0,0]-closes_3Y.iloc[0,0])/closes.iloc[0,0]
+  pct_chng_5Y = (closes.iloc[0,0]-closes_5Y.iloc[0,0])/closes.iloc[0,0]
+  pct_chng_10Y = (closes.iloc[0,0]-closes_10Y.iloc[0,0])/closes.iloc[0,0]
