@@ -30,7 +30,6 @@ class Form1_copy(Form1_copyTemplate):
     self.last_close.text=closes[0]
     self.high_52weeks.text=max(closes[0:259])
     self.low_52weeks.text=min(closes[0:259])
-    
     self.std.text=std
     
     
