@@ -52,8 +52,26 @@ def price_chart(ticker):
     closes.append(close)
   std=np.std(closes[0:259])
   return dates,closes,int(std)
-    
 
-  
-  
-
+def returns(ticker):
+  prices=fmpsdk.historical_price_full(apikey=api_key(),symbol=ticker,series_type='line')
+  dates=[]
+  closes=[]
+  for x in prices:
+    date=x['date']
+    close=x['close']
+    dates.append(date)
+    closes.append(close)
+  dates=pd.to_datetime(dates)
+  closes=pd.DataFrame(data=close,index=dates)
+  today=datetime.date.today()
+  start = datetime.date(today.year-10, today.month, today.day)
+  end = datetime.date.today()
+  bus_day_W=pd.date_range(start, end, freq='W')
+  bus_day_M=pd.date_range(start, end, freq='BM')
+  bus_day_Q=pd.date_range(start, end, freq='BQ')
+  bus_day_Q=pd.date_range(start, end, freq='2BQ')
+  bus_day_Y=pd.date_range(start, end, freq='BY')
+  bus_day_3Y=pd.date_range(start, end, freq='3BY')
+  bus_day_5Y=pd.date_range(start, end, freq='5BY')
+  bus_day_10Y=pd.date_range(start, end, freq='10BY')
