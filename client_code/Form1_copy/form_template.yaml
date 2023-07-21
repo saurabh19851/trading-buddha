@@ -170,6 +170,7 @@ components:
       columns:
       - {id: PGNPVJ, title: '', data_key: Name, $$hashKey: 'object:498', expand: true}
       - {id: XMSBSF, title: 1 Day, data_key: 1_day, $$hashKey: 'object:499', expand: true}
+      - {id: PNHQMF, title: 1 Week, data_key: 1_week, $$hashKey: 'object:2065'}
       - {id: PKAWES, title: 1 Month, data_key: 1_month, $$hashKey: 'object:500', expand: true}
       - {id: IUCEND, title: 6 Months, data_key: 6_month, $$hashKey: 'object:640',
         expand: true}
