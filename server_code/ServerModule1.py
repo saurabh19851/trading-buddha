@@ -67,7 +67,7 @@ def returns(ticker):
   today=datetime.date.today()
   start = datetime.date(today.year-10, today.month, today.day)
   end = datetime.date.today()
-  bus_day_W=pd.date_range(start, end, freq='W')
+  bus_day_W=pd.date_range(start, end, freq='D')
   bus_day_M=pd.date_range(start, end, freq='BM')
   bus_day_Q=pd.date_range(start, end, freq='BQ')
   bus_day_Q=pd.date_range(start, end, freq='2BQ')
