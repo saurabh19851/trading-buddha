@@ -201,6 +201,13 @@ components:
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
+  components:
+  - type: form:dep_4ozdechq4inthr:Autocomplete
+    properties: {}
+    name: autocomplete_1
+    layout_properties: {grid_position: 'GHRWIS,ZSIYWX'}
+    data_bindings: []
+    event_bindings: {change: autocomplete_1_change}
 - type: ColumnPanel
   properties: {col_widths: '{}'}
   name: column_panel_1

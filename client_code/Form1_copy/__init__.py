@@ -48,3 +48,7 @@ class Form1_copy(Form1_copyTemplate):
     
   def text_box_1_show(self, **event_args):
     """This method is called when the TextBox is shown on the screen"""
+
+  def autocomplete_1_change(self, **event_args):
+    self.autocomplete_1.suggestions=['AAPL','AAPK','AAPT','AAPP','AAPB','AAPC']
+

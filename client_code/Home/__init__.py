@@ -45,6 +45,22 @@ class Home(HomeTemplate):
     Globals.ticker=self.ticker_search.text
     open_form('Form1_copy')
 
+  def autocomplete_1_change(self, **event_args):
+    self.autocomplete_1.suggestions=['AAPA','AAPB','AAPC','AAPD','AAPE','AAPF','AAPG','AAPL']
+
+  def autocomplete_1_suggestion_clicked(self, **event_args):
+    Globals.ticker=self.autocomplete_1.text
+    open_form('Form1_copy')
+
+  def autocomplete_1_pressed_enter(self, **event_args):
+    Globals.ticker=self.autocomplete_1.text
+    open_form('Form1_copy')
+
+    
+
+
+
+
 
 
 

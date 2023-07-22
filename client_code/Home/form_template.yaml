@@ -10,14 +10,12 @@ components:
   name: navbar_links
   layout_properties: {slot: nav-right}
   components:
-  - type: TextBox
-    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
-      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
-      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-      background: '', bold: false, underline: false}
-    name: ticker_search
+  - type: form:dep_4ozdechq4inthr:Autocomplete
+    properties: {}
+    name: autocomplete_1
     layout_properties: {}
-    event_bindings: {pressed_enter: text_box_1_pressed_enter}
+    event_bindings: {change: autocomplete_1_change, suggestion_clicked: autocomplete_1_suggestion_clicked,
+      pressed_enter: autocomplete_1_pressed_enter}
 - type: RichText
   properties: {}
   name: Headline
