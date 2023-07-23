@@ -5,6 +5,8 @@ import anvil.server
 import fmpsdk
 import pandas as pd
 import numpy as np
+import datetime
+import requests
 
 # This is a server module. It runs on the Anvil server,
 # rather than in the user's browser.
@@ -20,6 +22,7 @@ import numpy as np
 #
 api_key='622f44c679bbfc88f813b6d43f217749'
 
+@anvil.server.callable
 def api_key():
   fmp_api_key='622f44c679bbfc88f813b6d43f217749'
   return fmp_api_key
@@ -94,3 +97,16 @@ def returns(ticker):
   pct_chng_3Y = (closes.iloc[0,0]-closes_3Y.iloc[0,0])/closes.iloc[0,0]
   pct_chng_5Y = (closes.iloc[0,0]-closes_5Y.iloc[0,0])/closes.iloc[0,0]
   pct_chng_10Y = (closes.iloc[0,0]-closes_10Y.iloc[0,0])/closes.iloc[0,0]
+
+@anvil.server.callable
+def econ_indicators(selection):
+  d=datetime.datetime.today().strftime('%Y-%m-%d')
+  params={'name':selection,'from':'2010-01-01','to':d,'apikey':api_key()}
+  response=requests.get('https://financialmodelingprep.com/api/v4/economic?', params)
+  data=response.json()
+  dates=[]
+  values=[]
+  for x in data:
+    dates.append(x['date'])
+    values.append(x['value'])
+  return dates,values

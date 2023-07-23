@@ -7,6 +7,7 @@ from anvil.tables import app_tables
 import anvil.server
 from .. import Globals
 from ..Form1_copy import Form1_copy
+from ..Economy import Economy
 
 class Home(HomeTemplate):
   def __init__(self, **properties):
@@ -55,6 +56,11 @@ class Home(HomeTemplate):
   def autocomplete_1_pressed_enter(self, **event_args):
     Globals.ticker=self.autocomplete_1.text
     open_form('Form1_copy')
+
+  def economy_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('Economy')
+
 
     
 
