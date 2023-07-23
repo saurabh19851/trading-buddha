@@ -22,7 +22,10 @@ db_schema:
   table_1:
     client: full
     server: full
-    columns: []
+    columns:
+    - name: Value
+      admin_ui: {}
+      type: number
     title: Table 1
 uplink_visible: true
 renamed: true
