@@ -110,3 +110,10 @@ def econ_indicators(selection):
     dates.append(x['date'])
     values.append(x['value'])
   return dates,values
+
+@anvil.server.callable
+def gainers():
+  param={'apikey':api_key()}
+  a=requests.get('https://financialmodelingprep.com/api/v3/stock_market/gainers?',param)
+  data=a.json()
+  return data

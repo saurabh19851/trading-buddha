@@ -87,10 +87,12 @@ components:
     properties:
       role: null
       columns:
-      - {id: FYAMVF, title: Ticker, data_key: ticker, $$hashKey: 'object:3716', expand: true}
+      - {id: FYAMVF, title: Ticker, data_key: symbol, $$hashKey: 'object:3716', expand: true}
       - {id: AETXME, title: Name, data_key: name, $$hashKey: 'object:3717', expand: true}
       - {id: SPGAUY, title: Price, data_key: price, $$hashKey: 'object:3718', expand: true}
-      - {id: LWVQVV, title: Change (%), data_key: pct_change, $$hashKey: 'object:3755',
+      - {id: LWVQVV, title: Change (%), data_key: changesPercentage, $$hashKey: 'object:3755',
+        expand: true}
+      - {id: CGNNJD, title: Change ($), data_key: change, $$hashKey: 'object:4940',
         expand: true}
       auto_header: true
       tooltip: ''
@@ -103,12 +105,12 @@ components:
       spacing_above: small
       spacing_below: small
       background: ''
-    name: gainers
+    name: gainers_grid
     layout_properties: {grid_position: 'VGGQUZ,JPXOKF', full_width_row: true}
     components:
     - type: RepeatingPanel
       properties: {spacing_above: none, spacing_below: none, item_template: Home.RowTemplate3}
-      name: repeating_panel_1
+      name: gainers_panel
       layout_properties: {}
   - type: DataGrid
     properties:
@@ -130,10 +132,10 @@ components:
       spacing_above: small
       spacing_below: small
       background: ''
-    name: data_grid_1_copy
+    name: loses_grid
     layout_properties: {grid_position: 'VGGQUZ,GGPEKQ', full_width_row: true}
     components:
     - type: RepeatingPanel
       properties: {spacing_above: none, spacing_below: none, item_template: Home.RowTemplate3}
-      name: repeating_panel_1_copy
+      name: losers_panel
       layout_properties: {}
