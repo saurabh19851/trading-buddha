@@ -83,3 +83,57 @@ components:
     properties: {}
     name: plot_3
     layout_properties: {grid_position: 'BLNMOS,FGHWYS'}
+  - type: DataGrid
+    properties:
+      role: null
+      columns:
+      - {id: FYAMVF, title: Ticker, data_key: ticker, $$hashKey: 'object:3716', expand: true}
+      - {id: AETXME, title: Name, data_key: name, $$hashKey: 'object:3717', expand: true}
+      - {id: SPGAUY, title: Price, data_key: price, $$hashKey: 'object:3718', expand: true}
+      - {id: LWVQVV, title: Change (%), data_key: pct_change, $$hashKey: 'object:3755',
+        expand: true}
+      auto_header: true
+      tooltip: ''
+      border: ''
+      foreground: ''
+      rows_per_page: 20
+      visible: true
+      wrap_on: never
+      show_page_controls: true
+      spacing_above: small
+      spacing_below: small
+      background: ''
+    name: gainers
+    layout_properties: {grid_position: 'VGGQUZ,JPXOKF', full_width_row: true}
+    components:
+    - type: RepeatingPanel
+      properties: {spacing_above: none, spacing_below: none, item_template: Home.RowTemplate3}
+      name: repeating_panel_1
+      layout_properties: {}
+  - type: DataGrid
+    properties:
+      role: null
+      columns:
+      - {id: FYAMVF, title: Ticker, data_key: ticker, $$hashKey: 'object:3716', expand: true}
+      - {id: AETXME, title: Name, data_key: name, $$hashKey: 'object:3717', expand: true}
+      - {id: SPGAUY, title: Price, data_key: price, $$hashKey: 'object:3718', expand: true}
+      - {id: LWVQVV, title: Change (%), data_key: pct_change, $$hashKey: 'object:3755',
+        expand: true}
+      auto_header: true
+      tooltip: ''
+      border: ''
+      foreground: ''
+      rows_per_page: 20
+      visible: true
+      wrap_on: never
+      show_page_controls: true
+      spacing_above: small
+      spacing_below: small
+      background: ''
+    name: data_grid_1_copy
+    layout_properties: {grid_position: 'VGGQUZ,GGPEKQ', full_width_row: true}
+    components:
+    - type: RepeatingPanel
+      properties: {spacing_above: none, spacing_below: none, item_template: Home.RowTemplate3}
+      name: repeating_panel_1_copy
+      layout_properties: {}
