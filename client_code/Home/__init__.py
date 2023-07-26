@@ -14,8 +14,11 @@ class Home(HomeTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     # Any code you write here will run before the form opens.
-    data=anvil.server.call('gainers')
-    self.gainers_panel.items=data
+    data_gainers=anvil.server.call('gainers')
+    self.gainers_panel.items=data_gainers
+    data_losers=anvil.server.call('losers')
+    self.losers_panel.items=data_losers
+    
 
   def form_show(self, **event_args):
     pass

@@ -116,10 +116,12 @@ components:
     properties:
       role: null
       columns:
-      - {id: FYAMVF, title: Ticker, data_key: ticker, $$hashKey: 'object:3716', expand: true}
+      - {id: FYAMVF, title: Ticker, data_key: symbol, $$hashKey: 'object:3716', expand: true}
       - {id: AETXME, title: Name, data_key: name, $$hashKey: 'object:3717', expand: true}
       - {id: SPGAUY, title: Price, data_key: price, $$hashKey: 'object:3718', expand: true}
-      - {id: LWVQVV, title: Change (%), data_key: pct_change, $$hashKey: 'object:3755',
+      - {id: LWVQVV, title: Change (%), data_key: changespercentage, $$hashKey: 'object:3755',
+        expand: true}
+      - {id: FVMVCI, title: Change ($), data_key: change, $$hashKey: 'object:464',
         expand: true}
       auto_header: true
       tooltip: ''

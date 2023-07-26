@@ -117,3 +117,10 @@ def gainers():
   a=requests.get('https://financialmodelingprep.com/api/v3/stock_market/gainers?',param)
   data=a.json()
   return data
+  
+@anvil.server.callable
+def losers():
+  param={'apikey':api_key()}
+  a=requests.get('https://financialmodelingprep.com/api/v3/stock_market/losers?',param)
+  data=a.json()
+  return data
