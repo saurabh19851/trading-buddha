@@ -13,28 +13,7 @@ class Fundamentals_form(Fundamentals_formTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     # Any code you write here will run before the form opens.
-    #Code for getting stock basic information
-    ticker=Globals.ticker
-    company_profile,mkt_cap,avg_volume,pe=anvil.server.call('stock_info',ticker)
-    self.sector.text=company_profile['sector']
-    self.industry.text=company_profile['industry']
-    self.logo.source=company_profile['image']
-    self.name.text=company_profile['companyName']
-    self.name.url=company_profile['website']
-    beta=company_profile['beta']
-    self.beta.text=f'{beta:.2f}'
-    self.mkt_cap.text=f'{mkt_cap/1000000:,.2f}'
-    self.volume.text=f'{int(avg_volume/1000):,}'
-    self.pe.text=pe
 
-    #Code for plotting price chart and volatility
-    dates,closes,std=anvil.server.call('price_chart',ticker)
-    self.price_chart.data=go.Scatter(x=dates,y=closes,mode='lines')
-    self.last_close.text=closes[0]
-    self.high_52weeks.text=max(closes[0:259])
-    self.low_52weeks.text=min(closes[0:259])
-    self.std.text=std
-    #Code for calculating returns and entering them in returns table
 
 
 

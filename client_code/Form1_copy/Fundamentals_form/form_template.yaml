@@ -38,7 +38,7 @@ components:
       - {id: FHKTNB, title: Column 1, data_key: column_1}
       - {id: EOJVRN, title: Column 2, data_key: column_2}
       - {id: NNIAFQ, title: Column 3, data_key: column_3}
-    name: data_grid_1
+    name: income
     layout_properties: {grid_position: 'GKHPEB,ADLWZV'}
     components:
     - type: RepeatingPanel

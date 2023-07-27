@@ -124,3 +124,13 @@ def losers():
   a=requests.get('https://financialmodelingprep.com/api/v3/stock_market/losers?',param)
   data=a.json()
   return data
+
+@anvil.server.callable
+def get_annual_IS(ticker):
+  income_statement=fmpsdk.income_statement(api_key(),ticker)
+  rows=['Revenue','Cost of Revenue','Gross Profit','Operating Expenses','Operating Income','Net Income','EPS']
+  years=[]
+  for x in income_statement:
+    years.append(x['calendarYear'])
+    
+  
