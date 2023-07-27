@@ -13,6 +13,10 @@ class Fundamentals_form(Fundamentals_formTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     # Any code you write here will run before the form opens.
+    ticker=Globals.ticker
+    income_statement_data,years,cols=anvil.server.call('get_annual_IS',ticker)
+    self.income_statement.columns=cols
+    self.income_statement_panel.items=income_statement_data
 
 
 

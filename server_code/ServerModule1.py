@@ -129,8 +129,24 @@ def losers():
 def get_annual_IS(ticker):
   income_statement=fmpsdk.income_statement(api_key(),ticker)
   rows=['Revenue','Cost of Revenue','Gross Profit','Operating Expenses','Operating Income','Net Income','EPS']
+  data_filter=['calendarYear','revenue','costOfRevenue','grossProfit','operatingExpenses','operatingIncome','ebitda','netIncome','eps']
+  data=[]
   years=[]
+  revenue,costOfRevenue,grossProfit,operatingExpenses,operatingIncome,ebitda,netIncome,eps={}
   for x in income_statement:
-    years.append(x['calendarYear'])
-    
+    revenue[x['calendaryear']]=x['revenue']
+    costOfRevenue[x['calendaryear']]=x['costOfRevenue']
+    grossProfit[x['calendarYear']]=x['grossProfit']
+    operatingExpenses[x['calendarYear']]=x['operatingExpenses']
+    operatingIncome[x['calendarYear']]=x['operatingIncome']
+    ebitda[x['calendarYear']]=x['ebitda']
+    netIncome[x['calendarYear']]=x['netIncome']
+    eps[x['calendarYear']]=x['eps']
+  data=[revenue,costOfRevenue,grossProfit,operatingExpenses,operatingExpenses,ebitda,netIncome,eps]
+  income_statement_columns=[]
+  for x in years:
+    col=dict(id=x,title=x,data_key=x)
+    income_statement_columns.append(col)
+  return data,years,income_statement_columns
+
   

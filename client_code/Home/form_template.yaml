@@ -112,6 +112,7 @@ components:
       properties: {spacing_above: none, spacing_below: none, item_template: Home.RowTemplate3}
       name: gainers_panel
       layout_properties: {}
+    data_bindings: []
   - type: DataGrid
     properties:
       role: null

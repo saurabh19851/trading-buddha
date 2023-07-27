@@ -52,3 +52,8 @@ class Form1_copy(Form1_copyTemplate):
   def autocomplete_1_change(self, **event_args):
     self.autocomplete_1.suggestions=['AAPL','AAPK','AAPT','AAPP','AAPB','AAPC']
 
+  def fundamental_data_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('Form1_copy.Fundamentals_form')
+
+
