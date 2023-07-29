@@ -14,7 +14,7 @@ class Fundamentals_form(Fundamentals_formTemplate):
     self.init_components(**properties)
     # Any code you write here will run before the form opens.
     ticker=Globals.ticker
-    income_statement_data,cols=anvil.server.call('get_quarter_IS',ticker)
+    income_statement_data,cols=anvil.server.call('get_annual_CF',ticker)
     self.income_statement.columns=cols
     self.income_statement_panel.items=income_statement_data
 
