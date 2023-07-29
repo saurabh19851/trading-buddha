@@ -128,19 +128,44 @@ def losers():
 @anvil.server.callable
 def get_annual_IS(ticker):
   income_statement=fmpsdk.income_statement(api_key(),ticker)
-  rows=['Revenue','Cost of Revenue','Gross Profit','Operating Expenses','Operating Income','Net Income','EPS']
+  income_statement.reverse()
+  rows=['Revenue','Cost of Revenue','Gross Profit','Operating Expenses','Operating Income','EBITDA','Net Income','EPS']
   data_filter=['revenue','costOfRevenue','grossProfit','operatingExpenses','operatingIncome','ebitda','netIncome','eps']
   data_ic=[{} for x in data_filter]
-  years=[]
+  years=["Name"]
   cols=[]
   for x in income_statement:
     for idx,val in enumerate(data_filter):
-        data_ic[idx][x['calendarYear']]=x[val]
+        data_ic[idx]['Name']=rows[idx]
+        if val!='eps':
+          data_ic[idx][x['calendarYear']]='{:,.0f}'.format(x[val]/1000000)
+        else:
+          data_ic[idx][x['calendarYear']]='{:,.1f}'.format(x[val])
     years.append(x['calendarYear'])
   for x in years:
     col=dict(id=x,title=x,data_key=x)
     cols.append(col)
   return data_ic,cols
 
-
+@anvil.server.callable
+def get_quarter_IS(ticker):
+  income_statement=fmpsdk.income_statement(api_key(),ticker,period='quarter')
+  income_statement.reverse()
+  rows=['Revenue','Cost of Revenue','Gross Profit','Operating Expenses','Operating Income','EBITDA','Net Income','EPS']
+  data_filter=['revenue','costOfRevenue','grossProfit','operatingExpenses','operatingIncome','ebitda','netIncome','eps']
+  data_ic=[{} for x in data_filter]
+  years=["Name"]
+  cols=[]
+  for x in income_statement:
+    for idx,val in enumerate(data_filter):
+        data_ic[idx]['Name']=rows[idx]
+        if val!='eps':
+          data_ic[idx][x['period']+' '+x['calendarYear']]='{:,.0f}'.format(x[val]/1000000)
+        else:
+          data_ic[idx][x['period']+' '+x['calendarYear']]='{:,.1f}'.format(x[val])
+    years.append(x['period']+' '+x['calendarYear'])
+  for x in years:
+    col=dict(id=x,title=x,data_key=x)
+    cols.append(col)
+  return data_ic,cols
   
