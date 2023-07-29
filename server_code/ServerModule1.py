@@ -266,3 +266,7 @@ def get_quarterly_CF(ticker):
       col=dict(id=x,title=x,data_key=x)
       cols.append(col)
   return data_cf,cols
+
+@anvil.server.callable
+def liqidity_ratios(ticker):
+  
