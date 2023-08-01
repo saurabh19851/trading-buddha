@@ -269,5 +269,10 @@ def get_quarterly_CF(ticker):
 
 @anvil.server.callable
 def financial_ratios_ttm(ticker):
-  data=fmpsdk.
-  
+  data=fmpsdk.financial_ratios_ttm(apikey=api_key(),symbol=ticker)
+  liq_ratios=['currentRatioTTM','quickRatioTTM','cashRatioTTM']
+  profit_ratios=['grossProfitMarginTTM','operatingProfitMarginTTM','netProfitMarginTTM','returnOnAssetsTTM','returnOnEquityTTM','returnOnCapitalEmployedTTM']
+  debt_ratios=['debtRatioTTM','debtEquityRatioTTM','totalDebtToCapitalizationTTM','companyEquityMultiplierTTM']
+  oper_ratios=['daysOfSalesOutstandingTTM','daysOfInventoryOutstandingTTM','operatingCycleTTM']
+  cf_ratios=['cashFlowToDebtRatioTTM','operatingCashFlowPerShareTTM','freeCashFlowPerShareTTM','operatingCashFlowSalesRatioTTM','cashFlowCoverageRatiosTTM']
+  val_ratios=['dividendYielPercentageTTM','peRatioTTM','pegRatioTTM','payoutRatioTTM','priceToBookRatioTTM','priceToSalesRatioTTM','enterpriseValueMultipleTTM','payoutRatioTTM']
