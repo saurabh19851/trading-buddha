@@ -268,5 +268,6 @@ def get_quarterly_CF(ticker):
   return data_cf,cols
 
 @anvil.server.callable
-def liqidity_ratios(ticker):
+def financial_ratios_ttm(ticker):
+  data=fmpsdk.
   
