@@ -278,3 +278,17 @@ def financial_ratios_ttm(ticker):
   val_ratios=['dividendYielPercentageTTM','peRatioTTM','pegRatioTTM','payoutRatioTTM','priceToBookRatioTTM','priceToSalesRatioTTM','enterpriseValueMultipleTTM','payoutRatioTTM']
 
 @anvil.server.callable
+def news(ticker):
+  news_data=fmpsdk.stock_news(apikey=api_key(),tickers=ticker)
+  dates=[]
+  title=[]
+  text=[]
+  url=[]
+  images=[]
+  for x in news_data:
+    dates.append(x['publishedDate'])
+    title.append(x['title'])
+    text.append(x['title'])
+    url.append(x['url'])
+    images.append(x['image'])
+  return (dates,title,text,url,images)
