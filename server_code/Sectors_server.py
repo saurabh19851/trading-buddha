@@ -9,10 +9,16 @@ import datetime
 import requests
 
 @anvil.server.callable
+def api_key():
+  fmp_api_key='622f44c679bbfc88f813b6d43f217749'
+  return fmp_api_key
+
+
+@anvil.server.callable
 def sectors():
   indices=['S&P 500','Communication services','Consumer Discretionary','Consumer Staples','Energy','Financials','Healthcare',\
            'Industrials','Materials','Real Estate','Technology','Utiities']
-  
+  tickers=['']
 # This is a server module. It runs on the Anvil server,
 # rather than in the user's browser.
 #
