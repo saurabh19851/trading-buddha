@@ -16,7 +16,9 @@ components:
   layout_properties: {column: null}
   components:
   - type: Image
-    properties: {height: 155}
+    properties: {role: null, vertical_align: center, height: 68, tooltip: '', border: '',
+      foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: none,
+      source: '', spacing_below: none, background: '', horizontal_align: right}
     name: news_image
-    layout_properties: {}
+    layout_properties: {width: 68}
 is_package: true

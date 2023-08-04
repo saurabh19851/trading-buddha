@@ -9,11 +9,12 @@ unique_ids:
     Form1_copy.RowTemplate1: '1689798229730948912440606.187'
     Form1_copy.RowTemplate2: '1689948261891709093596151.2252'
     Form1_copy.Fundamentals_form.RowTemplate6: '1690426726964597811603315.5063'
+    Sectors: '1691119668870797524010732.0076'
     Home: NBOBRVLB55DHM3BV4DOJNRH7VJW5X746
-    Form1_copy.Fundamentals_form.RowTemplate5: '16903443484734594402870.6332855'
   modules:
     Globals: '1689781692894443575501160.8988'
   server_modules:
+    Sectors_server: '1691120299785535471766836.638'
     ServerModule1: '1689214700627282090435994.1343'
   assets:
     standard-page.html: GECHQGLVX6GGGSLTQKBZ3ATCWM2OVX6Y

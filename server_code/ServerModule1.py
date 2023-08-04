@@ -291,4 +291,4 @@ def news(ticker):
     text.append(x['title'])
     url.append(x['url'])
     images.append(x['image'])
-  return (dates,title,text,url,images)
+  return news_data
