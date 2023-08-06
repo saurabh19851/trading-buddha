@@ -18,7 +18,19 @@ def api_key():
 def sectors():
   indices=['S&P 500','Communication services','Consumer Discretionary','Consumer Staples','Energy','Financials','Healthcare',\
            'Industrials','Materials','Real Estate','Technology','Utiities']
-  tickers=['']
+  tickers=['XLC','XLY','XLP','XLE','XLF','XLV','XLI','XLB','XLRE','XLK','XLU']
+  data=pd.DataFrame(fmpsdk.historical_price_full(apikey, symbol='SPY',series_type='line'))
+  data.columns=['date','SPY']
+  for x in tickers:
+    a=pd.DataFrame(fmpsdk.historical_price_full(apikey, symbol=x,series_type='line'))
+    a.columns=['date',x]
+    data=pd.merge(data, a,how='inner',on='date')
+  data=data.set_index('date')
+  data=data[::-1]
+  returns=data.pct_change()
+  cum_returns=((1+returns).cumprod())*100
+  fig=px.line(cum_returns,x=cum_returns.index,y=cum_returns.columns[0:])
+  return fig
 # This is a server module. It runs on the Anvil server,
 # rather than in the user's browser.
 #
