@@ -8,6 +8,7 @@ import anvil.server
 from .. import Globals
 from ..Form1_copy import Form1_copy
 from ..Economy import Economy
+from ..Sectors import Sectors
 
 class Home(HomeTemplate):
   def __init__(self, **properties):
@@ -42,6 +43,17 @@ class Home(HomeTemplate):
   def economy_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form('Economy')
+
+  def link_2_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    pass
+
+  def sector_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('Sectors')
+    
+
+
 
 
     

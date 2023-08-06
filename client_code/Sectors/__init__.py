@@ -14,6 +14,8 @@ class Sectors(SectorsTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     # Any code you write here will run before the form opens.
+    fig=anvil.server.call('sectors')
+    self.sector_graph.figure=fig
 
 
 

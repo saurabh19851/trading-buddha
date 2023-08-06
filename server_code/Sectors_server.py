@@ -7,6 +7,7 @@ import pandas as pd
 import numpy as np
 import datetime
 import requests
+import plotly.express as px
 
 @anvil.server.callable
 def api_key():
@@ -19,10 +20,10 @@ def sectors():
   indices=['S&P 500','Communication services','Consumer Discretionary','Consumer Staples','Energy','Financials','Healthcare',\
            'Industrials','Materials','Real Estate','Technology','Utiities']
   tickers=['XLC','XLY','XLP','XLE','XLF','XLV','XLI','XLB','XLRE','XLK','XLU']
-  data=pd.DataFrame(fmpsdk.historical_price_full(apikey, symbol='SPY',series_type='line'))
+  data=pd.DataFrame(fmpsdk.historical_price_full(apikey=api_key(), symbol='SPY',series_type='line'))
   data.columns=['date','SPY']
   for x in tickers:
-    a=pd.DataFrame(fmpsdk.historical_price_full(apikey, symbol=x,series_type='line'))
+    a=pd.DataFrame(fmpsdk.historical_price_full(apikey=api_key(), symbol=x,series_type='line'))
     a.columns=['date',x]
     data=pd.merge(data, a,how='inner',on='date')
   data=data.set_index('date')

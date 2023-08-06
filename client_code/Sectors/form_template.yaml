@@ -70,4 +70,8 @@ components:
   properties: {col_widths: '{}'}
   name: column_panel_1
   layout_properties: {slot: default}
-  components: []
+  components:
+  - type: Plot
+    properties: {}
+    name: sector_graph
+    layout_properties: {grid_position: 'NGSZYB,JLXTSD'}
