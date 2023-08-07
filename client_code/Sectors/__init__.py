@@ -16,6 +16,7 @@ class Sectors(SectorsTemplate):
     # Any code you write here will run before the form opens.
     fig=anvil.server.call('sectors')
     self.sector_graph.figure=fig
+    
 
 
 

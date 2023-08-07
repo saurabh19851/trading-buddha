@@ -10,6 +10,14 @@ components:
   name: navbar_links
   layout_properties: {slot: nav-right}
   components:
+  - type: Image
+    properties: {height: 42}
+    name: image_1
+    layout_properties: {width: 295}
+  - type: Spacer
+    properties: {height: 32}
+    name: spacer_1
+    layout_properties: {width: 388}
   - type: form:dep_4ozdechq4inthr:Autocomplete
     properties: {}
     name: autocomplete_1
