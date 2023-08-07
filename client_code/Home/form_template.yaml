@@ -150,3 +150,16 @@ components:
       properties: {spacing_above: none, spacing_below: none, item_template: Home.RowTemplate3}
       name: losers_panel
       layout_properties: {}
+  - type: DataGrid
+    properties:
+      columns:
+      - {id: SWCIRI, title: Column 1, data_key: column_1}
+      - {id: XMPATO, title: Column 2, data_key: column_2}
+      - {id: RKZLRZ, title: Column 3, data_key: column_3}
+    name: data_grid_1
+    layout_properties: {grid_position: 'HHNWKJ,FFKKCH'}
+    components:
+    - type: RepeatingPanel
+      properties: {spacing_above: none, spacing_below: none, item_template: Home.RowTemplate5}
+      name: repeating_panel_1
+      layout_properties: {}
