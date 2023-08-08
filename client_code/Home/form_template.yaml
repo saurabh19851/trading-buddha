@@ -79,18 +79,6 @@ components:
   name: column_panel_1
   layout_properties: {slot: default}
   components:
-  - type: Plot
-    properties: {}
-    name: plot_1
-    layout_properties: {grid_position: 'BLNMOS,IFGGPX'}
-  - type: Plot
-    properties: {}
-    name: plot_2
-    layout_properties: {grid_position: 'BLNMOS,IPEUVW'}
-  - type: Plot
-    properties: {}
-    name: plot_3
-    layout_properties: {grid_position: 'BLNMOS,FGHWYS'}
   - type: DataGrid
     properties:
       role: null
@@ -114,7 +102,7 @@ components:
       spacing_below: small
       background: ''
     name: gainers_grid
-    layout_properties: {grid_position: 'VGGQUZ,JPXOKF', full_width_row: true}
+    layout_properties: {grid_position: 'ECZSCK,CPZQQU VGGQUZ,JPXOKF', full_width_row: true}
     components:
     - type: RepeatingPanel
       properties: {spacing_above: none, spacing_below: none, item_template: Home.RowTemplate3}
@@ -144,7 +132,7 @@ components:
       spacing_below: small
       background: ''
     name: loses_grid
-    layout_properties: {grid_position: 'VGGQUZ,GGPEKQ', full_width_row: true}
+    layout_properties: {grid_position: 'ECZSCK,CPZQQU VGGQUZ,GGPEKQ', full_width_row: true}
     components:
     - type: RepeatingPanel
       properties: {spacing_above: none, spacing_below: none, item_template: Home.RowTemplate3}
@@ -157,9 +145,26 @@ components:
       - {id: XMPATO, title: Column 2, data_key: column_2}
       - {id: RKZLRZ, title: Column 3, data_key: column_3}
     name: data_grid_1
-    layout_properties: {grid_position: 'HHNWKJ,FFKKCH'}
+    layout_properties: {grid_position: 'ECZSCK,CPZQQU HHNWKJ,FFKKCH'}
     components:
     - type: RepeatingPanel
       properties: {spacing_above: none, spacing_below: none, item_template: Home.RowTemplate5}
       name: repeating_panel_1
       layout_properties: {}
+  - type: ColumnPanel
+    properties: {col_widths: '{}'}
+    name: column_panel_3
+    layout_properties: {grid_position: 'ECZSCK,ALVXFI'}
+    components:
+    - type: RichText
+      properties: {}
+      name: rich_text_1
+      layout_properties: {grid_position: 'JWJDFB,LPIIRL'}
+    - type: Plot
+      properties: {height: 308}
+      name: plot_1
+      layout_properties: {grid_position: 'OFYVYF,WINUGW', width: 403}
+    - type: Plot
+      properties: {height: 309}
+      name: plot_2
+      layout_properties: {grid_position: 'USISJI,EYOSQE', width: 398}
