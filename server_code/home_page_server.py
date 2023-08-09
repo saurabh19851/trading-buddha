@@ -3,6 +3,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
 import datetime
+import fmpsdk
 
 # This is a server module. It runs on the Anvil server,
 # rather than in the user's browser.
@@ -35,3 +36,7 @@ def economic_calendar():
     if x['country']=='US':
       data_US.append(x)
   return data_US
+
+@anvil.server.callable
+def indices_graph(ticker):
+  data=
