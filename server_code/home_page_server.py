@@ -4,6 +4,13 @@ from anvil.tables import app_tables
 import anvil.server
 import datetime
 import fmpsdk
+import datetime
+import dateutil
+import pandas as pd
+import numpy as np
+import plotly.express as px
+import requests
+import plotly.graph_objects as go
 
 # This is a server module. It runs on the Anvil server,
 # rather than in the user's browser.
@@ -38,11 +45,19 @@ def economic_calendar():
   return data_US
 
 @anvil.server.callable
-def indices_graph(ticker):
+def indices_graph(ticker,title):
   today=str(datetime.date.today())
   hist_date=str(datetime.date.today()-dateutil.relativedelta.relativedelta(years=30))
-  data=fmp.historical_price_full(apikey=api, '^GSPC',series_type='line',from_date=hist_date,to_date=today)
+  data=fmpsdk.historical_price_full(apikey=api_key(), symbol=ticker,series_type='line',from_date=hist_date,to_date=today)
   data=pd.DataFrame(data)
   data.set_index(keys=['date'],inplace=True)
-  fig=px.line(data,x=data.index,y=['close'])
+  data.columns=[title]
+  fig=px.line(data,x=data.index,y=title)
+  fig.update_layout(showlegend=False)
+  fig.update_xaxes(rangeselector=dict(buttons=list([dict(count=1, label="1m", step="month", stepmode="backward"),\
+                                                   dict(count=6, label="6m", step="month", stepmode="backward"),\
+                                                   dict(count=1, label="YTD", step="year", stepmode="todate"),\
+                                                   dict(count=1, label="1y", step="year", stepmode="backward"),\
+                                                   dict(count=5, label="5y", step="year", stepmode="backward"),\
+                                                   dict(count=10, label="10y", step="year", stepmode="backward"),dict(step="all")])))
   return fig

@@ -162,9 +162,17 @@ components:
       layout_properties: {grid_position: 'JWJDFB,LPIIRL'}
     - type: Plot
       properties: {height: 308}
-      name: plot_1
+      name: sp500
       layout_properties: {grid_position: 'OFYVYF,WINUGW', width: 403}
     - type: Plot
       properties: {height: 309}
-      name: plot_2
+      name: nasdaq
       layout_properties: {grid_position: 'USISJI,EYOSQE', width: 398}
+    - type: Plot
+      properties: {}
+      name: dow_jones
+      layout_properties: {grid_position: 'AVZFTZ,IWYDKT'}
+    - type: Plot
+      properties: {}
+      name: vix
+      layout_properties: {grid_position: 'GDLQKL,YLTIGW'}

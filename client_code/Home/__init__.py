@@ -19,6 +19,11 @@ class Home(HomeTemplate):
     self.gainers_panel.items=data_gainers
     data_losers=anvil.server.call('losers')
     self.losers_panel.items=data_losers
+    self.sp500.figure=anvil.server.call('indices_graph','^GSPC','S&P 500')
+    self.nasdaq.figure=anvil.server.call('indices_graph','^IXIC','NASDAQ')
+    self.dow_jones.figure=anvil.server.call('indices_graph','^DJI','Dow Jones')
+    self.vix.figure=anvil.server.call('indices_graph','^IXIC','VIX')
+    
     
 
   def form_show(self, **event_args):
