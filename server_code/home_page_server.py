@@ -39,4 +39,10 @@ def economic_calendar():
 
 @anvil.server.callable
 def indices_graph(ticker):
-  data=
+  today=str(datetime.date.today())
+  hist_date=str(datetime.date.today()-dateutil.relativedelta.relativedelta(years=30))
+  data=fmp.historical_price_full(apikey=api, '^GSPC',series_type='line',from_date=hist_date,to_date=today)
+  data=pd.DataFrame(data)
+  data.set_index(keys=['date'],inplace=True)
+  fig=px.line(data,x=data.index,y=['close'])
+  return fig
