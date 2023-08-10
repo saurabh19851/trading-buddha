@@ -13,7 +13,8 @@ class stock_news_template(stock_news_templateTemplate):
     self.news_link.text=self.item['title']
     self.news_link.url=self.item['url']
     self.news_ticker.text=self.item['symbol']
-    self.news_sentiment.content=self.item['sentiment']
+    self.news_sentiment.content='Sentiment: '+ self.item['sentiment']
     self.news_date.content=self.item['publishedDate']
     self.news_text.content=self.item['text']
+    self.ticker_rich_text.content='Ticker: '
     # Any code you write here will run before the form opens.

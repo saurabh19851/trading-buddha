@@ -21,14 +21,18 @@ components:
       name: news_link
       layout_properties: {row: JIUEBA, width_xs: 10, col_xs: 2}
       components: []
+    - type: RichText
+      properties: {}
+      name: ticker_rich_text
+      layout_properties: {row: BRTAQA, width_xs: 1, col_xs: 2}
     - type: Link
       properties: {}
       name: news_ticker
-      layout_properties: {row: BRTAQA, width_xs: 3, col_xs: 2}
+      layout_properties: {row: BRTAQA, width_xs: 2, col_xs: 3}
     - type: RichText
       properties: {}
       name: news_sentiment
-      layout_properties: {row: BRTAQA, width_xs: 4, col_xs: 5}
+      layout_properties: {row: BRTAQA, width_xs: 3, col_xs: 6}
     - type: RichText
       properties: {}
       name: news_date
