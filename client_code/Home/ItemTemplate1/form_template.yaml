@@ -19,12 +19,12 @@ components:
     - type: Link
       properties: {col_widths: '{}'}
       name: link_1
-      layout_properties: {row: JIUEBA, width_xs: 8, col_xs: 4}
+      layout_properties: {row: JIUEBA, width_xs: 8, col_xs: 3}
       components: []
     - type: RichText
       properties: {}
       name: rich_text_1
-      layout_properties: {row: RZHWKW, width_xs: 5, col_xs: 2}
+      layout_properties: {row: BRTAQA, width_xs: 5, col_xs: 2}
     - type: RichText
       properties: {}
       name: rich_text_2
