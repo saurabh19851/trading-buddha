@@ -61,3 +61,10 @@ def indices_graph(ticker,title):
                                                    dict(count=5, label="5y", step="year", stepmode="backward"),\
                                                    dict(count=10, label="10y", step="year", stepmode="backward"),dict(step="all")])))
   return fig
+
+@anvil.server.callable
+def general_stock_news():
+  param = {'page':0,'apikey':api_key()} 
+  req=requests.get('https://financialmodelingprep.com/api/v4/stock-news-sentiments-rss-feed?', param)
+  data=req.json()
+  return data

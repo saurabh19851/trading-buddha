@@ -23,7 +23,7 @@ class Home(HomeTemplate):
     self.nasdaq.figure=anvil.server.call('indices_graph','^IXIC','NASDAQ')
     self.dow_jones.figure=anvil.server.call('indices_graph','^DJI','Dow Jones')
     self.vix.figure=anvil.server.call('indices_graph','^IXIC','VIX')
-    
+    self.news_panel.items=anvil.server.call('general_stock_news')
     
 
   def form_show(self, **event_args):

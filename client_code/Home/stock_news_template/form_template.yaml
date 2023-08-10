@@ -1,0 +1,40 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
+components:
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: column_panel_1
+  layout_properties: {grid_position: 'SCVFLH,TQWUQI'}
+  components:
+  - type: GridPanel
+    properties: {}
+    name: grid_panel_1
+    layout_properties: {grid_position: 'DXVVFG,IMCQOG'}
+    components:
+    - type: Image
+      properties: {height: 43}
+      name: news_image
+      layout_properties: {row: JIUEBA, width_xs: 2, col_xs: 0}
+    - type: Link
+      properties: {col_widths: '{}'}
+      name: news_link
+      layout_properties: {row: JIUEBA, width_xs: 10, col_xs: 2}
+      components: []
+    - type: Link
+      properties: {}
+      name: news_ticker
+      layout_properties: {row: BRTAQA, width_xs: 3, col_xs: 2}
+    - type: RichText
+      properties: {}
+      name: news_sentiment
+      layout_properties: {row: BRTAQA, width_xs: 4, col_xs: 5}
+    - type: RichText
+      properties: {}
+      name: news_date
+      layout_properties: {row: BRTAQA, width_xs: 3, col_xs: 9}
+    - type: RichText
+      properties: {}
+      name: news_text
+      layout_properties: {row: ZRLETR, width_xs: 12, col_xs: 0}
+is_package: true

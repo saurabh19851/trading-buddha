@@ -152,9 +152,13 @@ components:
       name: repeating_panel_1
       layout_properties: {}
   - type: RepeatingPanel
-    properties: {item_template: Home.ItemTemplate1}
-    name: repeating_panel_2
+    properties: {item_template: Home.stock_news_template}
+    name: news_panel
     layout_properties: {grid_position: 'ECZSCK,CPZQQU TLZQLF,UXISKN'}
+  - type: Label
+    properties: {}
+    name: label_1
+    layout_properties: {grid_position: 'ECZSCK,CPZQQU BWHBFA,WSENFW'}
   - type: ColumnPanel
     properties: {col_widths: '{}'}
     name: column_panel_3
