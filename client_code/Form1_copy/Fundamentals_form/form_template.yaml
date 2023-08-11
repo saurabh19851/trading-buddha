@@ -43,6 +43,7 @@ components:
       name: bal_sheet
       layout_properties: {row: YXKSMB, width_xs: 2, col_xs: 2, width: 141.734, x: 176,
         y: 63}
+      event_bindings: {click: bal_sheet_click}
     - type: Button
       properties: {role: elevated-button, align: center, tooltip: '', border: '',
         enabled: true, foreground: '', visible: true, text: Cash Flow, font_size: null,
@@ -61,6 +62,7 @@ components:
       layout_properties: {row: YXKSMB, width_xs: 1, col_xs: 8, width: 95.7344, x: 738.999975,
         y: 63}
       data_bindings: []
+      event_bindings: {click: annual_click}
     - type: Button
       properties: {role: elevated-button, align: center, tooltip: '', border: '',
         enabled: true, foreground: '', visible: true, text: Quarterly, font_size: null,
@@ -69,9 +71,10 @@ components:
       name: Quarterly
       layout_properties: {row: YXKSMB, width_xs: 1, col_xs: 9, width: 114.7344, x: 833.734375,
         y: 63}
+      event_bindings: {click: Quarterly_click}
     - type: DataGrid
       properties:
-        role: null
+        role: tonal-data-grid
         columns:
         - {id: FHKTNB, title: Column 1, data_key: column_1, $$hashKey: 'object:123978',
           expand: true}
@@ -92,11 +95,11 @@ components:
         background: ''
       name: financial_table
       layout_properties: {grid_position: 'GKHPEB,ADLWZV', row: XBIMVK, width_xs: 12,
-        col_xs: 0, x: 193, y: 127, width: 607.719}
+        col_xs: 0, x: 193, y: 127, width: 605.719}
       components:
       - type: RepeatingPanel
         properties: {spacing_above: none, spacing_below: none, item_template: Form1_copy.Fundamentals_form.RowTemplate6}
-        name: income_statement_panel
+        name: financial_table_panel
         layout_properties: {}
   - type: RichText
     properties: {}

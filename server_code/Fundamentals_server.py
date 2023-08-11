@@ -8,6 +8,12 @@ import numpy as np
 import datetime
 import requests
 
+
+@anvil.server.callable
+def api_key():
+  fmp_api_key='622f44c679bbfc88f813b6d43f217749'
+  return fmp_api_key
+
 #Code for getting annual Income statement Data
 @anvil.server.callable
 def get_annual_IS(ticker):
@@ -31,10 +37,9 @@ def get_annual_IS(ticker):
     cols.append(col)
   return data_ic,cols
 
-
 #Code for getting Quarterly statement Data
 @anvil.server.callable
-def get_quarter_IS(ticker):
+def get_quarterly_IS(ticker):
   income_statement=fmpsdk.income_statement(api_key(),ticker,period='quarter')
   income_statement.reverse()
   rows=['Revenue','Cost of Revenue','Gross Profit','Operating Expenses','Operating Income','EBITDA','Net Income','EPS']
@@ -54,7 +59,6 @@ def get_quarter_IS(ticker):
     col=dict(id=x,title=x,data_key=x)
     cols.append(col)
   return data_ic,cols
-
 
 #Code for getting Yearly Balance Sheet Data
 @anvil.server.callable
@@ -76,7 +80,6 @@ def get_annual_BS(ticker):
     cols.append(col)
   return data_bs,cols
 
-
 #Code for getting Quaterly Balance Sheet Data
 @anvil.server.callable
 def get_quarterly_BS(ticker):
@@ -97,7 +100,6 @@ def get_quarterly_BS(ticker):
     cols.append(col)
   return data_bs,cols
 
-
 #Code for getting Annual Cashflow
 @anvil.server.callable
 def get_annual_CF(ticker):
@@ -117,7 +119,6 @@ def get_annual_CF(ticker):
       col=dict(id=x,title=x,data_key=x)
       cols.append(col)
   return data_cf,cols
-
 
 # Code to get quarterly CF
 @anvil.server.callable
