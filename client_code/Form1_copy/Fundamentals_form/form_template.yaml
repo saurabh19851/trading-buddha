@@ -9,38 +9,90 @@ components:
   name: content_panel
   layout_properties: {slot: default}
   components:
-  - type: GridPanel
-    properties: {spacing_above: small, spacing_below: small, background: '', foreground: '',
-      border: '', visible: true, role: null, tooltip: ''}
-    name: grid_panel_1
-    layout_properties: {grid_position: 'XOIKET,XMIPIX', full_width_row: true}
+  - type: XYPanel
+    properties: {height: 350}
+    name: xy_panel_1
+    layout_properties: {grid_position: 'WGWDBY,BSGZYG'}
     components:
-    - type: FlowPanel
-      properties: {}
-      name: flow_panel_1
-      layout_properties: {row: TZEJEK, width_xs: 6, col_xs: 0}
-      components:
-      - type: Image
-        properties: {height: 53}
-        name: logo
-        layout_properties: {width: 68}
-      - type: Link
-        properties: {role: selected, url: '', align: left, tooltip: '', border: '',
-          foreground: '', visible: true, text: '', font_size: null, wrap_on: mobile,
-          font: '', col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
-          spacing_below: small, italic: false, background: '', bold: false, underline: false,
-          icon: ''}
-        name: name
-        layout_properties: {expand: true, width: null}
+    - type: Image
+      properties: {height: 53}
+      name: logo
+      layout_properties: {width: 68, x: 0, y: 0}
+    - type: Link
+      properties: {role: selected, url: '', align: left, tooltip: '', border: '',
+        foreground: '', visible: true, text: '', font_size: null, wrap_on: mobile,
+        font: '', col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+        spacing_below: small, italic: false, background: '', bold: false, underline: false,
+        icon: ''}
+      name: name
+      layout_properties: {expand: true, width: 137.016, x: 78, y: 8}
+    - type: Button
+      properties: {role: elevated-button, align: center, tooltip: '', border: '',
+        enabled: true, foreground: '', visible: true, text: Income Statement, font_size: null,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: inc_stat
+      layout_properties: {row: YXKSMB, width_xs: 2, col_xs: 0, width: 174.7344, x: 0,
+        y: 63}
+      event_bindings: {click: inc_stat_click}
+    - type: Button
+      properties: {role: elevated-button, align: center, tooltip: '', border: '',
+        enabled: true, foreground: '', visible: true, text: Balance Sheet, font_size: null,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: bal_sheet
+      layout_properties: {row: YXKSMB, width_xs: 2, col_xs: 2, width: 141.734, x: 176,
+        y: 63}
+    - type: Button
+      properties: {role: elevated-button, align: center, tooltip: '', border: '',
+        enabled: true, foreground: '', visible: true, text: Cash Flow, font_size: null,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: Cash_flow
+      layout_properties: {row: YXKSMB, width_xs: 2, col_xs: 4, width: 116.719, x: 321.71875,
+        y: 63}
+      event_bindings: {click: Cash_flow_click}
+    - type: Button
+      properties: {role: elevated-button, align: center, tooltip: '', border: '',
+        enabled: true, foreground: '', visible: true, text: Annual, font_size: null,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: annual
+      layout_properties: {row: YXKSMB, width_xs: 1, col_xs: 8, width: 95.7344, x: 738.999975,
+        y: 63}
+      data_bindings: []
+    - type: Button
+      properties: {role: elevated-button, align: center, tooltip: '', border: '',
+        enabled: true, foreground: '', visible: true, text: Quarterly, font_size: null,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: Quarterly
+      layout_properties: {row: YXKSMB, width_xs: 1, col_xs: 9, width: 114.7344, x: 833.734375,
+        y: 63}
     - type: DataGrid
       properties:
+        role: null
         columns:
-        - {id: FHKTNB, title: Column 1, data_key: column_1}
-        - {id: EOJVRN, title: Column 2, data_key: column_2}
-        - {id: NNIAFQ, title: Column 3, data_key: column_3}
-      name: income_statement
+        - {id: FHKTNB, title: Column 1, data_key: column_1, $$hashKey: 'object:123978',
+          expand: true}
+        - {id: EOJVRN, title: Column 2, data_key: column_2, $$hashKey: 'object:123979',
+          expand: true}
+        - {id: NNIAFQ, title: Column 3, data_key: column_3, $$hashKey: 'object:123980',
+          expand: true}
+        auto_header: true
+        tooltip: ''
+        border: ''
+        foreground: ''
+        rows_per_page: 20
+        visible: true
+        wrap_on: never
+        show_page_controls: true
+        spacing_above: small
+        spacing_below: small
+        background: ''
+      name: financial_table
       layout_properties: {grid_position: 'GKHPEB,ADLWZV', row: XBIMVK, width_xs: 12,
-        col_xs: 0}
+        col_xs: 0, x: 193, y: 127, width: 607.719}
       components:
       - type: RepeatingPanel
         properties: {spacing_above: none, spacing_below: none, item_template: Form1_copy.Fundamentals_form.RowTemplate6}

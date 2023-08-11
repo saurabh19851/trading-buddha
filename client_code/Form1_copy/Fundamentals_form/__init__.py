@@ -34,3 +34,13 @@ class Fundamentals_form(Fundamentals_formTemplate):
 
   def autocomplete_1_change(self, **event_args):
     self.autocomplete_1.suggestions=['AAPL','AAPK','AAPT','AAPP','AAPB','AAPC']
+
+  def Cash_flow_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    pass
+
+  def inc_stat_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    pass
+
+
