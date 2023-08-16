@@ -149,3 +149,5 @@ def financial_ratios_ttm(ticker):
   oper_ratios=['daysOfSalesOutstandingTTM','daysOfInventoryOutstandingTTM','operatingCycleTTM']
   cf_ratios=['cashFlowToDebtRatioTTM','operatingCashFlowPerShareTTM','freeCashFlowPerShareTTM','operatingCashFlowSalesRatioTTM','cashFlowCoverageRatiosTTM']
   val_ratios=['dividendYielPercentageTTM','peRatioTTM','pegRatioTTM','payoutRatioTTM','priceToBookRatioTTM','priceToSalesRatioTTM','enterpriseValueMultipleTTM','payoutRatioTTM']
+  param={'apikey':api_key()}
+  ratios_data=requests.get('https://financialmodelingprep.com/api/v3/ratios-ttm/'+ticker,param)

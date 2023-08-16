@@ -22,7 +22,7 @@ class Fundamentals_form(Fundamentals_formTemplate):
     data,cols=anvil.server.call('get_annual_IS',ticker)
     self.financial_table.columns=cols
     self.financial_table_panel.items=data
-    self.
+    
 
   def form_refreshing_data_bindings(self, **event_args):
     """This method is called when refreshing_data_bindings is called"""
@@ -104,6 +104,8 @@ class Fundamentals_form(Fundamentals_formTemplate):
       data,cols=anvil.server.call('get_quarterly_CF',self.ticker)
       self.financial_table.columns=cols
       self.financial_table_panel.items=data
+
+
 
       
 

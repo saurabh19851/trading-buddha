@@ -10,9 +10,11 @@ components:
   layout_properties: {slot: default}
   components:
   - type: XYPanel
-    properties: {height: 350}
+    properties: {role: null, width: null, align: center, height: 350, tooltip: '',
+      border: '', foreground: '', visible: true, spacing_above: small, spacing_below: small,
+      background: ''}
     name: xy_panel_1
-    layout_properties: {grid_position: 'WGWDBY,BSGZYG'}
+    layout_properties: {grid_position: 'WGWDBY,BSGZYG', full_width_row: true}
     components:
     - type: Image
       properties: {height: 53}
@@ -102,13 +104,72 @@ components:
         name: financial_table_panel
         layout_properties: {}
   - type: RichText
-    properties: {}
+    properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+      foreground: '', visible: true, font_size: null, content: '', font: '', spacing_above: small,
+      spacing_below: small, data: null, background: '', format: markdown}
     name: rich_text_1
-    layout_properties: {grid_position: 'FMLDAI,XGBVIP'}
-  - type: form:dep_4ozdechq4inthr:Tabs
-    properties: {}
-    name: ratios_tab
-    layout_properties: {grid_position: 'NXYQRS,ROYJUO'}
+    layout_properties: {grid_position: 'FMLDAI,XGBVIP', full_width_row: true}
+  - type: GridPanel
+    properties: {spacing_above: small, spacing_below: small, background: '', foreground: '',
+      border: '', visible: true, role: null, tooltip: ''}
+    name: grid_panel_1
+    layout_properties: {grid_position: 'YTTFFW,UCVPQQ', full_width_row: true}
+    components:
+    - type: Button
+      properties: {role: elevated-button, align: center, tooltip: '', border: '',
+        enabled: true, foreground: '', visible: true, text: Liquidity Ratios, font_size: null,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: liquity_ratio_button
+      layout_properties: {row: QLMXPL, width_xs: 2, col_xs: null, width: 136.656}
+    - type: Button
+      properties: {role: elevated-button, align: center, tooltip: '', border: '',
+        enabled: true, foreground: '', visible: true, text: Profit Ratios, font_size: null,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: profit_ratios_button
+      layout_properties: {row: QLMXPL, width_xs: 2, col_xs: null, width: 136.656}
+    - type: Button
+      properties: {role: elevated-button, align: center, tooltip: '', border: '',
+        enabled: true, foreground: '', visible: true, text: Debt Ratios, font_size: null,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: debt_ratios_button
+      layout_properties: {row: QLMXPL, width_xs: 2, col_xs: null, width: 136.656}
+    - type: Button
+      properties: {role: elevated-button, align: center, tooltip: '', border: '',
+        enabled: true, foreground: '', visible: true, text: Operating Ratios, font_size: null,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: operating_ratios_button
+      layout_properties: {row: QLMXPL, width_xs: 2, col_xs: null, width: 136.656}
+    - type: Button
+      properties: {role: elevated-button, align: center, tooltip: '', border: '',
+        enabled: true, foreground: '', visible: true, text: Cashflow Ratios, font_size: null,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: cashflow_ratios_button
+      layout_properties: {row: QLMXPL, width_xs: 2, col_xs: null, width: 136.656}
+    - type: Button
+      properties: {role: elevated-button, align: center, tooltip: '', border: '',
+        enabled: true, foreground: '', visible: true, text: Valuation ratios, font_size: null,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: valuation_ratios_button
+      layout_properties: {row: QLMXPL, width_xs: 2, col_xs: null, width: 136.656}
+  - type: DataGrid
+    properties:
+      columns:
+      - {id: JZMQCH, title: Column 1, data_key: column_1}
+      - {id: AVWXFV, title: Column 2, data_key: column_2}
+      - {id: TQJXLA, title: Column 3, data_key: column_3}
+    name: ratios_grid
+    layout_properties: {grid_position: 'YJYBTX,OBXJBV'}
+    components:
+    - type: RepeatingPanel
+      properties: {spacing_above: none, spacing_below: none, item_template: Form1_copy.Fundamentals_form.RowTemplate8}
+      name: repeating_panel_1
+      layout_properties: {}
 - type: FlowPanel
   properties: {}
   name: navbar_links
