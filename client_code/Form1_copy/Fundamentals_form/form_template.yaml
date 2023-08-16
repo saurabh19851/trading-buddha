@@ -107,7 +107,7 @@ components:
     layout_properties: {grid_position: 'FMLDAI,XGBVIP'}
   - type: form:dep_4ozdechq4inthr:Tabs
     properties: {}
-    name: tabs_1
+    name: ratios_tab
     layout_properties: {grid_position: 'NXYQRS,ROYJUO'}
 - type: FlowPanel
   properties: {}
