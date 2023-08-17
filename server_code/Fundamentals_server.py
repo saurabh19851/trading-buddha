@@ -152,10 +152,18 @@ def financial_ratios_ttm(ticker):
   param={'apikey':api_key()}
   ratios_data=requests.get('https://financialmodelingprep.com/api/v3/ratios-ttm/'+ticker,param)
   ratios_data=ratios_data[0]
-  liq_ratios={f"{k}:{v:.2f}" for (k,v) in ratios_data.items() if k in liq_ratios_list}
-  profit_ratios={f"{k}:{v:.2f}" for (k,v) in ratios_data.items() if k in profit_ratios_list}
-  debt_ratios={f"{k}:{v:.2f}" for (k,v) in ratios_data.items() if k in debt_ratios_list}
-  oper_ratios={f"{k}:{v:.2f}" for (k,v) in ratios_data.items() if k in oper_ratios_list}
-  cf_ratios={f"{k}:{v:.2f}" for (k,v) in ratios_data.items() if k in cf_ratios_list}
-  val_ratios={f"{k}:{v:.2f}" for (k,v) in ratios_data.items() if k in val_ratios_list}
+  liq_ratios={k:v for (k,v) in ratios_data.items() if k in liq_ratios_list}
+  profit_ratios={k:v for (k,v) in ratios_data.items() if k in profit_ratios_list}
+  debt_ratios={k:v for (k,v) in ratios_data.items() if k in debt_ratios_list}
+  oper_ratios={k:v for (k,v) in ratios_data.items() if k in oper_ratios_list}
+  cf_ratios={k:v for (k,v) in ratios_data.items() if k in cf_ratios_list}
+  val_ratios={k:v for (k,v) in ratios_data.items() if k in val_ratios_list}
+  cols=[{"id": "Ratios", "title": "Ratios", "data_key": "Ratios" },{"id": "Value", "title": "Value", "data_key": "Value" }]
+  ratios_to_return=[]
+  selected_ratios=[]
+  for x in liq_ratios:
+    a={'Ratios':x.}
+  
+  
   return liq_ratios,profit_ratios,debt_ratios,oper_ratios,cf_ratios,val_ratios
+  
