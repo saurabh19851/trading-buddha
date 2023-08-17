@@ -157,6 +157,27 @@ components:
         background: '', bold: false, underline: false, icon: ''}
       name: valuation_ratios_button
       layout_properties: {row: QLMXPL, width_xs: 2, col_xs: null, width: 136.656}
+    - type: Button
+      properties: {role: elevated-button, align: center, tooltip: '', border: '',
+        enabled: true, foreground: '', visible: true, text: TTM, font_size: null,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: ttm_ratios
+      layout_properties: {row: IEKNBZ, width_xs: 2, col_xs: null, width: 113.977}
+    - type: Button
+      properties: {role: elevated-button, align: center, tooltip: '', border: '',
+        enabled: true, foreground: '', visible: true, text: Annual, font_size: null,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: annual_ratios
+      layout_properties: {row: IEKNBZ, width_xs: 2, col_xs: null, width: 113.977}
+    - type: Button
+      properties: {role: elevated-button, align: center, tooltip: '', border: '',
+        enabled: true, foreground: '', visible: true, text: Quarterly, font_size: null,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: quarterly_ratios
+      layout_properties: {row: IEKNBZ, width_xs: 2, col_xs: null, width: 113.977}
   - type: DataGrid
     properties:
       columns:
