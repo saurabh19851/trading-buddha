@@ -143,11 +143,19 @@ def get_quarterly_CF(ticker):
 @anvil.server.callable
 def financial_ratios_ttm(ticker):
   data=fmpsdk.financial_ratios_ttm(apikey=api_key(),symbol=ticker)
-  liq_ratios=['currentRatioTTM','quickRatioTTM','cashRatioTTM']
-  profit_ratios=['grossProfitMarginTTM','operatingProfitMarginTTM','netProfitMarginTTM','returnOnAssetsTTM','returnOnEquityTTM','returnOnCapitalEmployedTTM']
-  debt_ratios=['debtRatioTTM','debtEquityRatioTTM','totalDebtToCapitalizationTTM','companyEquityMultiplierTTM']
-  oper_ratios=['daysOfSalesOutstandingTTM','daysOfInventoryOutstandingTTM','operatingCycleTTM']
-  cf_ratios=['cashFlowToDebtRatioTTM','operatingCashFlowPerShareTTM','freeCashFlowPerShareTTM','operatingCashFlowSalesRatioTTM','cashFlowCoverageRatiosTTM']
-  val_ratios=['dividendYielPercentageTTM','peRatioTTM','pegRatioTTM','payoutRatioTTM','priceToBookRatioTTM','priceToSalesRatioTTM','enterpriseValueMultipleTTM','payoutRatioTTM']
+  liq_ratios_list=['currentRatioTTM','quickRatioTTM','cashRatioTTM']
+  profit_ratios_list=['grossProfitMarginTTM','operatingProfitMarginTTM','netProfitMarginTTM','returnOnAssetsTTM','returnOnEquityTTM','returnOnCapitalEmployedTTM']
+  debt_ratios_list=['debtRatioTTM','debtEquityRatioTTM','totalDebtToCapitalizationTTM','companyEquityMultiplierTTM']
+  oper_ratios_list=['daysOfSalesOutstandingTTM','daysOfInventoryOutstandingTTM','operatingCycleTTM']
+  cf_ratios_list=['cashFlowToDebtRatioTTM','operatingCashFlowPerShareTTM','freeCashFlowPerShareTTM','operatingCashFlowSalesRatioTTM','cashFlowCoverageRatiosTTM']
+  val_ratios_list=['dividendYielPercentageTTM','peRatioTTM','pegRatioTTM','payoutRatioTTM','priceToBookRatioTTM','priceToSalesRatioTTM','enterpriseValueMultipleTTM','payoutRatioTTM']
   param={'apikey':api_key()}
   ratios_data=requests.get('https://financialmodelingprep.com/api/v3/ratios-ttm/'+ticker,param)
+  ratios_data=ratios_data[0]
+  liq_ratios={f"{k}:{v:.2f}" for (k,v) in ratios_data.items() if k in liq_ratios_list}
+  profit_ratios={f"{k}:{v:.2f}" for (k,v) in ratios_data.items() if k in profit_ratios_list}
+  debt_ratios={f"{k}:{v:.2f}" for (k,v) in ratios_data.items() if k in debt_ratios_list}
+  oper_ratios={f"{k}:{v:.2f}" for (k,v) in ratios_data.items() if k in oper_ratios_list}
+  cf_ratios={f"{k}:{v:.2f}" for (k,v) in ratios_data.items() if k in cf_ratios_list}
+  val_ratios={f"{k}:{v:.2f}" for (k,v) in ratios_data.items() if k in val_ratios_list}
+  return liq_ratios,profit_ratios,debt_ratios,oper_ratios,cf_ratios,val_ratios
