@@ -168,7 +168,7 @@ components:
     components:
     - type: RepeatingPanel
       properties: {spacing_above: none, spacing_below: none, item_template: Form1_copy.Fundamentals_form.RowTemplate8}
-      name: repeating_panel_1
+      name: ratios_panel
       layout_properties: {}
 - type: FlowPanel
   properties: {}

@@ -22,6 +22,9 @@ class Fundamentals_form(Fundamentals_formTemplate):
     data,cols=anvil.server.call('get_annual_IS',ticker)
     self.financial_table.columns=cols
     self.financial_table_panel.items=data
+    ratios_cols,ratios_data=anvil.server.call('financial_ratios_ttm',ticker)
+    self.ratios_grid.columns=ratios_cols
+    self.ratios_panel.items=ratios_data
     
 
   def form_refreshing_data_bindings(self, **event_args):
