@@ -117,7 +117,7 @@ class Fundamentals_form(Fundamentals_formTemplate):
     button=event_args['sender']
     button_text=button.text
     self.fin_ratio=button_text
-    print(self.fin_ratio+' '+self.ratio_period)
+    
 
   def financial_ratios_period(self,**event_args):
     button=event_args['sender']

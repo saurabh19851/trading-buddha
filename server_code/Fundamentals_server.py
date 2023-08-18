@@ -166,8 +166,40 @@ def financial_ratios_ttm(ticker,ratios_type,period):
 
 @anvil.server.callable
 def financial_ratios(ticker,ratio_type,period):
-  if period=='Annual':
-    data=fmpsdk.financial_ratios(apikey=api_key(), symbol=ticker,period='annual',limit=8)
-  elif period=='Quarterly':
-    data=fmpsdk.financial_ratios(apikey=api_key(), symbol=ticker,period='quarter',limit=8)
+    if period=='Annual':
+        data=fmpsdk.financial_ratios(apikey=api_key(), symbol=ticker,period='annual',limit=8)
+    elif period=='Quarterly':
+        data=fmpsdk.financial_ratios(apikey=api_key(), symbol=ticker,period='quarter',limit=8)
+    data.reverse()
+    liq_ratios_list=['currentRatio','quickRatio','cashRatio']
+    profit_ratios_list=['grossProfitMargin','operatingProfitMargin','netProfitMargin','returnOnAssets','returnOnEquity','returnOnCapitalEmployed']
+    debt_ratios_list=['debtRatio','debtEquityRatio','totalDebtToCapitalization','companyEquityMultiplier']
+    oper_ratios_list=['daysOfSalesOutstanding','daysOfInventoryOutstanding','operatingCycle']
+    cf_ratios_list=['cashFlowToDebtRatio','operatingCashFlowPerShare','freeCashFlowPerShare','operatingCashFlowSalesRatio','cashFlowCoverageRatios']
+    val_ratios_list=['dividendYielPercentage','peRatio','pegRatio','payoutRatio','priceToBookRatio','priceToSalesRatio','enterpriseValueMultiple','payoutRatio']
+    cols=[{"id": "Ratios", "title": "Ratios", "data_key": "Ratios" }]
+    selected_ratios=[]
+    selected_ratios_data=[]
+    for x in data:
+        date=x['date']
+        a={"id": date, "title": date, "data_key": date }
+        cols.append(a)
+    if ratio_type=='Liquidity Ratios':
+        selected_ratios=liq_ratios_list
+    elif ratio_type=='Profitability Ratios':
+        selected_ratios=profit_ratios_list
+    elif ratio_type=='Leverage Ratios':
+        selected_ratios=debt_ratios_list
+    elif ratio_type=='Operating Ratios':
+        selected_ratios==oper_ratios_list
+    elif ratio_type=='Cashflow Ratios':
+        selected_ratios=cf_ratios_list
+    elif ratio_type=='Valuation Ratios':
+        selected_ratios=val_ratios_list
+    for x in selected_ratios:
+        a=dict(ratios=x)
+        for y in data:
+            a[y['date']]=y[x]
+        selected_ratios_data.append(a)
+    return cols, selected_ratios_data
   
