@@ -165,7 +165,7 @@ def financial_ratios_ttm(ticker,ratios_type,period):
   return cols,selected_ratios
 
 @anvil.server.callable
-def finacial_ratios(ticker,ratio_type,period):
+def financial_ratios(ticker,ratio_type,period):
   if period=='Annual':
     data=fmpsdk.financial_ratios(apikey=api_key(), symbol=ticker,period='annual',limit=8)
   elif period=='Quarterly':
