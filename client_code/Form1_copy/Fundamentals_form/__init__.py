@@ -12,16 +12,21 @@ class Fundamentals_form(Fundamentals_formTemplate):
   financial_type=''
   period=''
   ticker=Globals.ticker
+  fin_ratio=''
+  ratio_period=''
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     # Any code you write here will run before the form opens.
-    ticker=Globals.ticker
+    #Code for populating financial statement table
     self.financial_type='is'
     self.period='y'
     data,cols=anvil.server.call('get_annual_IS',ticker)
     self.financial_table.columns=cols
     self.financial_table_panel.items=data
+    #Code for populating Financial Ratios Table
+    self.fin_ratio='Liq Ratio'
+    self.ratio_period='ttm'
     ratios_cols,ratios_data=anvil.server.call('financial_ratios_ttm',ticker)
     self.ratios_grid.columns=ratios_cols
     self.ratios_panel.items=ratios_data
