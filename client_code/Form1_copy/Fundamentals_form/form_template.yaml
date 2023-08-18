@@ -122,6 +122,7 @@ components:
         background: '', bold: false, underline: false, icon: ''}
       name: liquity_ratio_button
       layout_properties: {row: QLMXPL, width_xs: 2, col_xs: null, width: 136.656}
+      event_bindings: {click: financial_ratios}
     - type: Button
       properties: {role: elevated-button, align: center, tooltip: '', border: '',
         enabled: true, foreground: '', visible: true, text: Profit Ratios, font_size: null,
@@ -129,6 +130,7 @@ components:
         background: '', bold: false, underline: false, icon: ''}
       name: profit_ratios_button
       layout_properties: {row: QLMXPL, width_xs: 2, col_xs: null, width: 136.656}
+      event_bindings: {click: financial_ratios}
     - type: Button
       properties: {role: elevated-button, align: center, tooltip: '', border: '',
         enabled: true, foreground: '', visible: true, text: Debt Ratios, font_size: null,
@@ -136,6 +138,7 @@ components:
         background: '', bold: false, underline: false, icon: ''}
       name: debt_ratios_button
       layout_properties: {row: QLMXPL, width_xs: 2, col_xs: null, width: 136.656}
+      event_bindings: {click: financial_ratios}
     - type: Button
       properties: {role: elevated-button, align: center, tooltip: '', border: '',
         enabled: true, foreground: '', visible: true, text: Operating Ratios, font_size: null,
@@ -143,6 +146,7 @@ components:
         background: '', bold: false, underline: false, icon: ''}
       name: operating_ratios_button
       layout_properties: {row: QLMXPL, width_xs: 2, col_xs: null, width: 136.656}
+      event_bindings: {click: financial_ratios}
     - type: Button
       properties: {role: elevated-button, align: center, tooltip: '', border: '',
         enabled: true, foreground: '', visible: true, text: Cashflow Ratios, font_size: null,
@@ -150,13 +154,15 @@ components:
         background: '', bold: false, underline: false, icon: ''}
       name: cashflow_ratios_button
       layout_properties: {row: QLMXPL, width_xs: 2, col_xs: null, width: 136.656}
+      event_bindings: {click: financial_ratios}
     - type: Button
       properties: {role: elevated-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: '', visible: true, text: Valuation ratios, font_size: null,
+        enabled: true, foreground: '', visible: true, text: Valuation Ratios, font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '', bold: false, underline: false, icon: ''}
       name: valuation_ratios_button
-      layout_properties: {row: QLMXPL, width_xs: 2, col_xs: null, width: 136.656}
+      layout_properties: {row: QLMXPL, width_xs: 2, col_xs: null, width: 112.797}
+      event_bindings: {click: financial_ratios}
     - type: Button
       properties: {role: elevated-button, align: center, tooltip: '', border: '',
         enabled: true, foreground: '', visible: true, text: TTM, font_size: null,
@@ -164,6 +170,7 @@ components:
         background: '', bold: false, underline: false, icon: ''}
       name: ttm_ratios
       layout_properties: {row: IEKNBZ, width_xs: 2, col_xs: null, width: 113.977}
+      event_bindings: {click: financial_ratios_period}
     - type: Button
       properties: {role: elevated-button, align: center, tooltip: '', border: '',
         enabled: true, foreground: '', visible: true, text: Annual, font_size: null,
@@ -171,6 +178,7 @@ components:
         background: '', bold: false, underline: false, icon: ''}
       name: annual_ratios
       layout_properties: {row: IEKNBZ, width_xs: 2, col_xs: null, width: 113.977}
+      event_bindings: {click: financial_ratios_period}
     - type: Button
       properties: {role: elevated-button, align: center, tooltip: '', border: '',
         enabled: true, foreground: '', visible: true, text: Quarterly, font_size: null,
@@ -178,6 +186,7 @@ components:
         background: '', bold: false, underline: false, icon: ''}
       name: quarterly_ratios
       layout_properties: {row: IEKNBZ, width_xs: 2, col_xs: null, width: 113.977}
+      event_bindings: {click: financial_ratios_period}
   - type: DataGrid
     properties:
       columns:

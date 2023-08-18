@@ -141,17 +141,14 @@ def get_quarterly_CF(ticker):
   return data_cf,cols
 
 @anvil.server.callable
-def financial_ratios_ttm(ticker):
-  data=fmpsdk.financial_ratios_ttm(apikey=api_key(),symbol=ticker)
+def financial_ratios_ttm(ticker,ratios_type,period):
+  ratios_data=fmpsdk.financial_ratios_ttm(apikey=api_key(),symbol=ticker)
   liq_ratios_list=['currentRatioTTM','quickRatioTTM','cashRatioTTM']
   profit_ratios_list=['grossProfitMarginTTM','operatingProfitMarginTTM','netProfitMarginTTM','returnOnAssetsTTM','returnOnEquityTTM','returnOnCapitalEmployedTTM']
   debt_ratios_list=['debtRatioTTM','debtEquityRatioTTM','totalDebtToCapitalizationTTM','companyEquityMultiplierTTM']
   oper_ratios_list=['daysOfSalesOutstandingTTM','daysOfInventoryOutstandingTTM','operatingCycleTTM']
   cf_ratios_list=['cashFlowToDebtRatioTTM','operatingCashFlowPerShareTTM','freeCashFlowPerShareTTM','operatingCashFlowSalesRatioTTM','cashFlowCoverageRatiosTTM']
   val_ratios_list=['dividendYielPercentageTTM','peRatioTTM','pegRatioTTM','payoutRatioTTM','priceToBookRatioTTM','priceToSalesRatioTTM','enterpriseValueMultipleTTM','payoutRatioTTM']
-  param={'apikey':api_key()}
-  req=requests.get('https://financialmodelingprep.com/api/v3/ratios-ttm/'+ticker,param)
-  ratios_data=req.json()
   ratios_data=ratios_data[0]
   liq_ratios={k:v for (k,v) in ratios_data.items() if k in liq_ratios_list}
   profit_ratios={k:v for (k,v) in ratios_data.items() if k in profit_ratios_list}
@@ -166,4 +163,11 @@ def financial_ratios_ttm(ticker):
     a={'Ratios':k,'Value':v}
     selected_ratios.append(a)
   return cols,selected_ratios
+
+@anvil.server.callable
+def finacial_ratios(ticker,ratio_type,period):
+  if period=='Annual':
+    data=fmpsdk.financial_ratios(apikey=api_key(), symbol=ticker,period='annual',limit=8)
+  elif period=='Quarterly':
+    data=fmpsdk.financial_ratios(apikey=api_key(), symbol=ticker,period='quarter',limit=8)
   

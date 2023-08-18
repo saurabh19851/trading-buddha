@@ -21,13 +21,13 @@ class Fundamentals_form(Fundamentals_formTemplate):
     #Code for populating financial statement table
     self.financial_type='is'
     self.period='y'
-    data,cols=anvil.server.call('get_annual_IS',ticker)
+    data,cols=anvil.server.call('get_annual_IS',self.ticker)
     self.financial_table.columns=cols
     self.financial_table_panel.items=data
     #Code for populating Financial Ratios Table
-    self.fin_ratio='Liq Ratio'
-    self.ratio_period='ttm'
-    ratios_cols,ratios_data=anvil.server.call('financial_ratios_ttm',ticker)
+    self.fin_ratio='Liquidity Ratios'
+    self.ratio_period='TTM'
+    ratios_cols,ratios_data=anvil.server.call('financial_ratios_ttm',self.ticker,self.fin_ratio,self.ratio_period)
     self.ratios_grid.columns=ratios_cols
     self.ratios_panel.items=ratios_data
     
@@ -113,7 +113,17 @@ class Fundamentals_form(Fundamentals_formTemplate):
       self.financial_table.columns=cols
       self.financial_table_panel.items=data
 
+  def financial_ratios(self,**event_args):
+    button=event_args['sender']
+    button_text=button.text
+    self.fin_ratio=button_text
+    print(self.fin_ratio+' '+self.ratio_period)
 
+  def financial_ratios_period(self,**event_args):
+    button=event_args['sender']
+    button_text=button.text
+    self.ratio_period=button_text
+    print(self.fin_ratio+' '+self.ratio_period)
 
       
 
