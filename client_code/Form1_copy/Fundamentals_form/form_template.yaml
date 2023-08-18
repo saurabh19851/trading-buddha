@@ -120,24 +120,24 @@ components:
         enabled: true, foreground: '', visible: true, text: Liquidity Ratios, font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '', bold: false, underline: false, icon: ''}
-      name: liquity_ratio_button
+      name: liquidity_ratio_button
       layout_properties: {row: QLMXPL, width_xs: 2, col_xs: null, width: 136.656}
       event_bindings: {click: financial_ratios}
     - type: Button
       properties: {role: elevated-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: '', visible: true, text: Profit Ratios, font_size: null,
-        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false, icon: ''}
+        enabled: true, foreground: '', visible: true, text: Profitability Ratios,
+        font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+        italic: false, background: '', bold: false, underline: false, icon: ''}
       name: profit_ratios_button
-      layout_properties: {row: QLMXPL, width_xs: 2, col_xs: null, width: 136.656}
+      layout_properties: {row: QLMXPL, width_xs: 2, col_xs: null, width: 112.797}
       event_bindings: {click: financial_ratios}
     - type: Button
       properties: {role: elevated-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: '', visible: true, text: Debt Ratios, font_size: null,
+        enabled: true, foreground: '', visible: true, text: Leverage Ratios, font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '', bold: false, underline: false, icon: ''}
       name: debt_ratios_button
-      layout_properties: {row: QLMXPL, width_xs: 2, col_xs: null, width: 136.656}
+      layout_properties: {row: QLMXPL, width_xs: 2, col_xs: null, width: 112.797}
       event_bindings: {click: financial_ratios}
     - type: Button
       properties: {role: elevated-button, align: center, tooltip: '', border: '',
