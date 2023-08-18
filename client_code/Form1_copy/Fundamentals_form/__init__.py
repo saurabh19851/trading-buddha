@@ -117,13 +117,19 @@ class Fundamentals_form(Fundamentals_formTemplate):
     button=event_args['sender']
     button_text=button.text
     self.fin_ratio=button_text
+    cols,ratio_data=anvil.server.call('financial_ratios',self.ticker,self.fin_ratio,self.ratio_period)
+    self.ratios_grid.columns=cols
+    self.ratios_panel.items=ratio_data
+    
     
 
   def financial_ratios_period(self,**event_args):
     button=event_args['sender']
     button_text=button.text
     self.ratio_period=button_text
-    print(self.fin_ratio+' '+self.ratio_period)
+    cols,ratio_data=anvil.server.call('financial_ratios',self.ticker,self.fin_ratio,self.ratio_period)
+    self.ratios_grid.columns=cols
+    self.ratios_panel.items=ratio_data
 
       
 

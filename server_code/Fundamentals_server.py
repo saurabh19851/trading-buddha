@@ -166,20 +166,24 @@ def financial_ratios_ttm(ticker,ratios_type,period):
 
 @anvil.server.callable
 def financial_ratios(ticker,ratio_type,period):
+    selected_ratios=[]
+    selected_ratios_data=[]
+    cols=[]
     if period=='Annual':
         data=fmpsdk.financial_ratios(apikey=api_key(), symbol=ticker,period='annual',limit=8)
     elif period=='Quarterly':
         data=fmpsdk.financial_ratios(apikey=api_key(), symbol=ticker,period='quarter',limit=8)
+    elif period=='TTM':
+      cols,selected_ratios_data=financial_ratios_ttm(ticker,ratio_type,period)
+      return cols, selected_ratios_data
     data.reverse()
     liq_ratios_list=['currentRatio','quickRatio','cashRatio']
     profit_ratios_list=['grossProfitMargin','operatingProfitMargin','netProfitMargin','returnOnAssets','returnOnEquity','returnOnCapitalEmployed']
     debt_ratios_list=['debtRatio','debtEquityRatio','totalDebtToCapitalization','companyEquityMultiplier']
     oper_ratios_list=['daysOfSalesOutstanding','daysOfInventoryOutstanding','operatingCycle']
     cf_ratios_list=['cashFlowToDebtRatio','operatingCashFlowPerShare','freeCashFlowPerShare','operatingCashFlowSalesRatio','cashFlowCoverageRatios']
-    val_ratios_list=['dividendYielPercentage','peRatio','pegRatio','payoutRatio','priceToBookRatio','priceToSalesRatio','enterpriseValueMultiple','payoutRatio']
+    val_ratios_list=['dividendYield','dividendPayoutRatio','priceEarningsRatio','priceEarningsToGrowthRatio','payoutRatio','priceToBookRatio','priceToSalesRatio','enterpriseValueMultiple','payoutRatio']
     cols=[{"id": "Ratios", "title": "Ratios", "data_key": "Ratios" }]
-    selected_ratios=[]
-    selected_ratios_data=[]
     for x in data:
         date=x['date']
         a={"id": date, "title": date, "data_key": date }
@@ -191,7 +195,7 @@ def financial_ratios(ticker,ratio_type,period):
     elif ratio_type=='Leverage Ratios':
         selected_ratios=debt_ratios_list
     elif ratio_type=='Operating Ratios':
-        selected_ratios==oper_ratios_list
+        selected_ratios=oper_ratios_list
     elif ratio_type=='Cashflow Ratios':
         selected_ratios=cf_ratios_list
     elif ratio_type=='Valuation Ratios':
