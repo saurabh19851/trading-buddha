@@ -189,12 +189,25 @@ components:
       event_bindings: {click: financial_ratios_period}
   - type: DataGrid
     properties:
+      role: tonal-data-grid
       columns:
-      - {id: JZMQCH, title: Column 1, data_key: column_1}
-      - {id: AVWXFV, title: Column 2, data_key: column_2}
-      - {id: TQJXLA, title: Column 3, data_key: column_3}
+      - {id: JZMQCH, title: Column 1, data_key: column_1, $$hashKey: 'object:11621',
+        expand: true}
+      - {id: AVWXFV, title: Column 2, data_key: column_2, $$hashKey: 'object:11622'}
+      - {id: TQJXLA, title: Column 3, data_key: column_3, $$hashKey: 'object:11623'}
+      auto_header: true
+      tooltip: ''
+      border: ''
+      foreground: ''
+      rows_per_page: 20
+      visible: true
+      wrap_on: never
+      show_page_controls: true
+      spacing_above: small
+      spacing_below: small
+      background: ''
     name: ratios_grid
-    layout_properties: {grid_position: 'YJYBTX,OBXJBV'}
+    layout_properties: {grid_position: 'YJYBTX,OBXJBV', full_width_row: true}
     components:
     - type: RepeatingPanel
       properties: {spacing_above: none, spacing_below: none, item_template: Form1_copy.Fundamentals_form.RowTemplate8}

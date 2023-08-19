@@ -201,9 +201,9 @@ def financial_ratios(ticker,ratio_type,period):
     elif ratio_type=='Valuation Ratios':
         selected_ratios=val_ratios_list
     for x in selected_ratios:
-        a=dict(ratios=x)
+        a=dict(Ratios=x)
         for y in data:
-            a[y['date']]=y[x]
+            a[y['date']]=f"{y[x]:.3f}"
         selected_ratios_data.append(a)
     return cols, selected_ratios_data
   
