@@ -68,3 +68,12 @@ def general_stock_news():
   req=requests.get('https://financialmodelingprep.com/api/v4/stock-news-sentiments-rss-feed?', param)
   data=req.json()
   return data
+
+@anvil.server.callable
+def indices_day_change(tickers):
+  tickers=','.join(tickers)
+  param={'apikey':api_key()}
+  link='https://financialmodelingprep.com/api/v3/stock-price-change/'+tickers
+  req=requests.get(link,param)
+  data=req.json()
+  return data
