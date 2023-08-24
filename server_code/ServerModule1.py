@@ -127,7 +127,7 @@ def gainers():
   return data
 
 
-#Code for getting quarterly losers
+#Code for getting daily losers
 @anvil.server.callable
 def losers():
   param={'apikey':api_key()}
