@@ -151,12 +151,31 @@ components:
       spacing_above: small, spacing_below: small, data: null, background: '', format: markdown}
     name: rich_text_4
     layout_properties: {grid_position: 'LOGQGK,TPSLNC PWCGEN,URRNDY', full_width_row: true}
-  - type: RepeatingPanel
-    properties: {role: elevated-card, tooltip: '', border: '', foreground: '', items: null,
-      visible: true, spacing_above: small, spacing_below: small, item_template: Home.stock_news_template,
-      background: ''}
-    name: news_panel
-    layout_properties: {grid_position: 'LOGQGK,TPSLNC XNCWWK,QSIIEH', full_width_row: true}
+  - type: DataGrid
+    properties:
+      role: null
+      columns: []
+      auto_header: false
+      tooltip: ''
+      border: ''
+      foreground: ''
+      rows_per_page: 20
+      visible: true
+      wrap_on: never
+      show_page_controls: true
+      spacing_above: small
+      spacing_below: small
+      background: ''
+    name: data_grid_2
+    layout_properties: {grid_position: 'LOGQGK,TPSLNC MZWDLW,MRANAH', full_width_row: true}
+    components:
+    - type: RepeatingPanel
+      properties: {role: elevated-card, tooltip: '', border: '', foreground: '', items: null,
+        visible: true, spacing_above: small, spacing_below: small, item_template: Home.stock_news_template,
+        background: ''}
+      name: news_panel
+      layout_properties: {grid_position: 'LOGQGK,TPSLNC XNCWWK,QSIIEH', full_width_row: true,
+        pinned: true}
   - type: RichText
     properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
       foreground: '', visible: true, font_size: null, content: Biggest Losers, font: '',
@@ -201,16 +220,60 @@ components:
       foreground: '', visible: true, font_size: null, content: General News, font: Playfair Display,
       spacing_above: small, spacing_below: small, data: null, background: '', format: markdown}
     name: rich_text_5
-    layout_properties: {grid_position: 'LOGQGK,SMWMXC FVBBDH,IMCDFV'}
-  - type: RepeatingPanel
-    properties: {role: elevated-card, tooltip: '', border: '', foreground: '', items: null,
-      visible: true, spacing_above: small, spacing_below: small, item_template: Home.stock_news_template,
-      background: ''}
-    name: news_panel_copy
-    layout_properties:
-      col_widths: {}
-      grid_position: LOGQGK,SMWMXC QMENZI,MIIRNU
-      full_width_row: true
+    layout_properties: {grid_position: 'LOGQGK,SMWMXC FVBBDH,IMCDFV', full_width_row: true}
+    components: []
+  - type: DataGrid
+    properties:
+      role: null
+      columns:
+      - {id: TOKBFO, title: Column 1, data_key: column_1, $$hashKey: 'object:31916'}
+      auto_header: true
+      tooltip: ''
+      border: ''
+      foreground: ''
+      rows_per_page: 20
+      visible: true
+      wrap_on: never
+      show_page_controls: true
+      spacing_above: small
+      spacing_below: small
+      background: ''
+    name: data_grid_4
+    layout_properties: {grid_position: 'LOGQGK,SMWMXC KBSGZC,SQQDJB'}
+    components:
+    - type: RepeatingPanel
+      properties: {spacing_above: none, spacing_below: none, item_template: Home.RowTemplate12}
+      name: repeating_panel_2
+      layout_properties: {}
+  - type: DataGrid
+    properties:
+      role: tonal-data-grid
+      columns:
+      - {id: ABYVUD, title: General News, data_key: column_1, $$hashKey: 'object:23359',
+        expand: false}
+      auto_header: false
+      tooltip: ''
+      border: ''
+      foreground: ''
+      rows_per_page: 10
+      visible: true
+      wrap_on: never
+      show_page_controls: true
+      spacing_above: small
+      spacing_below: small
+      background: ''
+    name: data_grid_3
+    layout_properties: {grid_position: 'LOGQGK,SMWMXC UPYGKM,JJXGTX', full_width_row: true}
+    components:
+    - type: RepeatingPanel
+      properties: {role: elevated-card, tooltip: '', border: '', foreground: '', items: null,
+        visible: true, spacing_above: none, spacing_below: none, item_template: Home.general_news_template,
+        background: ''}
+      name: general_news_panel
+      layout_properties:
+        col_widths: {}
+        grid_position: LOGQGK,SMWMXC QMENZI,MIIRNU
+        full_width_row: true
   - type: RichText
     properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
       foreground: '', visible: true, font_size: null, content: Biggest Winners, font: '',

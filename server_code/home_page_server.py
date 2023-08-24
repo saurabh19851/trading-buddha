@@ -77,3 +77,37 @@ def indices_day_change(tickers):
   req=requests.get(link,param)
   data=req.json()
   return data
+
+#Code for getting daily gainers
+@anvil.server.callable
+def gainers():
+  param={'apikey':api_key()}
+  a=requests.get('https://financialmodelingprep.com/api/v3/stock_market/gainers?',param)
+  data=a.json()
+  return data
+
+#Code for getting daily losers
+@anvil.server.callable
+def losers():
+  param={'apikey':api_key()}
+  a=requests.get('https://financialmodelingprep.com/api/v3/stock_market/losers?',param)
+  data=a.json()
+  return data
+
+#Code for getting stock news
+@anvil.server.callable
+def news(ticker):
+  news_data=fmpsdk.stock_news(apikey=api_key(),tickers=ticker)
+  return news_data
+
+#Code for getting general news
+@anvil.server.callable
+def general_news(p):
+  data=[]
+  for x in range(p):  
+      param={'page':p,'apikey':api_key()}
+      req=requests.get('https://financialmodelingprep.com/api/v4/general_news?',param)
+      raw_data=req.json()
+      for y in raw_data:
+          data.append(y)
+  return data

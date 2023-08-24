@@ -118,25 +118,6 @@ def econ_indicators(selection):
   return dates,values
 
 
-#Code for getting daily gainers
-@anvil.server.callable
-def gainers():
-  param={'apikey':api_key()}
-  a=requests.get('https://financialmodelingprep.com/api/v3/stock_market/gainers?',param)
-  data=a.json()
-  return data
 
 
-#Code for getting daily losers
-@anvil.server.callable
-def losers():
-  param={'apikey':api_key()}
-  a=requests.get('https://financialmodelingprep.com/api/v3/stock_market/losers?',param)
-  data=a.json()
-  return data
 
-
-@anvil.server.callable
-def news(ticker):
-  news_data=fmpsdk.stock_news(apikey=api_key(),tickers=ticker)
-  return news_data

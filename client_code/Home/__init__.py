@@ -24,6 +24,8 @@ class Home(HomeTemplate):
     self.dow_jones.figure=anvil.server.call('indices_graph','^DJI','Dow Jones')
     self.vix.figure=anvil.server.call('indices_graph','^IXIC','VIX')
     self.news_panel.items=anvil.server.call('general_stock_news')
+    self.general_news_panel.items=anvil.server.call('general_news',20)
+    self.repeating_panel_2.items=anvil.server.call('general_news',20)
     self.rich_text_1.background='rgba(255,99,71,0.5)'
     major_indicies=['^GSPC','^IXIC','^DJI','^VIX','^RUA','CLUSD','GCUSD']
     major_indices_data=anvil.server.call('indices_day_change',major_indicies)
