@@ -27,7 +27,7 @@ class Home(HomeTemplate):
     self.rich_text_1.background='rgba(255,99,71,0.5)'
     major_indicies=['^GSPC','^IXIC','^DJI','^VIX','^RUA','CLUSD','GCUSD']
     major_indices_data=anvil.server.call('indices_day_change',major_indicies)
-    self.dr_sp500.content=str("S&P500: "+f"{major_indices_data[0]['1D']:.2f}%")
+    self.dr_sp500.content=str("S&P 500: "+f"{major_indices_data[0]['1D']:.2f}%")
     self.dr_nasdaq.content=str("NASDAQ: "+f"{major_indices_data[1]['1D']:.2f}%")
     self.dr_dji.content=str("Dow Jones: "+f"{major_indices_data[2]['1D']:.2f}%")
     self.dr_vix.content=str("VIX: "+f"{major_indices_data[3]['1D']:.2f}%")

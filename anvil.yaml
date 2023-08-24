@@ -18,6 +18,12 @@ runtime_options:
   server_spec_disabled: {base: python310-standard, requirements: ''}
 metadata: {title: Trading Buddha, description: Website for finding best investment opportunities across asset classes}
 startup_form: null
+native_deps: {head_html: '<link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Montserrat:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Public+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Varela+Round&display=swap"
+    rel="stylesheet">'}
 db_schema:
   table_1:
     client: full
