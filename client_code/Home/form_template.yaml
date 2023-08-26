@@ -116,6 +116,13 @@ components:
       properties: {}
       name: dr_gold
       layout_properties: {grid_position: 'SCKEDX,KINRCZ'}
+    - type: Label
+      properties: {role: body, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: '', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_2
+      layout_properties: {grid_position: 'SCKEDX,DJOITT'}
     event_bindings: {show: stock_indices_show}
   - type: ColumnPanel
     properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
