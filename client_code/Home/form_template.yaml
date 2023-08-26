@@ -87,7 +87,9 @@ components:
     layout_properties: {grid_position: 'QENBTL,XQOBYU', full_width_row: true}
     components:
     - type: RichText
-      properties: {}
+      properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+        foreground: '', visible: true, font_size: null, content: '', font: '', spacing_above: small,
+        spacing_below: small, data: null, background: '', format: markdown}
       name: dr_sp500
       layout_properties: {grid_position: 'SCKEDX,NYVDUE'}
     - type: RichText
@@ -114,6 +116,7 @@ components:
       properties: {}
       name: dr_gold
       layout_properties: {grid_position: 'SCKEDX,KINRCZ'}
+    event_bindings: {show: stock_indices_show}
   - type: ColumnPanel
     properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
       wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
@@ -153,8 +156,10 @@ components:
     layout_properties: {grid_position: 'LOGQGK,TPSLNC PWCGEN,URRNDY', full_width_row: true}
   - type: DataGrid
     properties:
-      role: null
-      columns: []
+      role: tonal-data-grid
+      columns:
+      - {id: SGMVGL, title: Column 1, data_key: column_1, $$hashKey: 'object:21758',
+        expand: true}
       auto_header: false
       tooltip: ''
       border: ''
@@ -166,16 +171,15 @@ components:
       spacing_above: small
       spacing_below: small
       background: ''
-    name: data_grid_2
-    layout_properties: {grid_position: 'LOGQGK,TPSLNC MZWDLW,MRANAH', full_width_row: true}
+    name: stock_news_grid
+    layout_properties: {grid_position: 'LOGQGK,TPSLNC ZWLRXM,OULMAU'}
     components:
     - type: RepeatingPanel
       properties: {role: elevated-card, tooltip: '', border: '', foreground: '', items: null,
-        visible: true, spacing_above: small, spacing_below: small, item_template: Home.stock_news_template,
+        visible: true, spacing_above: none, spacing_below: none, item_template: Home.stock_news_row,
         background: ''}
-      name: news_panel
-      layout_properties: {grid_position: 'LOGQGK,TPSLNC XNCWWK,QSIIEH', full_width_row: true,
-        pinned: true}
+      name: stock_news_panel
+      layout_properties: {}
   - type: RichText
     properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
       foreground: '', visible: true, font_size: null, content: Biggest Losers, font: '',
@@ -211,7 +215,7 @@ components:
       components:
       - type: RepeatingPanel
         properties: {role: null, tooltip: '', border: '', foreground: '', items: null,
-          visible: true, spacing_above: none, spacing_below: none, item_template: Home.RowTemplate3,
+          visible: true, spacing_above: none, spacing_below: none, item_template: Home.losers_row,
           background: ''}
         name: losers_panel
         layout_properties: {}
@@ -224,33 +228,9 @@ components:
     components: []
   - type: DataGrid
     properties:
-      role: null
-      columns:
-      - {id: TOKBFO, title: Column 1, data_key: column_1, $$hashKey: 'object:31916'}
-      auto_header: true
-      tooltip: ''
-      border: ''
-      foreground: ''
-      rows_per_page: 20
-      visible: true
-      wrap_on: never
-      show_page_controls: true
-      spacing_above: small
-      spacing_below: small
-      background: ''
-    name: data_grid_4
-    layout_properties: {grid_position: 'LOGQGK,SMWMXC KBSGZC,SQQDJB'}
-    components:
-    - type: RepeatingPanel
-      properties: {spacing_above: none, spacing_below: none, item_template: Home.RowTemplate12}
-      name: repeating_panel_2
-      layout_properties: {}
-  - type: DataGrid
-    properties:
       role: tonal-data-grid
       columns:
-      - {id: ABYVUD, title: General News, data_key: column_1, $$hashKey: 'object:23359',
-        expand: false}
+      - {id: TOKBFO, title: Column 1, data_key: column_1, $$hashKey: 'object:31916'}
       auto_header: false
       tooltip: ''
       border: ''
@@ -262,18 +242,15 @@ components:
       spacing_above: small
       spacing_below: small
       background: ''
-    name: data_grid_3
-    layout_properties: {grid_position: 'LOGQGK,SMWMXC UPYGKM,JJXGTX', full_width_row: true}
+    name: geenral_news_grid
+    layout_properties: {grid_position: 'LOGQGK,SMWMXC KBSGZC,SQQDJB'}
     components:
     - type: RepeatingPanel
       properties: {role: elevated-card, tooltip: '', border: '', foreground: '', items: null,
-        visible: true, spacing_above: none, spacing_below: none, item_template: Home.general_news_template,
+        visible: true, spacing_above: none, spacing_below: none, item_template: Home.general_news_row,
         background: ''}
       name: general_news_panel
-      layout_properties:
-        col_widths: {}
-        grid_position: LOGQGK,SMWMXC QMENZI,MIIRNU
-        full_width_row: true
+      layout_properties: {}
   - type: RichText
     properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
       foreground: '', visible: true, font_size: null, content: Biggest Winners, font: '',
@@ -308,7 +285,7 @@ components:
       layout_properties: {grid_position: 'LOGQGK,GQDRRP', full_width_row: true}
       components:
       - type: RepeatingPanel
-        properties: {spacing_above: none, spacing_below: none, item_template: Home.RowTemplate3}
+        properties: {spacing_above: none, spacing_below: none, item_template: Home.losers_row}
         name: gainers_panel
         layout_properties: {}
       data_bindings: []
