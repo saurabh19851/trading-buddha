@@ -100,7 +100,9 @@ components:
         col_xs: 0, x: 193, y: 127, width: 605.719}
       components:
       - type: RepeatingPanel
-        properties: {spacing_above: none, spacing_below: none, item_template: Form1_copy.Fundamentals_form.RowTemplate6}
+        properties: {role: elevated-card, tooltip: '', border: '', foreground: '',
+          items: null, visible: true, spacing_above: none, spacing_below: none, item_template: Form1_copy.Fundamentals_form.RowTemplate6,
+          background: ''}
         name: financial_table_panel
         layout_properties: {}
   - type: RichText
