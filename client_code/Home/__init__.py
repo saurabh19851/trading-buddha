@@ -63,17 +63,62 @@ class Home(HomeTemplate):
     """This method is called when the column panel is shown on the screen"""
     major_indicies=['^GSPC','^IXIC','^DJI','^VIX','^RUA','CLUSD','GCUSD']
     major_indices_data=anvil.server.call('indices_day_change',major_indicies)
+    
     self.dr_sp500.content=str("S&P 500: "+f"{major_indices_data[0]['1D']:.2f}%")
     if major_indices_data[0]['1D']>0:
       self.dr_sp500.background='rgba(124, 252, 0,0.2)'
+      self.dr_sp500.foreground='rgba(0, 128, 0,1)'
     else:
-      self.dr_sp500.background='rgba(255, 49, 49,0.2)'
+      self.dr_sp500.background='rgba(255, 87, 51,0.2)'
+      self.dr_sp500.foreground='rgba(255, 87, 51,1)'
+      
     self.dr_nasdaq.content=str("NASDAQ: "+f"{major_indices_data[1]['1D']:.2f}%")
+    if major_indices_data[1]['1D']>0:
+      self.dr_sp500.background='rgba(124, 252, 0,0.2)'
+      self.dr_sp500.foreground='rgba(0, 128, 0,1)'
+    else:
+      self.dr_sp500.background='rgba(255, 87, 51,0.2)'
+      self.dr_sp500.foreground='rgba(255, 87, 51,1)'
+      
     self.dr_dji.content=str("Dow Jones: "+f"{major_indices_data[2]['1D']:.2f}%")
+    if major_indices_data[2]['1D']>0:
+      self.dr_sp500.background='rgba(124, 252, 0,0.2)'
+      self.dr_sp500.foreground='rgba(0, 128, 0,1)'
+    else:
+      self.dr_sp500.background='rgba(255, 87, 51,0.2)'
+      self.dr_sp500.foreground='rgba(255, 87, 51,1)'
+      
     self.dr_vix.content=str("VIX: "+f"{major_indices_data[3]['1D']:.2f}%")
+    if major_indices_data[3]['1D']>0:
+      self.dr_sp500.background='rgba(124, 252, 0,0.2)'
+      self.dr_sp500.foreground='rgba(0, 128, 0,1)'
+    else:
+      self.dr_sp500.background='rgba(255, 87, 51,0.2)'
+      self.dr_sp500.foreground='rgba(255, 87, 51,1)'
+      
     self.dr_russell3000.content=str("Russell 3000: "+f"{major_indices_data[4]['1D']:.2f}%")
+    if major_indices_data[4]['1D']>0:
+      self.dr_sp500.background='rgba(124, 252, 0,0.2)'
+      self.dr_sp500.foreground='rgba(0, 128, 0,1)'
+    else:
+      self.dr_sp500.background='rgba(255, 87, 51,0.2)'
+      self.dr_sp500.foreground='rgba(255, 87, 51,1)'
+      
     self.dr_oil.content=str("Oil: "+f"{major_indices_data[5]['1D']:.2f}%")
+    if major_indices_data[5]['1D']>0:
+      self.dr_sp500.background='rgba(124, 252, 0,0.2)'
+      self.dr_sp500.foreground='rgba(0, 128, 0,1)'
+    else:
+      self.dr_sp500.background='rgba(255, 87, 51,0.2)'
+      self.dr_sp500.foreground='rgba(255, 87, 51,1)'
+      
     self.dr_gold.content=str("Gold: "+f"{major_indices_data[6]['1D']:.2f}%")
+    if major_indices_data[6]['1D']>0:
+      self.dr_sp500.background='rgba(124, 252, 0,0.2)'
+      self.dr_sp500.foreground='rgba(0, 128, 0,1)'
+    else:
+      self.dr_sp500.background='rgba(255, 87, 51,0.2)'
+      self.dr_sp500.foreground='rgba(255, 87, 51,1)'
 
     
 

@@ -87,42 +87,47 @@ components:
     layout_properties: {grid_position: 'QENBTL,XQOBYU', full_width_row: true}
     components:
     - type: RichText
-      properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
-        foreground: '', visible: true, font_size: null, content: '', font: '', spacing_above: small,
-        spacing_below: small, data: null, background: '', format: markdown}
+      properties: {role: rounded, align: center, tooltip: '', enable_slots: true,
+        border: '', foreground: '', visible: true, font_size: null, content: '', font: '',
+        spacing_above: small, spacing_below: small, data: null, background: '', format: plain_text}
       name: dr_sp500
       layout_properties: {grid_position: 'SCKEDX,NYVDUE'}
     - type: RichText
-      properties: {}
+      properties: {role: rounded, align: left, tooltip: '', enable_slots: true, border: '',
+        foreground: '', visible: true, font_size: null, content: '', font: '', spacing_above: small,
+        spacing_below: small, data: null, background: '', format: markdown}
       name: dr_nasdaq
       layout_properties: {grid_position: 'SCKEDX,NJRHAO'}
     - type: RichText
-      properties: {}
+      properties: {role: rounded, align: left, tooltip: '', enable_slots: true, border: '',
+        foreground: '', visible: true, font_size: null, content: '', font: '', spacing_above: small,
+        spacing_below: small, data: null, background: '', format: markdown}
       name: dr_dji
       layout_properties: {grid_position: 'SCKEDX,DKORKE'}
     - type: RichText
-      properties: {}
+      properties: {role: rounded, align: left, tooltip: '', enable_slots: true, border: '',
+        foreground: '', visible: true, font_size: null, content: '', font: '', spacing_above: small,
+        spacing_below: small, data: null, background: '', format: markdown}
       name: dr_vix
       layout_properties: {grid_position: 'SCKEDX,MGSCFP'}
     - type: RichText
-      properties: {}
+      properties: {role: rounded, align: left, tooltip: '', enable_slots: true, border: '',
+        foreground: '', visible: true, font_size: null, content: '', font: '', spacing_above: small,
+        spacing_below: small, data: null, background: '', format: markdown}
       name: dr_russell3000
       layout_properties: {grid_position: 'SCKEDX,GYRMQK'}
     - type: RichText
-      properties: {}
+      properties: {role: rounded, align: left, tooltip: '', enable_slots: true, border: '',
+        foreground: '', visible: true, font_size: null, content: '', font: '', spacing_above: small,
+        spacing_below: small, data: null, background: '', format: markdown}
       name: dr_oil
       layout_properties: {grid_position: 'SCKEDX,ICYERL'}
     - type: RichText
-      properties: {}
+      properties: {role: rounded, align: left, tooltip: '', enable_slots: true, border: '',
+        foreground: '', visible: true, font_size: null, content: '', font: '', spacing_above: small,
+        spacing_below: small, data: null, background: '', format: markdown}
       name: dr_gold
       layout_properties: {grid_position: 'SCKEDX,KINRCZ'}
-    - type: Label
-      properties: {role: body, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: '', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: ''}
-      name: label_2
-      layout_properties: {grid_position: 'SCKEDX,DJOITT'}
     event_bindings: {show: stock_indices_show}
   - type: ColumnPanel
     properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
@@ -132,9 +137,10 @@ components:
     layout_properties: {grid_position: 'JMJMFK,BXCSHZ', full_width_row: true}
     components:
     - type: RichText
-      properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
-        foreground: '', visible: true, font_size: 20, content: Major Indices, font: Playfair Display,
-        spacing_above: small, spacing_below: small, data: null, background: '', format: markdown}
+      properties: {role: rounded, align: center, tooltip: '', enable_slots: true,
+        border: '', foreground: '', visible: true, font_size: 20, content: Major Indices,
+        font: Playfair Display, spacing_above: small, spacing_below: small, data: null,
+        background: '', format: markdown}
       name: rich_text_1
       layout_properties: {grid_position: 'JWJDFB,LPIIRL', full_width_row: true}
     - type: Plot
@@ -156,7 +162,7 @@ components:
       name: vix
       layout_properties: {grid_position: 'AVZFTZ,DCDYZI', full_width_row: true}
   - type: RichText
-    properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+    properties: {role: rounded, align: center, tooltip: '', enable_slots: true, border: '',
       foreground: '', visible: true, font_size: null, content: Stock News, font: Playfair Display,
       spacing_above: small, spacing_below: small, data: null, background: '', format: markdown}
     name: rich_text_4
@@ -171,7 +177,7 @@ components:
       tooltip: ''
       border: ''
       foreground: ''
-      rows_per_page: 20
+      rows_per_page: 10
       visible: true
       wrap_on: never
       show_page_controls: true
@@ -227,7 +233,7 @@ components:
         name: losers_panel
         layout_properties: {}
   - type: RichText
-    properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+    properties: {role: rounded, align: center, tooltip: '', enable_slots: true, border: '',
       foreground: '', visible: true, font_size: null, content: General News, font: Playfair Display,
       spacing_above: small, spacing_below: small, data: null, background: '', format: markdown}
     name: rich_text_5
@@ -296,32 +302,3 @@ components:
         name: gainers_panel
         layout_properties: {}
       data_bindings: []
-  - type: DataGrid
-    properties:
-      columns:
-      - {id: SWCIRI, title: Column 1, data_key: column_1}
-      - {id: XMPATO, title: Column 2, data_key: column_2}
-      - {id: RKZLRZ, title: Column 3, data_key: column_3}
-    name: data_grid_1
-    layout_properties: {grid_position: 'HHNWKJ,FFKKCH'}
-    components:
-    - type: RepeatingPanel
-      properties: {spacing_above: none, spacing_below: none, item_template: Home.RowTemplate5}
-      name: repeating_panel_1
-      layout_properties: {}
-  - type: Label
-    properties: {}
-    name: label_1
-    layout_properties: {grid_position: 'BWHBFA,WSENFW'}
-- type: RichText
-  properties: {}
-  name: rich_text_2_copy_2
-  layout_properties:
-    col_widths: {}
-    grid_position: SCKEDX,OIPYGZ
-- type: RichText
-  properties: {}
-  name: rich_text_2_copy_3
-  layout_properties:
-    col_widths: {}
-    grid_position: SCKEDX,QNPYAH
