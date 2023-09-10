@@ -64,14 +64,29 @@ components:
   components:
   - type: DataGrid
     properties:
+      role: rounded
       columns:
-      - {id: IMOORF, title: Column 1, data_key: column_1}
-      - {id: LQXHQM, title: Column 2, data_key: column_2}
-      - {id: KHJTLQ, title: Column 3, data_key: column_3}
-    name: data_grid_1
-    layout_properties: {grid_position: 'POTAGM,FTLDTZ'}
+      - {id: IMOORF, title: Column 1, data_key: column_1, $$hashKey: 'object:6240',
+        expand: false}
+      - {id: LQXHQM, title: Column 2, data_key: column_2, $$hashKey: 'object:6241'}
+      - {id: KHJTLQ, title: Column 3, data_key: column_3, $$hashKey: 'object:6242'}
+      auto_header: true
+      tooltip: ''
+      border: ''
+      foreground: ''
+      rows_per_page: 20
+      visible: true
+      wrap_on: never
+      show_page_controls: true
+      spacing_above: small
+      spacing_below: small
+      background: ''
+    name: options_chain_data_grid
+    layout_properties: {grid_position: 'POTAGM,FTLDTZ', full_width_row: true}
     components:
     - type: RepeatingPanel
-      properties: {spacing_above: none, spacing_below: none, item_template: options.RowTemplate3}
-      name: repeating_panel_1
+      properties: {role: elevated-card, tooltip: '', border: '', foreground: '', items: null,
+        visible: true, spacing_above: none, spacing_below: none, item_template: options.RowTemplate3,
+        background: ''}
+      name: options_chain_repeating_panel
       layout_properties: {}

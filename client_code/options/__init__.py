@@ -25,7 +25,10 @@ class options(optionsTemplate):
     pass
 
   def form_show(self, **event_args):
-    pass
+    ticker=Globals.ticker
+    cols,opt_data=anvil.server.call('options_data',ticker)
+    self.options_chain_data_grid.columns=cols
+    self.options_chain_repeating_panel.items=opt_data
 
  
   def autocomplete_1_change(self, **event_args):

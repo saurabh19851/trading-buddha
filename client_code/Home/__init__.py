@@ -74,51 +74,51 @@ class Home(HomeTemplate):
       
     self.dr_nasdaq.content=str("NASDAQ: "+f"{major_indices_data[1]['1D']:.2f}%")
     if major_indices_data[1]['1D']>0:
-      self.dr_sp500.background='rgba(124, 252, 0,0.2)'
-      self.dr_sp500.foreground='rgba(0, 128, 0,1)'
+      self.dr_nasdaq.background='rgba(124, 252, 0,0.2)'
+      self.dr_nasdaq.foreground='rgba(0, 128, 0,1)'
     else:
-      self.dr_sp500.background='rgba(255, 87, 51,0.2)'
-      self.dr_sp500.foreground='rgba(255, 87, 51,1)'
+      self.dr_nasdaq.background='rgba(255, 87, 51,0.2)'
+      self.dr_nasdaq.foreground='rgba(255, 87, 51,1)'
       
     self.dr_dji.content=str("Dow Jones: "+f"{major_indices_data[2]['1D']:.2f}%")
     if major_indices_data[2]['1D']>0:
-      self.dr_sp500.background='rgba(124, 252, 0,0.2)'
-      self.dr_sp500.foreground='rgba(0, 128, 0,1)'
+      self.dr_dji.background='rgba(124, 252, 0,0.2)'
+      self.dr_dji.foreground='rgba(0, 128, 0,1)'
     else:
-      self.dr_sp500.background='rgba(255, 87, 51,0.2)'
-      self.dr_sp500.foreground='rgba(255, 87, 51,1)'
+      self.dr_dji.background='rgba(255, 87, 51,0.2)'
+      self.dr_dji.foreground='rgba(255, 87, 51,1)'
       
     self.dr_vix.content=str("VIX: "+f"{major_indices_data[3]['1D']:.2f}%")
     if major_indices_data[3]['1D']>0:
-      self.dr_sp500.background='rgba(124, 252, 0,0.2)'
-      self.dr_sp500.foreground='rgba(0, 128, 0,1)'
+      self.dr_vix.background='rgba(124, 252, 0,0.2)'
+      self.dr_vix.foreground='rgba(0, 128, 0,1)'
     else:
-      self.dr_sp500.background='rgba(255, 87, 51,0.2)'
-      self.dr_sp500.foreground='rgba(255, 87, 51,1)'
+      self.dr_vix.background='rgba(255, 87, 51,0.2)'
+      self.dr_vix.foreground='rgba(255, 87, 51,1)'
       
     self.dr_russell3000.content=str("Russell 3000: "+f"{major_indices_data[4]['1D']:.2f}%")
     if major_indices_data[4]['1D']>0:
-      self.dr_sp500.background='rgba(124, 252, 0,0.2)'
-      self.dr_sp500.foreground='rgba(0, 128, 0,1)'
+      self.dr_russell3000.background='rgba(124, 252, 0,0.2)'
+      self.dr_russell3000.foreground='rgba(0, 128, 0,1)'
     else:
-      self.dr_sp500.background='rgba(255, 87, 51,0.2)'
-      self.dr_sp500.foreground='rgba(255, 87, 51,1)'
+      self.dr_russell3000.background='rgba(255, 87, 51,0.2)'
+      self.dr_russell3000.foreground='rgba(255, 87, 51,1)'
       
     self.dr_oil.content=str("Oil: "+f"{major_indices_data[5]['1D']:.2f}%")
     if major_indices_data[5]['1D']>0:
-      self.dr_sp500.background='rgba(124, 252, 0,0.2)'
-      self.dr_sp500.foreground='rgba(0, 128, 0,1)'
+      self.dr_oil.background='rgba(124, 252, 0,0.2)'
+      self.dr_oil.foreground='rgba(0, 128, 0,1)'
     else:
-      self.dr_sp500.background='rgba(255, 87, 51,0.2)'
-      self.dr_sp500.foreground='rgba(255, 87, 51,1)'
+      self.dr_oil.background='rgba(255, 87, 51,0.2)'
+      self.dr_oil.foreground='rgba(255, 87, 51,1)'
       
     self.dr_gold.content=str("Gold: "+f"{major_indices_data[6]['1D']:.2f}%")
     if major_indices_data[6]['1D']>0:
-      self.dr_sp500.background='rgba(124, 252, 0,0.2)'
-      self.dr_sp500.foreground='rgba(0, 128, 0,1)'
+      self.dr_gold.background='rgba(124, 252, 0,0.2)'
+      self.dr_gold.foreground='rgba(0, 128, 0,1)'
     else:
-      self.dr_sp500.background='rgba(255, 87, 51,0.2)'
-      self.dr_sp500.foreground='rgba(255, 87, 51,1)'
+      self.dr_gold.background='rgba(255, 87, 51,0.2)'
+      self.dr_gold.foreground='rgba(255, 87, 51,1)'
 
     
 

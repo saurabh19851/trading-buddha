@@ -88,7 +88,7 @@ components:
     components:
     - type: RichText
       properties: {role: rounded, align: center, tooltip: '', enable_slots: true,
-        border: '', foreground: '', visible: true, font_size: null, content: '', font: '',
+        border: '', foreground: '', visible: true, font_size: null, content: '', font: Montserrat 500,
         spacing_above: small, spacing_below: small, data: null, background: '', format: plain_text}
       name: dr_sp500
       layout_properties: {grid_position: 'SCKEDX,NYVDUE'}
