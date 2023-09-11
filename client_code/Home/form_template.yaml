@@ -194,7 +194,7 @@ components:
       name: stock_news_panel
       layout_properties: {}
   - type: RichText
-    properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+    properties: {role: rounded, align: center, tooltip: '', enable_slots: true, border: '',
       foreground: '', visible: true, font_size: null, content: Biggest Losers, font: '',
       spacing_above: small, spacing_below: small, data: null, background: '', format: markdown}
     name: rich_text_3
@@ -265,7 +265,7 @@ components:
       name: general_news_panel
       layout_properties: {}
   - type: RichText
-    properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+    properties: {role: rounded, align: center, tooltip: '', enable_slots: true, border: '',
       foreground: '', visible: true, font_size: null, content: Biggest Winners, font: '',
       spacing_above: small, spacing_below: small, data: null, background: '', format: markdown}
     name: rich_text_2
