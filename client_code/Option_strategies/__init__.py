@@ -7,6 +7,8 @@ from .. import Globals
 
 class Option_strategies(Option_strategiesTemplate):
   option_chain=[]
+  call_put=''
+  expiry_dates=[]
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -24,7 +26,9 @@ class Option_strategies(Option_strategiesTemplate):
 
   def form_show(self, **event_args):
     self.option_chain=Globals.option_chain
-    self.
+    self.call_put_dropdown.items=[("Call",'calls'),("Put",'puts')]
+    self.call_put=self.call_put_dropdown.selected_value
+    expiry_dates=[x['Expiry'] for x in self.option_chain if x['Option Type']==self.call_put]
 
 
   def autocomplete_1_change(self, **event_args):

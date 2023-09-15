@@ -90,7 +90,7 @@ components:
       bold: false
       underline: false
       include_placeholder: true
-    name: drop_down_1
+    name: call_put_dropdown
     layout_properties: {grid_position: 'XSAPCJ,KXYBMW'}
   - type: DropDown
     properties:
@@ -112,7 +112,7 @@ components:
       bold: false
       underline: false
       include_placeholder: true
-    name: drop_down_2
+    name: expiry_date_dropdown
     layout_properties: {grid_position: 'XSAPCJ,GMSGPQ'}
   - type: DropDown
     properties:
@@ -134,7 +134,7 @@ components:
       bold: false
       underline: false
       include_placeholder: true
-    name: drop_down_3
+    name: strike_dropdown
     layout_properties: {grid_position: 'WKIOVX,JQZCXO'}
   - type: DropDown
     properties:
@@ -156,5 +156,5 @@ components:
       bold: false
       underline: false
       include_placeholder: true
-    name: drop_down_4
+    name: buy_sell_dropdown
     layout_properties: {grid_position: 'WKIOVX,MAUALO'}
