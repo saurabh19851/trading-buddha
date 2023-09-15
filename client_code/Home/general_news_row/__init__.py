@@ -1,9 +1,6 @@
 from ._anvil_designer import general_news_rowTemplate
 from anvil import *
 import anvil.server
-import anvil.tables as tables
-import anvil.tables.query as q
-from anvil.tables import app_tables
 
 class general_news_row(general_news_rowTemplate):
   def __init__(self, **properties):
