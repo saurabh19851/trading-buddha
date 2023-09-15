@@ -71,18 +71,90 @@ components:
     name: label_1
     layout_properties: {grid_position: 'UJEDYZ,IPWIBX'}
   - type: DropDown
-    properties: {}
+    properties:
+      role: rounded
+      align: full
+      tooltip: ''
+      placeholder: Select Type of Option
+      border: ''
+      enabled: true
+      foreground: ''
+      items: []
+      visible: true
+      font_size: null
+      font: ''
+      spacing_above: small
+      spacing_below: small
+      italic: false
+      background: ''
+      bold: false
+      underline: false
+      include_placeholder: true
     name: drop_down_1
     layout_properties: {grid_position: 'XSAPCJ,KXYBMW'}
   - type: DropDown
-    properties: {}
+    properties:
+      role: null
+      align: full
+      tooltip: ''
+      placeholder: Select Expiry
+      border: ''
+      enabled: true
+      foreground: ''
+      items: []
+      visible: true
+      font_size: null
+      font: ''
+      spacing_above: small
+      spacing_below: small
+      italic: false
+      background: ''
+      bold: false
+      underline: false
+      include_placeholder: true
     name: drop_down_2
     layout_properties: {grid_position: 'XSAPCJ,GMSGPQ'}
   - type: DropDown
-    properties: {}
+    properties:
+      role: null
+      align: full
+      tooltip: ''
+      placeholder: Select Strike
+      border: ''
+      enabled: true
+      foreground: ''
+      items: []
+      visible: true
+      font_size: null
+      font: ''
+      spacing_above: small
+      spacing_below: small
+      italic: false
+      background: ''
+      bold: false
+      underline: false
+      include_placeholder: true
     name: drop_down_3
     layout_properties: {grid_position: 'WKIOVX,JQZCXO'}
   - type: DropDown
-    properties: {}
+    properties:
+      role: null
+      align: full
+      tooltip: ''
+      placeholder: Buy or Sell
+      border: ''
+      enabled: true
+      foreground: ''
+      items: []
+      visible: true
+      font_size: null
+      font: ''
+      spacing_above: small
+      spacing_below: small
+      italic: false
+      background: ''
+      bold: false
+      underline: false
+      include_placeholder: true
     name: drop_down_4
     layout_properties: {grid_position: 'WKIOVX,MAUALO'}

@@ -6,6 +6,7 @@ from .. import Globals
 
 
 class Option_strategies(Option_strategiesTemplate):
+  option_chain=[]
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -22,10 +23,8 @@ class Option_strategies(Option_strategiesTemplate):
     pass
 
   def form_show(self, **event_args):
-    ticker=Globals.ticker
-    cols,opt_data=anvil.server.call('options_data',ticker)
-    self.options_chain_data_grid.columns=cols
-    self.options_chain_repeating_panel.items=opt_data
+    self.option_chain=Globals.option_chain
+    self.
 
 
   def autocomplete_1_change(self, **event_args):
