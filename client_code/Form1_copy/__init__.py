@@ -59,5 +59,10 @@ class Form1_copy(Form1_copyTemplate):
     """This method is called when the link is clicked"""
     open_form('options')
 
+  def option_strategies_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('Option_strategies')
+
+
 
 

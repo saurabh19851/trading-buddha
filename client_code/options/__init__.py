@@ -32,3 +32,9 @@ class options(optionsTemplate):
   def autocomplete_1_change(self, **event_args):
     self.autocomplete_1.suggestions=['AAPL','AAPK','AAPT','AAPP','AAPB','AAPC']
 
+  def option_strategies_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('Option_strategies')
+    pass
+
+

@@ -273,6 +273,7 @@ components:
       icon: ''}
     name: option_strategies
     layout_properties: {grid_position: 'MNQEOZ,IEOYYF'}
+    event_bindings: {click: option_strategies_click}
 - type: TextBox
   properties: {role: outlined}
   name: outlined_1

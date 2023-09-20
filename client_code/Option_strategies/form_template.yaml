@@ -92,6 +92,7 @@ components:
       include_placeholder: true
     name: call_put_dropdown
     layout_properties: {grid_position: 'XSAPCJ,KXYBMW'}
+    event_bindings: {change: call_put_dropdown_change}
   - type: DropDown
     properties:
       role: null
@@ -114,6 +115,7 @@ components:
       include_placeholder: true
     name: expiry_date_dropdown
     layout_properties: {grid_position: 'XSAPCJ,GMSGPQ'}
+    event_bindings: {change: expiry_date_dropdown_change}
   - type: DropDown
     properties:
       role: null
@@ -136,6 +138,7 @@ components:
       include_placeholder: true
     name: strike_dropdown
     layout_properties: {grid_position: 'WKIOVX,JQZCXO'}
+    event_bindings: {change: strike_dropdown_change}
   - type: DropDown
     properties:
       role: null
@@ -158,3 +161,44 @@ components:
       include_placeholder: true
     name: buy_sell_dropdown
     layout_properties: {grid_position: 'WKIOVX,MAUALO'}
+  - type: Button
+    properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Add Selected Option, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: add_option_button
+    layout_properties: {grid_position: 'EBOQTM,AZAXYY'}
+  - type: Button
+    properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Create Strategy, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: create_strategy_button
+    layout_properties: {grid_position: 'EBOQTM,JUMCSY'}
+  - type: DataGrid
+    properties:
+      role: null
+      columns:
+      - {id: EPGEUT, title: Option Type, data_key: Option_Type, $$hashKey: 'object:13455'}
+      - {id: DIZQFZ, title: Expiry, data_key: Expiry, $$hashKey: 'object:13456'}
+      - {id: EPNLZN, title: Strike, data_key: Strike, $$hashKey: 'object:13457'}
+      - {id: BPOAGW, title: Buy/Sell, data_key: Buy_Sell, $$hashKey: 'object:13498'}
+      - {id: HIUQVK, title: Premium, data_key: Premium, $$hashKey: 'object:13598'}
+      auto_header: true
+      tooltip: ''
+      border: ''
+      foreground: ''
+      rows_per_page: 20
+      visible: true
+      wrap_on: never
+      show_page_controls: true
+      spacing_above: small
+      spacing_below: small
+      background: ''
+    name: data_grid_1
+    layout_properties: {grid_position: 'TTUBUO,AWQHPL'}
+    components:
+    - type: RepeatingPanel
+      properties: {spacing_above: none, spacing_below: none, item_template: Option_strategies.RowTemplate4}
+      name: repeating_panel_1
+      layout_properties: {}
