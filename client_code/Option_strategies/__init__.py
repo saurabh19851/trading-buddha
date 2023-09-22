@@ -61,10 +61,11 @@ class Option_strategies(Option_strategiesTemplate):
   def buy_sell_dropdown_change(self, **event_args):
     """This method is called when an item is selected"""
     self.buy_sell=self.buy_sell_dropdown.selected_value
+    self.premium=[x['Last Price'] for x in self.options_chain if x['Expiry']==self.selected_expiry if x['Option Type']==self.call_put if x['Strike']==self.selected_Strike]
 
   def add_option_button_click(self, **event_args):
     """This method is called when the button is clicked"""
-    self.selected_option={"Option_Type":self.call_put,"Expiry":self.selected_expiry,"Strike":self.selected_Strike,"Buy_Sell":self.buy_sell,"Premium":self.}
+    self.selected_option={"Option_Type":self.call_put,"Expiry":self.selected_expiry,"Strike":self.selected_Strike,"Buy_Sell":self.buy_sell,"Premium":self.premium}
     
     
 
