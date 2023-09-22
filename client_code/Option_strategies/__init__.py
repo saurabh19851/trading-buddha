@@ -21,6 +21,9 @@ class Option_strategies(Option_strategiesTemplate):
     self.str_strikes=[]
     self.selected_Strike=0.0
     self.options_chain=[]
+    self.premium=0.0
+    self.buy_sell=''
+    self.selected_option={}
 
   def form_refreshing_data_bindings(self, **event_args):
     """This method is called when refreshing_data_bindings is called"""
@@ -54,6 +57,19 @@ class Option_strategies(Option_strategiesTemplate):
   def strike_dropdown_change(self, **event_args):
     """This method is called when an item is selected"""
     self.selected_Strike=self.strike_dropdown.selected_value
+
+  def buy_sell_dropdown_change(self, **event_args):
+    """This method is called when an item is selected"""
+    self.buy_sell=self.buy_sell_dropdown.selected_value
+
+  def add_option_button_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.selected_option={"Option_Type":self.call_put,"Expiry":self.selected_expiry,"Strike":self.selected_Strike,"Buy_Sell":self.buy_sell,"Premium":self.}
+    
+    
+
+
+
 
 
 

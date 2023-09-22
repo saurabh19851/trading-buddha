@@ -161,6 +161,7 @@ components:
       include_placeholder: true
     name: buy_sell_dropdown
     layout_properties: {grid_position: 'WKIOVX,MAUALO'}
+    event_bindings: {change: buy_sell_dropdown_change}
   - type: Button
     properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: Add Selected Option, font_size: null, font: '',
@@ -168,6 +169,7 @@ components:
       background: '', bold: false, underline: false, icon: ''}
     name: add_option_button
     layout_properties: {grid_position: 'EBOQTM,AZAXYY'}
+    event_bindings: {click: add_option_button_click}
   - type: Button
     properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: Create Strategy, font_size: null, font: '',
@@ -200,5 +202,5 @@ components:
     components:
     - type: RepeatingPanel
       properties: {spacing_above: none, spacing_below: none, item_template: Option_strategies.RowTemplate4}
-      name: repeating_panel_1
+      name: selected_options_panel
       layout_properties: {}
