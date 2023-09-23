@@ -21,7 +21,7 @@ class Option_strategies(Option_strategiesTemplate):
     self.str_strikes=[]
     self.selected_Strike=0.0
     self.options_chain=[]
-    self.premium=0.0
+    self.premium=[]
     self.buy_sell=''
     self.selected_option={}
 
@@ -65,8 +65,9 @@ class Option_strategies(Option_strategiesTemplate):
 
   def add_option_button_click(self, **event_args):
     """This method is called when the button is clicked"""
-    self.selected_option={"Option_Type":self.call_put,"Expiry":self.selected_expiry,"Strike":self.selected_Strike,"Buy_Sell":self.buy_sell,"Premium":self.premium}
-    
+    self.selected_option={"Option_Type":self.call_put,"Expiry":self.selected_expiry,"Strike":self.selected_Strike,"Buy_Sell":self.buy_sell,"Premium":self.premium[0]}
+    row=DataRowPanel(item=self.selected_option)
+    self.selected_option_grid.add_component(row)
     
 
 
