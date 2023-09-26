@@ -71,7 +71,25 @@ components:
     name: rich_text_1
     layout_properties: {grid_position: 'DVDXAW,ZTGJWM'}
   - type: DropDown
-    properties: {}
+    properties:
+      role: null
+      align: full
+      tooltip: ''
+      placeholder: ''
+      border: ''
+      enabled: true
+      foreground: ''
+      items: []
+      visible: true
+      font_size: null
+      font: ''
+      spacing_above: small
+      spacing_below: small
+      italic: false
+      background: ''
+      bold: false
+      underline: false
+      include_placeholder: false
     name: indicators
     layout_properties: {grid_position: 'DVDXAW,DIVBBN'}
     event_bindings: {change: indicators_change}

@@ -81,6 +81,7 @@ def gainers():
   param={'apikey':api_key()}
   a=requests.get('https://financialmodelingprep.com/api/v3/stock_market/gainers?',param)
   data=a.json()
+  data=data[0:10]
   return data
 
 #Code for getting daily losers
@@ -89,6 +90,7 @@ def losers():
   param={'apikey':api_key()}
   a=requests.get('https://financialmodelingprep.com/api/v3/stock_market/losers?',param)
   data=a.json()
+  data=data[0:10]
   return data
 
 #Code for getting stock news
