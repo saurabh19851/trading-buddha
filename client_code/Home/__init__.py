@@ -12,6 +12,7 @@ class Home(HomeTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     # Any code you write here will run before the form opens.
+    '''
     data_gainers=anvil.server.call('gainers')
     self.gainers_panel.items=data_gainers
     data_losers=anvil.server.call('losers')
@@ -23,8 +24,18 @@ class Home(HomeTemplate):
     self.stock_news_panel.items=anvil.server.call('general_stock_news')
     self.general_news_panel.items=anvil.server.call('general_news',20)
     self.rich_text_1.background='rgba(255,99,71,0.5)'
-    
+    '''
+    general_stock_news,general_news,gainers,losers,sp500_graph,nasdaq_graph,dowjones_graph,vix_graph=anvil.server.call('home_screen_data')
+    self.stock_news_panel.items=general_stock_news
+    self.general_news_panel.items=general_news
+    self.gainers_panel.items=gainers
+    self.losers_panel.items=losers
+    self.sp500.figure=sp500_graph
+    self.nasdaq.figure=nasdaq_graph
+    self.dow_jones.figure=dowjones_graph
+    self.vix.figure=vix_graph
 
+  
   def form_show(self, **event_args):
     pass
 

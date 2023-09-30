@@ -27,7 +27,7 @@ def api_key():
   fmp_api_key='622f44c679bbfc88f813b6d43f217749'
   return fmp_api_key
 
-
+#Code to get economic calendar data
 @anvil.server.callable
 def economic_calendar():
   start_date=str(datetime.timedelta(days=10))
@@ -41,6 +41,7 @@ def economic_calendar():
       data_US.append(x)
   return data_US
 
+#Code to get graphs
 @anvil.server.callable
 def indices_graph(ticker,title):
   today=str(datetime.date.today())
@@ -59,6 +60,7 @@ def indices_graph(ticker,title):
                                                    dict(count=10, label="10y", step="year", stepmode="backward"),dict(step="all")])))
   return fig
 
+#Code to get general stock market news
 @anvil.server.callable
 def general_stock_news():
   param = {'page':0,'apikey':api_key()} 
@@ -66,6 +68,7 @@ def general_stock_news():
   data=req.json()
   return data
 
+#Code to get daily indices change
 @anvil.server.callable
 def indices_day_change(tickers):
   tickers=','.join(tickers)
@@ -93,13 +96,7 @@ def losers():
   data=data[0:10]
   return data
 
-#Code for getting stock news
-@anvil.server.callable
-def news(ticker):
-  news_data=fmpsdk.stock_news(apikey=api_key(),tickers=ticker)
-  return news_data
-
-#Code for getting general news
+#Function for getting general news 
 @anvil.server.callable
 def general_news(p):
   data=[]
@@ -110,3 +107,18 @@ def general_news(p):
       for y in raw_data:
           data.append(y)
   return data
+
+#Function to call all functions in one sever call
+@anvil.server.callable
+def home_screen_data():
+  #indices_day_change=indices_day_change()
+  general_stock_news,general_news,gainers,losers,sp500_graph,nasdaq_graph,dowjones_graph,vix_graph={},{},{},{},{},{},{},{}
+  general_stock_news=general_stock_news()
+  general_news=general_news(20)
+  gainers=gainers()
+  losers=losers()
+  sp500_graph=indices_graph('^GSPC','S&P 500')
+  nasdaq_graph=indices_graph('^IXIC','NASDAQ')
+  dowjones_graph=indices_graph('^DJI','Dow Jones')
+  vix_graph=indices_graph('^IXIC','VIX')
+  return general_stock_news,general_news,gainers,losers,sp500_graph,nasdaq_graph,dowjones_graph,vix_graph
