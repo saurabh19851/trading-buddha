@@ -112,13 +112,13 @@ def general_news(p):
 @anvil.server.callable
 def home_screen_data():
   #indices_day_change=indices_day_change()
-  general_stock_news,general_news,gainers,losers,sp500_graph,nasdaq_graph,dowjones_graph,vix_graph={},{},{},{},{},{},{},{}
-  general_stock_news=general_stock_news()
-  general_news=general_news(20)
-  gainers=gainers()
-  losers=losers()
-  sp500_graph=indices_graph('^GSPC','S&P 500')
-  nasdaq_graph=indices_graph('^IXIC','NASDAQ')
-  dowjones_graph=indices_graph('^DJI','Dow Jones')
-  vix_graph=indices_graph('^IXIC','VIX')
-  return general_stock_news,general_news,gainers,losers,sp500_graph,nasdaq_graph,dowjones_graph,vix_graph
+  news_general_stock,news_general,gainers_data,losers_data,sp500graph,nasdaqgraph,dowjonesgraph,vixgraph={},{},{},{},{},{},{},{}
+  news_general_stock=general_stock_news()
+  news_general=general_news(20)
+  gainers_data=gainers()
+  losers_data=losers()
+  sp500graph=indices_graph('^GSPC','S&P 500')
+  nasdaqgraph=indices_graph('^IXIC','NASDAQ')
+  dowjonesgraph=indices_graph('^DJI','Dow Jones')
+  vixgraph=indices_graph('^IXIC','VIX')
+  return news_general_stock,news_general,gainers_data,losers_data,sp500graph,nasdaqgraph,dowjonesgraph,vixgraph
