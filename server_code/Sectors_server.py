@@ -13,10 +13,10 @@ def api_key():
 
 
 @anvil.server.callable
-def sectors():
+def sectors(ticker):
   indices=['S&P 500','Communication services','Consumer Discretionary','Consumer Staples','Energy','Financials','Healthcare',\
            'Industrials','Materials','Real Estate','Technology','Utiities']
-  tickers=['XLC','XLY','XLP','XLE','XLF','XLV','XLI','XLB','XLRE','XLK','XLU']
+  tickers=[ticker]
   data=pd.DataFrame(fmpsdk.historical_price_full(apikey=api_key(), symbol='SPY',series_type='line'))
   data.columns=['date','SPY']
   for x in tickers:
@@ -27,9 +27,9 @@ def sectors():
   data=data[::-1]
   returns=data.pct_change()
   cum_returns=((1+returns).cumprod())*100
-  cum_returns.columns=indices
+  cum_returns.columns=['S&P500',ticker]
   fig=px.line(cum_returns,x=cum_returns.index,y=cum_returns.columns[0:])
-  fig.update_layout(title={'text':'Sector Performance','xanchor':'center','yanchor':'top'},legend={'yanchor':'bottom','xanchor':'center'})
+  fig.update_layout(title={'text':'Sector Performance','x':0.5,},legend={'orientation':'h','x':0.5,'xanchor':'center'})
   return fig
 # This is a server module. It runs on the Anvil server,
 # rather than in the user's browser.

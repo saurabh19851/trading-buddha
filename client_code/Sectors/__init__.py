@@ -10,9 +10,10 @@ class Sectors(SectorsTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.sectors.items=[('Communication services','XLC'),('Consumer Discretionary','XLY'),('Consumer Staples','XLP'),('Energy','XLE'),('Financials','XLF'),('Healthcare','XLV'),\
+           ('Industrials','XLI'),('Materials','XLB'),('Real Estate','XLRE'),('Technology','XLK'),('Utiities','XLU')]
     # Any code you write here will run before the form opens.
-    fig=anvil.server.call('sectors')
-    self.sector_graph.figure=fig
+
     
 
 
@@ -38,3 +39,11 @@ class Sectors(SectorsTemplate):
   def economy_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form('Economy')
+
+  def sectors_change(self, **event_args):
+    """This method is called when an item is selected"""
+    sector_selected=self.sectors.selected_value
+    fig=anvil.server.call('sectors',sector_selected)
+    self.sector_graph.figure=fig
+    pass
+

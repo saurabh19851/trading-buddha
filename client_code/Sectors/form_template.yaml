@@ -71,6 +71,36 @@ components:
   name: column_panel_1
   layout_properties: {slot: default}
   components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Choose a Sector:', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_1
+    layout_properties: {grid_position: 'RTRZHB,ENNSGO'}
+  - type: DropDown
+    properties:
+      role: null
+      align: full
+      tooltip: ''
+      placeholder: None
+      border: ''
+      enabled: true
+      foreground: ''
+      items: []
+      visible: true
+      font_size: null
+      font: ''
+      spacing_above: small
+      spacing_below: small
+      italic: false
+      background: ''
+      bold: false
+      underline: false
+      include_placeholder: true
+    name: sectors
+    layout_properties: {grid_position: 'RTRZHB,RYMFQG'}
+    event_bindings: {change: sectors_change}
   - type: Plot
     properties: {}
     name: sector_graph
