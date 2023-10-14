@@ -316,7 +316,7 @@ color_scheme:
   - {name: On Tertiary, color: '#00344e'}
   - {name: On Tertiary Container, color: '#c9e6ff'}
   - {name: Error, color: '#BA1A1A'}
-  - {name: Background, color: '#001f2a'}
+  - {name: Background, color: '#f7ffee'}
   - {name: Surface, color: '#386FA4'}
   - {name: On Background, color: '#bfe9ff'}
   - {name: On Surface, color: '#bfe9ff'}
