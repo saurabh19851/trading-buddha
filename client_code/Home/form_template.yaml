@@ -176,7 +176,7 @@ components:
     layout_properties: {grid_position: 'LOGQGK,TPSLNC PWCGEN,URRNDY', full_width_row: true}
   - type: DataGrid
     properties:
-      role: tonal-data-grid
+      role: rounded
       columns:
       - {id: SGMVGL, title: Column 1, data_key: column_1, $$hashKey: 'object:21758',
         expand: true}
@@ -309,3 +309,4 @@ components:
         name: gainers_panel
         layout_properties: {}
       data_bindings: []
+data_bindings: []
