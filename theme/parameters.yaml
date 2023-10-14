@@ -303,25 +303,25 @@ color_scheme:
       - {name: Primary Overlay 2, color: 'rgba(255, 181, 155, 0.08)'}
       - {name: Primary Overlay 3, color: 'rgba(255, 181, 155, 0.11)'}
   colors:
-  - {name: Primary, color: '#396a1e'}
-  - {name: Primary Container, color: '#b9f296'}
+  - {name: Primary, color: '#386b00'}
+  - {name: Primary Container, color: '#b5f57d'}
   - {name: On Primary, color: '#ffffff'}
-  - {name: On Primary Container, color: '#082100'}
-  - {name: Secondary, color: '#55624c'}
-  - {name: Secondary Container, color: '#d9e7ca'}
+  - {name: On Primary Container, color: '#0d2000'}
+  - {name: Secondary, color: '#416916'}
+  - {name: Secondary Container, color: '#c1f18e'}
   - {name: On Secondary, color: '#ffffff'}
-  - {name: On Secondary Container, color: '#131f0d'}
-  - {name: Tertiary, color: '#386666'}
-  - {name: Tertiary Container, color: '#bbebeb'}
+  - {name: On Secondary Container, color: '#0e2000'}
+  - {name: Tertiary, color: '#1660a5'}
+  - {name: Tertiary Container, color: '#d3e4ff'}
   - {name: On Tertiary, color: '#ffffff'}
-  - {name: On Tertiary Container, color: '#002020'}
+  - {name: On Tertiary Container, color: '#001c38'}
   - {name: Error, color: '#ba1a1a'}
-  - {name: Background, color: '#fdfdf5'}
-  - {name: Surface, color: '#fdfdf5'}
-  - {name: On Background, color: '#1a1c18'}
-  - {name: On Surface, color: '#1a1c18'}
+  - {name: Background, color: '#fffbff'}
+  - {name: Surface, color: '#fffbff'}
+  - {name: On Background, color: '#410005'}
+  - {name: On Surface, color: '#410005'}
   - {name: Surface Variant, color: '#e0e4d6'}
-  - {name: On Surface Variant, color: '#43483e'}
+  - {name: On Surface Variant, color: '#44483e'}
   - {name: Outline, color: '#74796d'}
   - {name: On Disabled, color: '#85858B'}
   - {name: Disabled Container, color: 'rgba(133, 133, 139, 0.12)'}
@@ -329,6 +329,6 @@ color_scheme:
   - {name: Light Overlay 2, color: 'rgba(57, 106, 30, 0.5)'}
   - {name: Dark Overlay 1, color: 'rgba(19, 31, 13, 0.2)'}
   - {name: Dark Overlay 2, color: 'rgba(19, 31, 13, 0.5)'}
-  - {name: Primary Overlay 1, color: 'rgba(57, 106, 30, 0.05)'}
-  - {name: Primary Overlay 2, color: 'rgba(57, 106, 30, 0.08)'}
-  - {name: Primary Overlay 3, color: 'rgba(57, 106, 30, 0.11)'}
+  - {name: Primary Overlay 1, color: 'rgba(56, 107, 0, 0.05)'}
+  - {name: Primary Overlay 2, color: 'rgba(56, 107, 0, 0.08)'}
+  - {name: Primary Overlay 3, color: 'rgba(56, 107, 0, 0.11)'}
