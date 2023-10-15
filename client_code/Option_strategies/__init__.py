@@ -24,6 +24,7 @@ class Option_strategies(Option_strategiesTemplate):
     self.premium=[]
     self.buy_sell=''
     self.selected_option={}
+    self.options_list=[]
 
   def form_refreshing_data_bindings(self, **event_args):
     """This method is called when refreshing_data_bindings is called"""
@@ -66,6 +67,7 @@ class Option_strategies(Option_strategiesTemplate):
   def add_option_button_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.selected_option={"Option_Type":self.call_put,"Expiry":self.selected_expiry,"Strike":self.selected_Strike,"Buy_Sell":self.buy_sell,"Premium":self.premium[0]}
+    self.options_list.append(self.selected_option)
     row=DataRowPanel(item=self.selected_option)
     self.selected_option_grid.add_component(row)
     
