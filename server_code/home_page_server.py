@@ -21,7 +21,7 @@ import plotly.graph_objects as go
 #   print("Hello, " + name + "!")
 #   return 42
 #
-
+'''
 @anvil.server.callable
 def api_key():
   fmp_api_key='622f44c679bbfc88f813b6d43f217749'
@@ -122,3 +122,4 @@ def home_screen_data():
   dowjonesgraph=indices_graph('^DJI','Dow Jones')
   vixgraph=indices_graph('^IXIC','VIX')
   return news_general_stock,news_general,gainers_data,losers_data,sp500graph,nasdaqgraph,dowjonesgraph,vixgraph
+  '''
