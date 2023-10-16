@@ -4,6 +4,7 @@ import datetime
 import fmpsdk
 import pandas as pd
 import numpy as np
+import plotly.express as px
 # This is a server module. It runs on the Anvil server,
 # rather than in the user's browser.
 #

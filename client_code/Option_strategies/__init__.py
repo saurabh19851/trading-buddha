@@ -12,7 +12,7 @@ class Option_strategies(Option_strategiesTemplate):
     self.init_components(**properties)
     # Any code you write here will run before the form opens.
     #Code for getting stock basic information
-    ticker=Globals.ticker
+    self.ticker=Globals.ticker
     self.call_put=''
     self.options=[]
     self.expiry_dates=[]
@@ -25,6 +25,7 @@ class Option_strategies(Option_strategiesTemplate):
     self.buy_sell=''
     self.selected_option={}
     self.options_list=[]
+    
 
   def form_refreshing_data_bindings(self, **event_args):
     """This method is called when refreshing_data_bindings is called"""
@@ -62,7 +63,7 @@ class Option_strategies(Option_strategiesTemplate):
   def buy_sell_dropdown_change(self, **event_args):
     """This method is called when an item is selected"""
     self.buy_sell=self.buy_sell_dropdown.selected_value
-    self.premium=[x['Last Price'] for x in self.options_chain if x['Expiry']==self.selected_expiry if x['Option Type']==self.call_put if x['Strike']==self.selected_Strike]
+    self.premium=[x['Last Price'] for x in self.options_chain if x['Expiry']==self.selected_expiry if x['Option Type']==self.call_put if x['Strike']==float(self.selected_Strike)]
 
   def add_option_button_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -70,6 +71,14 @@ class Option_strategies(Option_strategiesTemplate):
     self.options_list.append(self.selected_option)
     row=DataRowPanel(item=self.selected_option)
     self.selected_option_grid.add_component(row)
+
+  def create_strategy_button_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    cols,pnl_data,fig=anvil.server.call('option_pnl',self.ticker,self.options_list)
+    self.total_pnl.figure=fig
+    self.options_pnl_grid.columns=cols
+    self.options_pnl_panel.items=pnl_data
+
     
 
 
