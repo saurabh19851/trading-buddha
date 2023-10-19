@@ -123,3 +123,4 @@ def home_screen_data():
   vixgraph=indices_graph('^IXIC','VIX')
   return news_general_stock,news_general,gainers_data,losers_data,sp500graph,nasdaqgraph,dowjonesgraph,vixgraph
   '''
+
