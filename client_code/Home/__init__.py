@@ -45,7 +45,7 @@ class Home(HomeTemplate):
     open_form('Form1_copy')
 
   def autocomplete_1_change(self, **event_args):
-    self.autocomplete_1.suggestions=['AAPA','AAPB','AAPC','AAPD','AAPE','AAPF','AAPG','AAPL']
+    self.autocomplete_1.suggestions=anvil.sever.call('list_tickers',self.autocomplete_1.text)
 
   def autocomplete_1_suggestion_clicked(self, **event_args):
     Globals.ticker=self.autocomplete_1.text
