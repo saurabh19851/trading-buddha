@@ -49,6 +49,7 @@ components:
     layout_properties:
       col_widths: {}
       grid_position: LMLGGY,LMZEZR
+    event_bindings: {click: Sectors_click}
   - type: Link
     properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: Equity Markets, font_size: null, wrap_on: mobile, font: '',
@@ -59,6 +60,7 @@ components:
     layout_properties:
       col_widths: {}
       grid_position: KOLZQG,WOPRHW
+    event_bindings: {click: Equity_Markets_click}
 - type: ColumnPanel
   properties: {col_widths: '{"PXNLFO":30,"IFWQMU":15,"GCYWME":15}'}
   name: column_panel_2

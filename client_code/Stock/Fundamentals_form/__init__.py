@@ -3,7 +3,9 @@ from anvil import *
 import plotly.graph_objects as go
 import anvil.server
 from .. import Globals
-
+from ..Stock import Stock
+from ..options import options
+from ...Option_strategies import Option_strategies
 
 class Fundamentals_form(Fundamentals_formTemplate):
   financial_type=''
@@ -127,6 +129,21 @@ class Fundamentals_form(Fundamentals_formTemplate):
     cols,ratio_data=anvil.server.call('financial_ratios',self.ticker,self.fin_ratio,self.ratio_period)
     self.ratios_grid.columns=cols
     self.ratios_panel.items=ratio_data
+
+  def market_data_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('Stock')
+
+  def option_chain_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('options')
+
+  def option_strategies_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('Option_strategies')
+
+
+
 
       
 

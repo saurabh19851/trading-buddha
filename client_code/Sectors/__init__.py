@@ -3,7 +3,7 @@ from anvil import *
 import plotly.graph_objects as go
 import anvil.server
 from .. import Globals
-from ..Form1_copy import Form1_copy
+from ..Home import Home
 from ..Economy import Economy
 
 class Sectors(SectorsTemplate):
@@ -46,4 +46,9 @@ class Sectors(SectorsTemplate):
     fig=anvil.server.call('sectors',sector_selected)
     self.sector_graph.figure=fig
     pass
+
+  def home_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form("Home")
+
 

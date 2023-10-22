@@ -195,7 +195,7 @@ components:
     layout_properties: {grid_position: 'RIPRQE,BABUFC', full_width_row: true}
     components:
     - type: RepeatingPanel
-      properties: {spacing_above: none, spacing_below: none, item_template: Form1_copy.RowTemplate2}
+      properties: {spacing_above: none, spacing_below: none, item_template: Stock.RowTemplate2}
       name: repeating_panel_1
       layout_properties: {}
   - type: DataGrid
@@ -219,7 +219,7 @@ components:
     components:
     - type: RepeatingPanel
       properties: {role: elevated-card, tooltip: '', border: '', foreground: '', items: null,
-        visible: true, spacing_above: none, spacing_below: none, item_template: Form1_copy.RowTemplate7,
+        visible: true, spacing_above: none, spacing_below: none, item_template: Stock.RowTemplate7,
         background: ''}
       name: news_repeating_panel
       layout_properties: {}
