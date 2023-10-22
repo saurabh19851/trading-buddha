@@ -3,7 +3,10 @@ from anvil import *
 import plotly.graph_objects as go
 import anvil.server
 from .. import Globals
-
+from ..Form1_copy import Form1_copy
+from ..Economy import Economy
+from ..Sectors import Sectors
+from ..Home import Home
 
 class Economy(EconomyTemplate):
   def __init__(self, **properties):
@@ -42,5 +45,11 @@ class Economy(EconomyTemplate):
     selection=self.indicators.selected_value
     dates,values=anvil.server.call('econ_indicators',selection)
     self.indicator_chart.data=go.Scatter(x=dates,y=values,mode='lines')
+
+  def home_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('Home')
+    pass
+
 
 

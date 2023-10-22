@@ -29,6 +29,7 @@ components:
     layout_properties:
       col_widths: {}
       grid_position: JFXGWM,DECTHV
+    event_bindings: {click: home_click}
   - type: Link
     properties: {role: null, url: '', align: left, tooltip: U.S. Economic Activity Indicators,
       border: '', foreground: '', visible: true, text: U.S. Economy, font_size: null,
