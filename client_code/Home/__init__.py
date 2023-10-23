@@ -71,8 +71,8 @@ class Home(HomeTemplate):
     """This method is called when the column panel is shown on the screen"""
     major_indicies=['^GSPC','^IXIC','^DJI','^VIX','^RUA','CLUSD','GCUSD']
     major_indices_data=anvil.server.call('indices_day_change',major_indicies)
-    
-    self.dr_sp500.content=str("S&P 500: "+f"{major_indices_data[0]['1D']:.2f}%")
+
+    self.dr_sp500.text=str("S&P 500: "+f"{major_indices_data[0]['1D']:.2f}%")
     if major_indices_data[0]['1D']>0:
       self.dr_sp500.background='rgba(124, 252, 0,0.2)'
       self.dr_sp500.foreground='rgba(0, 128, 0,1)'

@@ -76,60 +76,39 @@ components:
   components:
   - type: ColumnPanel
     properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"NYVDUE":9,"NJRHAO":9,"DKORKE":9,"MGSCFP":9,"GYRMQK":9,"ICYERL":7,"KINRCZ":8}',
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"BRMHOX":9,"AEYTTP":3,"EEQULB":9,"DDGWEK":9,"XKBIJR":8,"TFDJXP":8,"PTSOLK":7,"ANNZOA":7}',
       spacing_below: small, background: ''}
     name: stock_indices
     layout_properties: {grid_position: 'QENBTL,XQOBYU', full_width_row: true}
     components:
-    - type: RichText
-      properties: {role: rounded, align: center, tooltip: '', enable_slots: true,
-        border: '', foreground: '', visible: true, font_size: null, content: '', font: '',
-        spacing_above: small, spacing_below: small, data: null, background: '', format: plain_text}
-      name: dr_sp500
-      layout_properties: {grid_position: 'SCKEDX,NYVDUE'}
-    - type: RichText
-      properties: {role: rounded, align: left, tooltip: '', enable_slots: true, border: '',
-        foreground: '', visible: true, font_size: null, content: '', font: '', spacing_above: small,
-        spacing_below: small, data: null, background: '', format: markdown}
-      name: dr_nasdaq
-      layout_properties: {grid_position: 'SCKEDX,NJRHAO'}
-    - type: RichText
-      properties: {role: rounded, align: left, tooltip: '', enable_slots: true, border: '',
-        foreground: '', visible: true, font_size: null, content: '', font: '', spacing_above: small,
-        spacing_below: small, data: null, background: '', format: markdown}
-      name: dr_dji
-      layout_properties: {grid_position: 'SCKEDX,DKORKE'}
-    - type: RichText
-      properties: {role: rounded, align: left, tooltip: '', enable_slots: true, border: '',
-        foreground: '', visible: true, font_size: null, content: '', font: '', spacing_above: small,
-        spacing_below: small, data: null, background: '', format: markdown}
-      name: dr_vix
-      layout_properties: {grid_position: 'SCKEDX,MGSCFP'}
-    - type: RichText
-      properties: {role: rounded, align: left, tooltip: '', enable_slots: true, border: '',
-        foreground: '', visible: true, font_size: null, content: '', font: '', spacing_above: small,
-        spacing_below: small, data: null, background: '', format: markdown}
-      name: dr_russell3000
-      layout_properties: {grid_position: 'SCKEDX,GYRMQK'}
-    - type: RichText
-      properties: {role: rounded, align: left, tooltip: '', enable_slots: true, border: '',
-        foreground: '', visible: true, font_size: null, content: '', font: '', spacing_above: small,
-        spacing_below: small, data: null, background: '', format: markdown}
-      name: dr_oil
-      layout_properties: {grid_position: 'SCKEDX,ICYERL'}
-    - type: RichText
-      properties: {role: rounded, align: left, tooltip: '', enable_slots: true, border: '',
-        foreground: '', visible: true, font_size: null, content: '', font: '', spacing_above: small,
-        spacing_below: small, data: null, background: '', format: markdown}
-      name: dr_gold
-      layout_properties: {grid_position: 'SCKEDX,KINRCZ'}
-    - type: Label
-      properties: {role: rounded, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: '', font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: ''}
-      name: label_1
-      layout_properties: {grid_position: 'SCKEDX,AEYTTP'}
+    - name: dr_sp500
+      properties: {role: rounded, bold: true}
+      type: Label
+      layout_properties: {grid_position: 'SCKEDX,BRMHOX'}
+    - name: dr_nasdaq
+      properties: {bold: true}
+      type: Label
+      layout_properties: {grid_position: 'SCKEDX,EEQULB'}
+    - name: dr_dji
+      properties: {bold: true}
+      type: Label
+      layout_properties: {grid_position: 'SCKEDX,DDGWEK'}
+    - name: dr_vix
+      properties: {bold: true}
+      type: Label
+      layout_properties: {grid_position: 'SCKEDX,XKBIJR'}
+    - name: dr_russell3000
+      properties: {bold: true}
+      type: Label
+      layout_properties: {grid_position: 'SCKEDX,TFDJXP'}
+    - name: dr_oil
+      properties: {bold: true}
+      type: Label
+      layout_properties: {grid_position: 'SCKEDX,PTSOLK'}
+    - name: dr_gold
+      properties: {bold: true}
+      type: Label
+      layout_properties: {grid_position: 'SCKEDX,ANNZOA'}
     event_bindings: {show: stock_indices_show}
   - type: ColumnPanel
     properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
@@ -190,7 +169,7 @@ components:
     layout_properties: {grid_position: 'LOGQGK,TPSLNC ZWLRXM,OULMAU'}
     components:
     - type: RepeatingPanel
-      properties: {role: elevated-card, tooltip: '', border: '', foreground: '', items: null,
+      properties: {role: null, tooltip: '', border: '', foreground: '', items: null,
         visible: true, spacing_above: none, spacing_below: none, item_template: Home.stock_news_row,
         background: ''}
       name: stock_news_panel
@@ -243,7 +222,7 @@ components:
     components: []
   - type: DataGrid
     properties:
-      role: tonal-data-grid
+      role: rounded
       columns:
       - {id: TOKBFO, title: Column 1, data_key: column_1, $$hashKey: 'object:31916'}
       auto_header: false

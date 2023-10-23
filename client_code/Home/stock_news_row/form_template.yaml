@@ -1,4 +1,6 @@
-container: {type: DataRowPanel}
+container:
+  type: DataRowPanel
+  properties: {role: rounded}
 components:
 - type: ColumnPanel
   properties: {col_widths: '{"GWNCQH":10,"TOZAQR":50}'}
