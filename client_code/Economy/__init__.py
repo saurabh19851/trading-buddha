@@ -3,7 +3,7 @@ from anvil import *
 import plotly.graph_objects as go
 import anvil.server
 from .. import Globals
-from ..Form1_copy import Form1_copy
+from ..Stock import Stock
 from ..Economy import Economy
 from ..Sectors import Sectors
 from ..Home import Home

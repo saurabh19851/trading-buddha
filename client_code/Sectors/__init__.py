@@ -5,6 +5,7 @@ import anvil.server
 from .. import Globals
 from ..Home import Home
 from ..Economy import Economy
+from ..Stock import Stock
 
 class Sectors(SectorsTemplate):
   def __init__(self, **properties):
@@ -30,11 +31,11 @@ class Sectors(SectorsTemplate):
 
   def autocomplete_1_suggestion_clicked(self, **event_args):
     Globals.ticker=self.autocomplete_1.text
-    open_form('Form1_copy')
+    open_form('Stock')
 
   def autocomplete_1_pressed_enter(self, **event_args):
     Globals.ticker=self.autocomplete_1.text
-    open_form('Form1_copy')
+    open_form('Stock')
 
   def economy_click(self, **event_args):
     """This method is called when the link is clicked"""
@@ -45,7 +46,7 @@ class Sectors(SectorsTemplate):
     sector_selected=self.sectors.selected_value
     fig=anvil.server.call('sectors',sector_selected)
     self.sector_graph.figure=fig
-    pass
+    
 
   def home_click(self, **event_args):
     """This method is called when the link is clicked"""

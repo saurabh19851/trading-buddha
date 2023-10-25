@@ -3,7 +3,7 @@ from anvil import *
 import plotly.graph_objects as go
 import anvil.server
 from .. import Globals
-from ..Form1_copy import Form1_copy
+from ..Stock import Stock
 from ..Economy import Economy
 from ..Sectors import Sectors
 
@@ -39,21 +39,16 @@ class Home(HomeTemplate):
   def form_show(self, **event_args):
     pass
 
-  def text_box_1_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    Globals.ticker=self.ticker_search.text
-    open_form('Form1_copy')
-
   def autocomplete_1_change(self, **event_args):
     self.autocomplete_1.suggestions=anvil.server.call('list_tickers',self.autocomplete_1.text)
 
   def autocomplete_1_suggestion_clicked(self, **event_args):
     Globals.ticker=self.autocomplete_1.text
-    open_form('Form1_copy')
+    open_form('Stock')
 
   def autocomplete_1_pressed_enter(self, **event_args):
     Globals.ticker=self.autocomplete_1.text
-    open_form('Form1_copy')
+    open_form('Stock')
 
   def economy_click(self, **event_args):
     """This method is called when the link is clicked"""
