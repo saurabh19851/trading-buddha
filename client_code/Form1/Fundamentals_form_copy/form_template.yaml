@@ -55,25 +55,6 @@ components:
       layout_properties: {row: YXKSMB, width_xs: 2, col_xs: 4, width: 116.719, x: 321.71875,
         y: 63}
       event_bindings: {click: Cash_flow_click}
-    - type: Button
-      properties: {role: elevated-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: '', visible: true, text: Annual, font_size: null,
-        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false, icon: ''}
-      name: annual
-      layout_properties: {row: YXKSMB, width_xs: 1, col_xs: 8, width: 95.7344, x: 738.999975,
-        y: 63}
-      data_bindings: []
-      event_bindings: {click: annual_click}
-    - type: Button
-      properties: {role: elevated-button, align: center, tooltip: '', border: '',
-        enabled: true, foreground: '', visible: true, text: Quarterly, font_size: null,
-        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false, icon: ''}
-      name: Quarterly
-      layout_properties: {row: YXKSMB, width_xs: 1, col_xs: 9, width: 114.7344, x: 833.734375,
-        y: 63}
-      event_bindings: {click: Quarterly_click}
     - type: DataGrid
       properties:
         role: rounded
@@ -105,6 +86,23 @@ components:
           background: ''}
         name: financial_table_panel
         layout_properties: {}
+    - type: Button
+      properties: {role: elevated-button, align: center, tooltip: '', border: '',
+        enabled: true, foreground: '', visible: true, text: Annual, font_size: null,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: annual
+      layout_properties: {x: 627, y: 73, width: 95.734375}
+      data_bindings: []
+      event_bindings: {click: annual_click}
+    - type: Button
+      properties: {role: elevated-button, align: center, tooltip: '', border: '',
+        enabled: true, foreground: '', visible: true, text: Quarterly, font_size: null,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: Quarterly
+      layout_properties: {x: 730.734375, y: 71, width: 114.734375}
+      event_bindings: {click: Quarterly_click}
   - type: RichText
     properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
       foreground: '', visible: true, font_size: null, content: '', font: '', spacing_above: small,
