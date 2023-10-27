@@ -270,4 +270,4 @@ components:
   properties: {role: outlined}
   name: outlined_1
   layout_properties: {slot: title}
-custom_component: true
+custom_component: false

@@ -1,4 +1,4 @@
-from ._anvil_designer import Fundamentals_formTemplate
+from ._anvil_designer import Fundamentals_form_copyTemplate
 from anvil import *
 import plotly.graph_objects as go
 import anvil.server
@@ -7,7 +7,7 @@ from .. import Stock
 from ..options import options
 from ...Option_strategies import Option_strategies
 
-class Fundamentals_form(Fundamentals_formTemplate):
+class Fundamentals_form_copy(Fundamentals_form_copyTemplate):
   financial_type=''
   period=''
   ticker=Globals.ticker
@@ -29,7 +29,7 @@ class Fundamentals_form(Fundamentals_formTemplate):
     ratios_cols,ratios_data=anvil.server.call('financial_ratios_ttm',self.ticker,self.fin_ratio,self.ratio_period)
     self.ratios_grid.columns=ratios_cols
     self.ratios_panel.items=ratios_data
-    
+
 
   def form_refreshing_data_bindings(self, **event_args):
     """This method is called when refreshing_data_bindings is called"""
@@ -55,7 +55,7 @@ class Fundamentals_form(Fundamentals_formTemplate):
       data,cols=anvil.server.call('get_quarterly_CF',self.ticker)
       self.financial_table.columns=cols
       self.financial_table_panel.items=data
-    
+
   def inc_stat_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.financial_type='is'
@@ -119,8 +119,8 @@ class Fundamentals_form(Fundamentals_formTemplate):
     cols,ratio_data=anvil.server.call('financial_ratios',self.ticker,self.fin_ratio,self.ratio_period)
     self.ratios_grid.columns=cols
     self.ratios_panel.items=ratio_data
-    
-    
+
+
 
   def financial_ratios_period(self,**event_args):
     button=event_args['sender']
@@ -141,13 +141,3 @@ class Fundamentals_form(Fundamentals_formTemplate):
   def option_strategies_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form('Option_strategies')
-
-
-
-
-      
-
-
-    
-
-
