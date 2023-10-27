@@ -1,13 +1,10 @@
-from ._anvil_designer import Fundamentals_form_copyTemplate
+from ._anvil_designer import Fundamentals_formTemplate
 from anvil import *
 import plotly.graph_objects as go
 import anvil.server
 from .. import Globals
-from .. import Stock
-from ..options import options
-from ...Option_strategies import Option_strategies
 
-class Fundamentals_form_copy(Fundamentals_form_copyTemplate):
+class Fundamentals_form(Fundamentals_formTemplate):
   financial_type=''
   period=''
   ticker=Globals.ticker
@@ -132,12 +129,15 @@ class Fundamentals_form_copy(Fundamentals_form_copyTemplate):
 
   def market_data_click(self, **event_args):
     """This method is called when the link is clicked"""
+    from ..Stock import Stock
     open_form('Stock')
 
   def option_chain_click(self, **event_args):
     """This method is called when the link is clicked"""
+    from ..options import options
     open_form('options')
 
   def option_strategies_click(self, **event_args):
     """This method is called when the link is clicked"""
+    from ..Option_strategies import Option_strategies
     open_form('Option_strategies')

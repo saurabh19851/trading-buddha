@@ -10,7 +10,7 @@ components:
   layout_properties: {slot: default}
   components:
   - type: XYPanel
-    properties: {role: null, width: null, align: center, height: 350, tooltip: '',
+    properties: {role: null, width: null, align: center, height: 127, tooltip: '',
       border: '', foreground: '', visible: true, spacing_above: small, spacing_below: small,
       background: ''}
     name: xy_panel_1
@@ -72,18 +72,18 @@ components:
       name: Quarterly
       layout_properties: {x: 730.734375, y: 71, width: 114.734375}
       event_bindings: {click: Quarterly_click}
-    - name: financial_Table
-      properties:
-        columns:
-        - {id: JKSDUP, title: Column 1, data_key: column_1}
-        - {id: VJQQOR, title: Column 2, data_key: column_2}
-        - {id: OJLQEN, title: Column 3, data_key: column_3}
-      type: DataGrid
-      components:
-      - name: repeating_panel_1
-        properties: {item_template: Form1.Fundamentals_form_copy.RowTemplate8}
-        type: RepeatingPanel
-      layout_properties: {x: 70.953125, y: 91, width: 200}
+  - name: financial_Table
+    properties:
+      columns:
+      - {id: JKSDUP, title: Column 1, data_key: column_1}
+      - {id: VJQQOR, title: Column 2, data_key: column_2}
+      - {id: OJLQEN, title: Column 3, data_key: column_3}
+    type: DataGrid
+    components:
+    - name: financial_table_panel
+      properties: {item_template: Fundamentals_form.RowTemplate8}
+      type: RepeatingPanel
+    layout_properties: {grid_position: 'KCZPEB,FMBZAO'}
   - type: RichText
     properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
       foreground: '', visible: true, font_size: null, content: '', font: '', spacing_above: small,
@@ -168,32 +168,18 @@ components:
       name: quarterly_ratios
       layout_properties: {row: IEKNBZ, width_xs: 2, col_xs: null, width: 113.977}
       event_bindings: {click: financial_ratios_period}
-  - type: DataGrid
+  - name: ratios_grid
     properties:
-      role: tonal-data-grid
       columns:
-      - {id: JZMQCH, title: Column 1, data_key: column_1, $$hashKey: 'object:11621',
-        expand: true}
-      - {id: AVWXFV, title: Column 2, data_key: column_2, $$hashKey: 'object:11622'}
-      - {id: TQJXLA, title: Column 3, data_key: column_3, $$hashKey: 'object:11623'}
-      auto_header: true
-      tooltip: ''
-      border: ''
-      foreground: ''
-      rows_per_page: 20
-      visible: true
-      wrap_on: never
-      show_page_controls: true
-      spacing_above: small
-      spacing_below: small
-      background: ''
-    name: ratios_grid
-    layout_properties: {grid_position: 'YJYBTX,OBXJBV', full_width_row: true}
+      - {id: JKSDUP, title: Column 1, data_key: column_1}
+      - {id: VJQQOR, title: Column 2, data_key: column_2}
+      - {id: OJLQEN, title: Column 3, data_key: column_3}
+    type: DataGrid
     components:
-    - type: RepeatingPanel
-      properties: {spacing_above: none, spacing_below: none, item_template: Stock.Fundamentals_form.RowTemplate8}
-      name: ratios_panel
-      layout_properties: {}
+    - name: ratios_panel
+      properties: {item_template: Fundamentals_form.RowTemplate10}
+      type: RepeatingPanel
+    layout_properties: {grid_position: 'PINMZF,DDHBNG'}
 - type: FlowPanel
   properties: {}
   name: navbar_links

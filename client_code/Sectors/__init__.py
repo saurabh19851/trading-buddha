@@ -3,9 +3,6 @@ from anvil import *
 import plotly.graph_objects as go
 import anvil.server
 from .. import Globals
-from ..Home import Home
-from ..Economy import Economy
-from ..Stock import Stock
 
 class Sectors(SectorsTemplate):
   def __init__(self, **properties):
@@ -14,7 +11,7 @@ class Sectors(SectorsTemplate):
     self.sectors.items=[('Communication services','XLC'),('Consumer Discretionary','XLY'),('Consumer Staples','XLP'),('Energy','XLE'),('Financials','XLF'),('Healthcare','XLV'),\
            ('Industrials','XLI'),('Materials','XLB'),('Real Estate','XLRE'),('Technology','XLK'),('Utiities','XLU')]
     tickers=['XLC','XLY','XLP','XLE','XLF','XLV','XLI','XLB','XLRE','XLK','XLU']
-    corr_heatmap,line_chart=anvil.server.call('sectors',tickers)
+    line_chart,corr_heatmap=anvil.server.call('sectors',tickers)
     self.sector_graph.figure=line_chart
     self.corr_graph.figure=corr_heatmap
     
@@ -36,14 +33,17 @@ class Sectors(SectorsTemplate):
 
   def autocomplete_1_suggestion_clicked(self, **event_args):
     Globals.ticker=self.autocomplete_1.text
+    from ..Stock import Stock
     open_form('Stock')
 
   def autocomplete_1_pressed_enter(self, **event_args):
     Globals.ticker=self.autocomplete_1.text
+    from ..Stock import Stock
     open_form('Stock')
 
   def economy_click(self, **event_args):
     """This method is called when the link is clicked"""
+    from ..Economy import Economy
     open_form('Economy')
 
   def sectors_change(self, **event_args):
@@ -55,6 +55,12 @@ class Sectors(SectorsTemplate):
 
   def home_click(self, **event_args):
     """This method is called when the link is clicked"""
+    from ..Home import Home
     open_form("Home")
+
+  def link_2_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    pass
+
 
 

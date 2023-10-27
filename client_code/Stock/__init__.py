@@ -3,9 +3,7 @@ from anvil import *
 import plotly.graph_objects as go
 import anvil.server
 from .. import Globals
-from .Fundamentals_form import Fundamentals_form
-from ..options import options
-from ..Option_strategies import Option_strategies
+
 
 
 class Stock(StockTemplate):
@@ -56,15 +54,23 @@ class Stock(StockTemplate):
 
   def fundamental_data_click(self, **event_args):
     """This method is called when the link is clicked"""
+    from ..Fundamentals_form import Fundamentals_form
     open_form('Stock.Fundamentals_form')
 
   def option_chain_click(self, **event_args):
     """This method is called when the link is clicked"""
+    from ..options import options
     open_form('options')
 
   def option_strategies_click(self, **event_args):
     """This method is called when the link is clicked"""
+    from ..Option_strategies import Option_strategies
     open_form('Option_strategies')
+
+  def market_data_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    pass
+
 
 
 

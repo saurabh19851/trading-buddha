@@ -3,9 +3,7 @@ from anvil import *
 import plotly.graph_objects as go
 import anvil.server
 from .. import Globals
-from ..Stock import Stock
-from ..Economy import Economy
-from ..Sectors import Sectors
+
 
 class Home(HomeTemplate):
   def __init__(self, **properties):
@@ -44,14 +42,17 @@ class Home(HomeTemplate):
 
   def autocomplete_1_suggestion_clicked(self, **event_args):
     Globals.ticker=self.autocomplete_1.text
+    from ..Stock import Stock
     open_form('Stock')
 
   def autocomplete_1_pressed_enter(self, **event_args):
     Globals.ticker=self.autocomplete_1.text
+    from ..Stock import Stock
     open_form('Stock')
 
   def economy_click(self, **event_args):
     """This method is called when the link is clicked"""
+    from ..Economy import Economy
     open_form('Economy')
 
   def link_2_click(self, **event_args):
@@ -60,6 +61,7 @@ class Home(HomeTemplate):
 
   def sector_click(self, **event_args):
     """This method is called when the link is clicked"""
+    from ..Sectors import Sectors
     open_form('Sectors')
 
   def stock_indices_show(self, **event_args):

@@ -1,3 +1,4 @@
+'''
 import anvil.server
 import fmpsdk
 import pandas as pd
@@ -43,3 +44,4 @@ def sectors(ticker):
 #   print("Hello, " + name + "!")
 #   return 42
 #
+'''
