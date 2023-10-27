@@ -76,7 +76,7 @@ components:
       event_bindings: {click: Quarterly_click}
     - type: DataGrid
       properties:
-        role: tonal-data-grid
+        role: rounded
         columns:
         - {id: FHKTNB, title: Column 1, data_key: column_1, $$hashKey: 'object:123978',
           expand: true}
