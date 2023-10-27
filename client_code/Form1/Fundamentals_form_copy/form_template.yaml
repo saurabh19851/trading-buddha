@@ -55,37 +55,6 @@ components:
       layout_properties: {row: YXKSMB, width_xs: 2, col_xs: 4, width: 116.719, x: 321.71875,
         y: 63}
       event_bindings: {click: Cash_flow_click}
-    - type: DataGrid
-      properties:
-        role: rounded
-        columns:
-        - {id: FHKTNB, title: Column 1, data_key: column_1, $$hashKey: 'object:123978',
-          expand: true}
-        - {id: EOJVRN, title: Column 2, data_key: column_2, $$hashKey: 'object:123979',
-          expand: true}
-        - {id: NNIAFQ, title: Column 3, data_key: column_3, $$hashKey: 'object:123980',
-          expand: true}
-        auto_header: true
-        tooltip: ''
-        border: ''
-        foreground: ''
-        rows_per_page: 20
-        visible: true
-        wrap_on: never
-        show_page_controls: true
-        spacing_above: small
-        spacing_below: small
-        background: ''
-      name: financial_table
-      layout_properties: {grid_position: 'GKHPEB,ADLWZV', row: XBIMVK, width_xs: 12,
-        col_xs: 0, x: 193, y: 127, width: 605.719}
-      components:
-      - type: RepeatingPanel
-        properties: {role: elevated-card, tooltip: '', border: '', foreground: '',
-          items: null, visible: true, spacing_above: none, spacing_below: none, item_template: Stock.Fundamentals_form.RowTemplate6,
-          background: ''}
-        name: financial_table_panel
-        layout_properties: {}
     - type: Button
       properties: {role: elevated-button, align: center, tooltip: '', border: '',
         enabled: true, foreground: '', visible: true, text: Annual, font_size: null,
@@ -103,6 +72,18 @@ components:
       name: Quarterly
       layout_properties: {x: 730.734375, y: 71, width: 114.734375}
       event_bindings: {click: Quarterly_click}
+    - name: financial_Table
+      properties:
+        columns:
+        - {id: JKSDUP, title: Column 1, data_key: column_1}
+        - {id: VJQQOR, title: Column 2, data_key: column_2}
+        - {id: OJLQEN, title: Column 3, data_key: column_3}
+      type: DataGrid
+      components:
+      - name: repeating_panel_1
+        properties: {item_template: Form1.Fundamentals_form_copy.RowTemplate8}
+        type: RepeatingPanel
+      layout_properties: {x: 70.953125, y: 91, width: 200}
   - type: RichText
     properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
       foreground: '', visible: true, font_size: null, content: '', font: '', spacing_above: small,
