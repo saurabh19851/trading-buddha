@@ -3,7 +3,7 @@ from anvil import *
 import plotly.graph_objects as go
 import anvil.server
 from .. import Globals
-from ..Stock import Stock
+from .. import Stock
 from ..options import options
 from ...Option_strategies import Option_strategies
 

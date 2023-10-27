@@ -13,6 +13,11 @@ class Sectors(SectorsTemplate):
     self.init_components(**properties)
     self.sectors.items=[('Communication services','XLC'),('Consumer Discretionary','XLY'),('Consumer Staples','XLP'),('Energy','XLE'),('Financials','XLF'),('Healthcare','XLV'),\
            ('Industrials','XLI'),('Materials','XLB'),('Real Estate','XLRE'),('Technology','XLK'),('Utiities','XLU')]
+    tickers=['XLC','XLY','XLP','XLE','XLF','XLV','XLI','XLB','XLRE','XLK','XLU']
+    corr_heatmap,line_chart=anvil.server.call('sectors',tickers)
+    self.sector_graph.figure=line_chart
+    self.corr_graph.figure=corr_heatmap
+    
     # Any code you write here will run before the form opens.
 
     
@@ -44,8 +49,8 @@ class Sectors(SectorsTemplate):
   def sectors_change(self, **event_args):
     """This method is called when an item is selected"""
     sector_selected=self.sectors.selected_value
-    fig=anvil.server.call('sectors',sector_selected)
-    self.sector_graph.figure=fig
+    #fig=anvil.server.call('sectors',sector_selected)
+    #self.sector_graph.figure=fig
     
 
   def home_click(self, **event_args):

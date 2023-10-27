@@ -106,3 +106,7 @@ components:
     properties: {}
     name: sector_graph
     layout_properties: {grid_position: 'NGSZYB,JLXTSD'}
+  - name: corr_graph
+    properties: {}
+    type: Plot
+    layout_properties: {grid_position: 'GNCTRA,TTZQMK'}
