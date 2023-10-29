@@ -1,7 +1,7 @@
 is_package: true
 container:
   type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html'}
+  properties: {html: '@theme:standard-page.html', align: center}
   event_bindings: {refreshing_data_bindings: form_refreshing_data_bindings, show: form_show}
 components:
 - type: ColumnPanel
@@ -170,16 +170,16 @@ components:
       role: tonal-data-grid
       columns:
       - {id: PGNPVJ, title: '', data_key: Name, $$hashKey: 'object:498', expand: true}
-      - {id: XMSBSF, title: 1 Day, data_key: 1_day, $$hashKey: 'object:499', expand: true}
-      - {id: PNHQMF, title: 1 Week, data_key: 1_week, $$hashKey: 'object:2065'}
-      - {id: PKAWES, title: 1 Month, data_key: 1_month, $$hashKey: 'object:500', expand: true}
-      - {id: IUCEND, title: 6 Months, data_key: 6_month, $$hashKey: 'object:640',
-        expand: true}
-      - {id: PTMQWX, title: 1 Year, data_key: 1_year, $$hashKey: 'object:642', expand: true}
-      - {id: SWBRDI, title: 3 Years, data_key: 3_year, $$hashKey: 'object:644', expand: true}
-      - {id: JRDNPE, title: 5 Years, data_key: 5_year, $$hashKey: 'object:646', expand: true}
-      - {id: WKBRHH, title: 10 Years, data_key: 10_year, $$hashKey: 'object:648',
-        expand: true}
+      - {id: XMSBSF, title: 1D, data_key: 1_day, $$hashKey: 'object:499', expand: true}
+      - {id: PNHQMF, title: 5D, data_key: 1_week, $$hashKey: 'object:2065'}
+      - {id: PKAWES, title: 1M, data_key: 1_month, $$hashKey: 'object:500', expand: true}
+      - {id: QNEFUJ, data_key: column_1, title: 3M}
+      - {id: IUCEND, title: 6M, data_key: 6_month, $$hashKey: 'object:640', expand: true}
+      - {id: SMIVHC, data_key: column_1, title: ytd}
+      - {id: PTMQWX, title: 1Y, data_key: 1_year, $$hashKey: 'object:642', expand: true}
+      - {id: SWBRDI, title: 3Y, data_key: 3_year, $$hashKey: 'object:644', expand: true}
+      - {id: JRDNPE, title: 5Y, data_key: 5_year, $$hashKey: 'object:646', expand: true}
+      - {id: WKBRHH, title: 10Y, data_key: 10_year, $$hashKey: 'object:648', expand: true}
       auto_header: true
       tooltip: ''
       border: ''
