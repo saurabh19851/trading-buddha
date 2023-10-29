@@ -169,7 +169,7 @@ components:
     properties:
       role: tonal-data-grid
       columns:
-      - {id: PGNPVJ, title: '', data_key: Name, $$hashKey: 'object:498', expand: true}
+      - {id: PGNPVJ, title: symbol, data_key: Name, $$hashKey: 'object:498', expand: true}
       - {id: XMSBSF, title: 1D, data_key: 1_day, $$hashKey: 'object:499', expand: true}
       - {id: PNHQMF, title: 5D, data_key: 1_week, $$hashKey: 'object:2065'}
       - {id: PKAWES, title: 1M, data_key: 1_month, $$hashKey: 'object:500', expand: true}
@@ -196,7 +196,7 @@ components:
     components:
     - type: RepeatingPanel
       properties: {spacing_above: none, spacing_below: none, item_template: Stock.RowTemplate2}
-      name: repeating_panel_1
+      name: returns_panel
       layout_properties: {}
   - type: DataGrid
     properties:

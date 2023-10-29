@@ -33,6 +33,7 @@ class Stock(StockTemplate):
     self.low_52weeks.text=min(closes[0:259])
     self.std.text=std
     #Code for calculating returns and entering them in returns table
+    self.returns_panel.items=anvil.server.call('period_returns',ticker)
     
     
     
