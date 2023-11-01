@@ -56,7 +56,7 @@ class Stock(StockTemplate):
   def fundamental_data_click(self, **event_args):
     """This method is called when the link is clicked"""
     from ..Fundamentals_form import Fundamentals_form
-    open_form('Stock.Fundamentals_form')
+    open_form('Fundamentals_form')
 
   def option_chain_click(self, **event_args):
     """This method is called when the link is clicked"""
