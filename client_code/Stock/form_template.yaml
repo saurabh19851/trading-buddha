@@ -219,7 +219,7 @@ components:
     components:
     - type: RepeatingPanel
       properties: {role: elevated-card, tooltip: '', border: '', foreground: '', items: null,
-        visible: true, spacing_above: none, spacing_below: none, item_template: Stock.RowTemplate7,
+        visible: true, spacing_above: small, spacing_below: small, item_template: Stock.News_template,
         background: ''}
       name: news_repeating_panel
       layout_properties: {}

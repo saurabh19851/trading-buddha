@@ -44,8 +44,8 @@ class Stock(StockTemplate):
 
   def form_show(self, **event_args):
     ticker=Globals.ticker
-    #news_data=anvil.server.call('news',ticker)
-    #self.news_repeating_panel.items=news_data
+    news_data=anvil.server.call('news',ticker)
+    self.news_repeating_panel.items=news_data
     
   def text_box_1_show(self, **event_args):
     """This method is called when the TextBox is shown on the screen"""

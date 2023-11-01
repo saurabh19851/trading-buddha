@@ -1,0 +1,33 @@
+container:
+  type: DataRowPanel
+  properties: {bold: false}
+components:
+- type: Link
+  properties: {col_widths: '{}', bold: true, font_size: null, col_spacing: medium}
+  name: news_title_link
+  layout_properties: {column: OQNYVC}
+  components: []
+- type: RichText
+  properties: {}
+  name: news_date
+  layout_properties: {column: null}
+  components: []
+- name: column_panel_1
+  properties: {col_widths: '{"QSVRQZ":35,"LVVRNL":25}'}
+  type: ColumnPanel
+  layout_properties: {column: 'null'}
+  components:
+  - type: RichText
+    properties: {}
+    name: news_text
+    layout_properties: {grid_position: 'PRUZVH,QSVRQZ'}
+    components: []
+  - type: Image
+    properties: {role: null, vertical_align: center, height: 48, tooltip: '', border: '',
+      foreground: '', visible: true, display_mode: zoom_to_fill, spacing_above: none,
+      source: '', spacing_below: none, background: '', horizontal_align: right}
+    name: news_image
+    layout_properties: {grid_position: 'PRUZVH,LVVRNL'}
+is_package: true
+data_bindings:
+- {property: border, code: '', writeback: false}

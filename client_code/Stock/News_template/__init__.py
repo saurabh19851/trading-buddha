@@ -1,9 +1,9 @@
-from ._anvil_designer import RowTemplate7Template
+from ._anvil_designer import News_templateTemplate
 from anvil import *
 import anvil.server
 from ... import Globals
 
-class RowTemplate7(RowTemplate7Template):
+class News_template(News_templateTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
