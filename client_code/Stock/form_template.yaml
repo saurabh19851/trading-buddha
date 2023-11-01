@@ -169,17 +169,17 @@ components:
     properties:
       role: tonal-data-grid
       columns:
-      - {id: PGNPVJ, title: symbol, data_key: Name, $$hashKey: 'object:498', expand: true}
-      - {id: XMSBSF, title: 1D, data_key: 1_day, $$hashKey: 'object:499', expand: true}
-      - {id: PNHQMF, title: 5D, data_key: 1_week, $$hashKey: 'object:2065'}
-      - {id: PKAWES, title: 1M, data_key: 1_month, $$hashKey: 'object:500', expand: true}
-      - {id: QNEFUJ, data_key: column_1, title: 3M}
-      - {id: IUCEND, title: 6M, data_key: 6_month, $$hashKey: 'object:640', expand: true}
-      - {id: SMIVHC, data_key: column_1, title: ytd}
-      - {id: PTMQWX, title: 1Y, data_key: 1_year, $$hashKey: 'object:642', expand: true}
-      - {id: SWBRDI, title: 3Y, data_key: 3_year, $$hashKey: 'object:644', expand: true}
-      - {id: JRDNPE, title: 5Y, data_key: 5_year, $$hashKey: 'object:646', expand: true}
-      - {id: WKBRHH, title: 10Y, data_key: 10_year, $$hashKey: 'object:648', expand: true}
+      - {id: PGNPVJ, title: Symbol, data_key: symbol, $$hashKey: 'object:498', expand: true}
+      - {id: XMSBSF, title: 1D, data_key: 1D, $$hashKey: 'object:499', expand: true}
+      - {id: PNHQMF, title: 5D, data_key: 5D, $$hashKey: 'object:2065'}
+      - {id: PKAWES, title: 1M, data_key: 1M, $$hashKey: 'object:500', expand: true}
+      - {id: QNEFUJ, data_key: 3M, title: 3M}
+      - {id: IUCEND, title: 6M, data_key: 6M, $$hashKey: 'object:640', expand: true}
+      - {id: SMIVHC, data_key: ytd, title: YTD}
+      - {id: PTMQWX, title: 1Y, data_key: 1Y, $$hashKey: 'object:642', expand: true}
+      - {id: SWBRDI, title: 3Y, data_key: 3Y, $$hashKey: 'object:644', expand: true}
+      - {id: JRDNPE, title: 5Y, data_key: 5Y, $$hashKey: 'object:646', expand: true}
+      - {id: WKBRHH, title: 10Y, data_key: 10Y, $$hashKey: 'object:648', expand: true}
       auto_header: true
       tooltip: ''
       border: ''
