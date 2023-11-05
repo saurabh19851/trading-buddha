@@ -316,11 +316,11 @@ color_scheme:
   - {name: On Tertiary, color: '#ffffff'}
   - {name: On Tertiary Container, color: '#002020'}
   - {name: Error, color: '#BA1A1A'}
-  - {name: Background, color: '#fdfdf5'}
-  - {name: Surface, color: '#fdfdf5'}
+  - {name: Background, color: '#FFFFFF'}
+  - {name: Surface, color: '#FFFFFF'}
   - {name: On Background, color: '#1a1c18'}
   - {name: On Surface, color: '#1a1c18'}
-  - {name: Surface Variant, color: '#e0e4d6'}
+  - {name: Surface Variant, color: '#FFFFFF'}
   - {name: On Surface Variant, color: '#43483e'}
   - {name: Outline, color: '#74796d'}
   - {name: On Disabled, color: 'rgba(253, 253, 245, 0.38)'}

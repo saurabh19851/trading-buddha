@@ -82,31 +82,31 @@ components:
     layout_properties: {grid_position: 'QENBTL,XQOBYU', full_width_row: true}
     components:
     - name: dr_sp500
-      properties: {role: rounded, bold: true}
+      properties: {role: rounded, bold: true, align: center}
       type: Label
       layout_properties: {grid_position: 'SCKEDX,BRMHOX'}
     - name: dr_nasdaq
-      properties: {bold: true}
+      properties: {bold: true, align: center}
       type: Label
       layout_properties: {grid_position: 'SCKEDX,EEQULB'}
     - name: dr_dji
-      properties: {bold: true}
+      properties: {bold: true, align: center}
       type: Label
       layout_properties: {grid_position: 'SCKEDX,DDGWEK'}
     - name: dr_vix
-      properties: {bold: true}
+      properties: {bold: true, align: center}
       type: Label
       layout_properties: {grid_position: 'SCKEDX,XKBIJR'}
     - name: dr_russell3000
-      properties: {bold: true}
+      properties: {bold: true, align: center}
       type: Label
       layout_properties: {grid_position: 'SCKEDX,TFDJXP'}
     - name: dr_oil
-      properties: {bold: true}
+      properties: {bold: true, align: center}
       type: Label
       layout_properties: {grid_position: 'SCKEDX,PTSOLK'}
     - name: dr_gold
-      properties: {bold: true}
+      properties: {bold: true, align: center}
       type: Label
       layout_properties: {grid_position: 'SCKEDX,ANNZOA'}
     event_bindings: {show: stock_indices_show}
