@@ -3,33 +3,35 @@ container:
   properties: {role: rounded}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{"GWNCQH":10,"TOZAQR":50}'}
+  properties: {col_widths: '{"EQSGDP":8,"NGIWHY":8,"CNRCDR":9}'}
   name: column_panel_1
   layout_properties: {column: SGMVGL}
   components:
-  - type: Image
-    properties: {height: 40}
-    name: image_1
-    layout_properties: {grid_position: 'UOUFNY,GWNCQH'}
-  - type: Link
-    properties: {}
-    name: link_1
-    layout_properties: {grid_position: 'UOUFNY,TOZAQR'}
-    event_bindings: {click: link_1_click}
   - type: RichText
     properties: {}
     name: rich_text_1
-    layout_properties: {grid_position: 'DOQIRH,GYJLPL'}
-  - type: RichText
-    properties: {}
-    name: rich_text_3
-    layout_properties: {grid_position: 'DOQIRH,AJKIZQ'}
+    layout_properties: {grid_position: 'UOUFNY,EQSGDP'}
   - type: RichText
     properties: {}
     name: rich_text_2
-    layout_properties: {grid_position: 'DOQIRH,OFSYSK'}
-- type: RichText
-  properties: {}
-  name: rich_text_4
-  layout_properties: {column: SGMVGL}
+    layout_properties: {grid_position: 'UOUFNY,NGIWHY'}
+  - name: flow_panel_1
+    properties: {}
+    type: FlowPanel
+    layout_properties: {grid_position: 'UOUFNY,CNRCDR'}
+    components:
+    - type: Image
+      properties: {height: 147}
+      name: image_1
+      layout_properties: {width: 36}
+    - type: RichText
+      properties: {}
+      name: rich_text_4
+    - type: RichText
+      properties: {}
+      name: rich_text_3
+    - type: Link
+      properties: {}
+      name: link_1
+      event_bindings: {click: link_1_click}
 is_package: true

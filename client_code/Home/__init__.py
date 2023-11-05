@@ -69,43 +69,43 @@ class Home(HomeTemplate):
     major_indicies=['^GSPC','^IXIC','^DJI','^VIX','^RUA','CLUSD','GCUSD']
     major_indices_data=anvil.server.call('indices_day_change',major_indicies)
 
-    self.dr_sp500.text=str("S&P 500: "+f"{major_indices_data[0]['1D']:.2f}%")
+    self.dr_sp500.text=str(f"{major_indices_data[0]['1D']:.2f}%")
     if major_indices_data[0]['1D']>0:
       self.dr_sp500.foreground='rgba(0, 128, 0,1)'
     else:
       self.dr_sp500.foreground='rgba(255, 87, 51,1)'
       
-    self.dr_nasdaq.text=str("NASDAQ: "+f"{major_indices_data[1]['1D']:.2f}%")
+    self.dr_nasdaq.text=str(f"{major_indices_data[1]['1D']:.2f}%")
     if major_indices_data[1]['1D']>0:
       self.dr_nasdaq.foreground='rgba(0, 128, 0,1)'
     else:
       self.dr_nasdaq.foreground='rgba(255, 87, 51,1)'
       
-    self.dr_dji.text=str("Dow Jones: "+f"{major_indices_data[2]['1D']:.2f}%")
+    self.dr_dji.text=str(f"{major_indices_data[2]['1D']:.2f}%")
     if major_indices_data[2]['1D']>0:
       self.dr_dji.foreground='rgba(0, 128, 0,1)'
     else:
       self.dr_dji.foreground='rgba(255, 87, 51,1)'
       
-    self.dr_vix.text=str("VIX: "+f"{major_indices_data[3]['1D']:.2f}%")
+    self.dr_vix.text=str(f"{major_indices_data[3]['1D']:.2f}%")
     if major_indices_data[3]['1D']>0:
       self.dr_vix.foreground='rgba(0, 128, 0,1)'
     else:
       self.dr_vix.foreground='rgba(255, 87, 51,1)'
       
-    self.dr_russell3000.text=str("Russell 3000: "+f"{major_indices_data[4]['1D']:.2f}%")
+    self.dr_russell3000.text=str(f"{major_indices_data[4]['1D']:.2f}%")
     if major_indices_data[4]['1D']>0:
       self.dr_russell3000.foreground='rgba(0, 128, 0,1)'
     else:
       self.dr_russell3000.foreground='rgba(255, 87, 51,1)'
       
-    self.dr_oil.text=str("Oil: "+f"{major_indices_data[5]['1D']:.2f}%")
+    self.dr_oil.text=str(f"{major_indices_data[5]['1D']:.2f}%")
     if major_indices_data[5]['1D']>0:
       self.dr_oil.foreground='rgba(0, 128, 0,1)'
     else:
       self.dr_oil.foreground='rgba(255, 87, 51,1)'
       
-    self.dr_gold.text=str("Gold: "+f"{major_indices_data[6]['1D']:.2f}%")
+    self.dr_gold.text=str(f"{major_indices_data[6]['1D']:.2f}%")
     if major_indices_data[6]['1D']>0:
       self.dr_gold.foreground='rgba(0, 128, 0,1)'
     else:
