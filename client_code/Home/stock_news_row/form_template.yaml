@@ -3,38 +3,38 @@ container:
   properties: {role: rounded}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{"EQSGDP":17,"BHVWTP":5}'}
+  properties: {col_widths: '{}'}
   name: column_panel_1
   layout_properties: {column: SGMVGL}
   components:
-  - type: Link
-    properties: {}
-    name: link_1
-    event_bindings: {click: link_1_click}
-    layout_properties: {grid_position: 'UOUFNY,EQSGDP GLMMUQ,IWONHN'}
-  - type: RichText
-    properties: {}
-    name: rich_text_2
-    layout_properties: {grid_position: 'UOUFNY,EQSGDP DPSOJD,ZYEVTX'}
-  - type: RichText
-    properties: {}
-    name: rich_text_1
-    layout_properties: {grid_position: 'UOUFNY,EQSGDP DPSOJD,AAVAFA'}
-  - type: RichText
-    properties: {}
-    name: rich_text_3
-    layout_properties: {grid_position: 'UOUFNY,EQSGDP DPSOJD,OFEDOL'}
-  - type: RichText
-    properties: {}
-    name: rich_text_4
-    layout_properties: {grid_position: 'UOUFNY,BHVWTP'}
   - name: grid_panel_1
     properties: {}
     type: GridPanel
     layout_properties: {grid_position: 'UOUFNY,RCOJOF'}
     components:
     - type: Image
-      properties: {height: 147}
+      properties: {height: 100, display_mode: original_size}
       name: image_1
-      layout_properties: {row: VJWZWH, width_xs: 2, col_xs: 2}
+      layout_properties: {row: VJWZWH, width_xs: 2, col_xs: 0}
+    - type: Link
+      properties: {spacing_below: small, col_spacing: tiny}
+      name: link_1
+      event_bindings: {click: link_1_click}
+      layout_properties: {row: VJWZWH, width_xs: 9, col_xs: 2}
+    - name: ticker
+      properties: {}
+      type: Label
+      layout_properties: {row: NTWJEC, width_xs: 3, col_xs: 2}
+    - name: date
+      properties: {}
+      type: Label
+      layout_properties: {row: NTWJEC, width_xs: 5, col_xs: 6}
+    - name: text
+      properties: {}
+      type: Label
+      layout_properties: {row: HIAUFC, width_xs: 9, col_xs: 2}
+    - name: sentiment
+      properties: {}
+      type: Label
+      layout_properties: {row: EYMUBN, width_xs: 7, col_xs: 2}
 is_package: true

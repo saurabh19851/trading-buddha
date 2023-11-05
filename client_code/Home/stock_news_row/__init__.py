@@ -9,10 +9,10 @@ class stock_news_row(stock_news_rowTemplate):
     self.image_1.source=self.item['image']
     self.link_1.text=self.item['title']
     self.link_1.url=self.item['url']
-    self.rich_text_1.content="Ticker: "+ self.item['symbol']
-    self.rich_text_3.content='Sentiment: '+ self.item['sentiment']
-    self.rich_text_2.content=self.item['publishedDate']
-    self.rich_text_4.content=self.item['text']
+    self.ticker.text="Ticker: "+ self.item['symbol']
+    self.sentiment.text='Sentiment: '+ self.item['sentiment']
+    self.date.text=self.item['publishedDate']
+    self.text.text=self.item['text']
 
     # Any code you write here will run before the form opens.
 
