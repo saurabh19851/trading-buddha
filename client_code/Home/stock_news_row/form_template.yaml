@@ -12,10 +12,6 @@ components:
     name: link_1
     event_bindings: {click: link_1_click}
     layout_properties: {grid_position: 'UOUFNY,EQSGDP GLMMUQ,IWONHN'}
-  - type: Image
-    properties: {height: 147}
-    name: image_1
-    layout_properties: {grid_position: 'UOUFNY,EQSGDP DPSOJD,UAMUYF'}
   - type: RichText
     properties: {}
     name: rich_text_2
@@ -36,4 +32,9 @@ components:
     properties: {}
     type: GridPanel
     layout_properties: {grid_position: 'UOUFNY,RCOJOF'}
+    components:
+    - type: Image
+      properties: {height: 147}
+      name: image_1
+      layout_properties: {row: VJWZWH, width_xs: 2, col_xs: 2}
 is_package: true
