@@ -70,73 +70,108 @@ components:
     layout_properties: {grid_position: 'ZKHZWY,WYGQDE'}
     event_bindings: {click: link_2_click}
 - type: ColumnPanel
-  properties: {col_widths: '{"TPSLNC":30}'}
+  properties: {col_widths: '{"TPSLNC":30}', background: '', role: rounded}
   name: column_panel_1
   layout_properties: {slot: default}
   components:
   - type: ColumnPanel
     properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"BRMHOX":9,"EEQULB":9,"DDGWEK":9,"XKBIJR":8,"PTSOLK":7,"ANNZOA":7}',
-      spacing_below: small, background: ''}
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"NQZSTY":10,"MHJJUD":9,"UOPMPN":9,"JJMPGD":7,"FKPZLW":7,"COQXHM":7,"VRQVWX":7}',
+      spacing_below: small, background: D0A2F7}
     name: stock_indices
     layout_properties: {grid_position: 'QENBTL,XQOBYU', full_width_row: true}
     components:
-    - name: label_1
-      properties: {bold: true, align: center, text: S&P 500}
-      type: Label
-      layout_properties: {grid_position: 'SCKEDX,BRMHOX UOOJMW,UWVSRD'}
-    - name: dr_sp500
-      properties: {role: rounded, bold: true, align: center}
-      type: Label
-      layout_properties: {grid_position: 'SCKEDX,BRMHOX LSVAXS,HPDJYT'}
-    - name: label_2
-      properties: {text: NASDAQ, bold: true, align: center}
-      type: Label
-      layout_properties: {grid_position: 'SCKEDX,EEQULB WFEPYR,TOMFND'}
-    - name: dr_nasdaq
-      properties: {bold: true, align: center}
-      type: Label
-      layout_properties: {grid_position: 'SCKEDX,EEQULB PWASTZ,ZSGRZF'}
-    - name: label_3
-      properties: {text: DOW 30, bold: true, align: center}
-      type: Label
-      layout_properties: {grid_position: 'SCKEDX,DDGWEK HXASHE,HHDBOQ'}
-    - name: dr_dji
-      properties: {bold: true, align: center}
-      type: Label
-      layout_properties: {grid_position: 'SCKEDX,DDGWEK RKCLMZ,QEHZMR'}
-    - name: label_5
-      properties: {text: RUSSELL, align: center, bold: true}
-      type: Label
-      layout_properties: {grid_position: 'SCKEDX,SPXHSF WKRKUM,TRCGQS'}
-    - name: dr_russell3000
-      properties: {bold: true, align: center}
-      type: Label
-      layout_properties: {grid_position: 'SCKEDX,SPXHSF CCBEEW,GJMCVD'}
-    - name: label_4
-      properties: {text: VIX, bold: true, align: center}
-      type: Label
-      layout_properties: {grid_position: 'SCKEDX,XKBIJR KHJWJR,WAVDLV'}
-    - name: dr_vix
-      properties: {bold: true, align: center}
-      type: Label
-      layout_properties: {grid_position: 'SCKEDX,XKBIJR JTFOTX,DRUALD'}
-    - name: label_6
-      properties: {bold: true, align: center, text: OIL}
-      type: Label
-      layout_properties: {grid_position: 'SCKEDX,PTSOLK XWWVLP,SWSQQM'}
-    - name: dr_oil
-      properties: {bold: true, align: center}
-      type: Label
-      layout_properties: {grid_position: 'SCKEDX,PTSOLK ITZKWP,EHBFEK'}
-    - name: label_7
-      properties: {bold: true, align: center, text: GOLD}
-      type: Label
-      layout_properties: {grid_position: 'SCKEDX,ANNZOA AGPXHU,NMKLFF'}
-    - name: dr_gold
-      properties: {bold: true, align: center}
-      type: Label
-      layout_properties: {grid_position: 'SCKEDX,ANNZOA DWIRTW,BJSTTZ'}
+    - name: column_panel_4
+      properties: {role: rounded, background: ''}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'SCKEDX,NQZSTY'}
+      components:
+      - name: label_1
+        properties: {bold: true, align: center, text: S&P 500}
+        type: Label
+        layout_properties: {grid_position: 'GLEQOS,JEJUQV'}
+      - name: dr_sp500
+        properties: {role: null, bold: true, align: center}
+        type: Label
+        layout_properties: {grid_position: 'OGSAOR,XBQLJE'}
+    - name: column_panel_5
+      properties: {}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'SCKEDX,MHJJUD'}
+      components:
+      - name: label_2
+        properties: {text: NASDAQ, bold: true, align: center}
+        type: Label
+        layout_properties: {grid_position: 'IJKVOO,CLJOKI'}
+      - name: dr_nasdaq
+        properties: {bold: true, align: center}
+        type: Label
+        layout_properties: {grid_position: 'OPBBUY,NIOIEG'}
+    - name: column_panel_6
+      properties: {}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'SCKEDX,UOPMPN'}
+      components:
+      - name: label_3
+        properties: {text: DOW 30, bold: true, align: center}
+        type: Label
+        layout_properties: {grid_position: 'VWBIBU,IRQQNW'}
+      - name: dr_dji
+        properties: {bold: true, align: center}
+        type: Label
+        layout_properties: {grid_position: 'VZTSCH,JYPWFF'}
+    - name: column_panel_7
+      properties: {}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'SCKEDX,JJMPGD'}
+      components:
+      - name: label_5
+        properties: {text: RUSSELL, align: center, bold: true}
+        type: Label
+        layout_properties: {grid_position: 'UKFWUC,WMYKVJ'}
+      - name: dr_russell3000
+        properties: {bold: true, align: center}
+        type: Label
+        layout_properties: {grid_position: 'NSGWFQ,YLTRYQ'}
+    - name: column_panel_8
+      properties: {}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'SCKEDX,FKPZLW'}
+      components:
+      - name: label_4
+        properties: {text: VIX, bold: true, align: center}
+        type: Label
+        layout_properties: {grid_position: 'OGUAMC,USLOMF'}
+      - name: dr_vix
+        properties: {bold: true, align: center}
+        type: Label
+        layout_properties: {grid_position: 'HARKFN,PZESWA'}
+    - name: column_panel_9
+      properties: {}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'SCKEDX,COQXHM'}
+      components:
+      - name: label_6
+        properties: {bold: true, align: center, text: OIL}
+        type: Label
+        layout_properties: {grid_position: 'KJRAKV,TRTVJM'}
+      - name: dr_oil
+        properties: {bold: true, align: center}
+        type: Label
+        layout_properties: {grid_position: 'FFJLRI,PDDICW'}
+    - name: column_panel_10
+      properties: {}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'SCKEDX,VRQVWX'}
+      components:
+      - name: label_7
+        properties: {bold: true, align: center, text: GOLD}
+        type: Label
+        layout_properties: {grid_position: 'FXHUTO,QVUHDN'}
+      - name: dr_gold
+        properties: {bold: true, align: center}
+        type: Label
+        layout_properties: {grid_position: 'CBMDHY,DFBNZY'}
     event_bindings: {show: stock_indices_show}
   - type: ColumnPanel
     properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
