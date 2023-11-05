@@ -3,35 +3,37 @@ container:
   properties: {role: rounded}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{"EQSGDP":8,"NGIWHY":8,"CNRCDR":9}'}
+  properties: {col_widths: '{"EQSGDP":17,"BHVWTP":5}'}
   name: column_panel_1
   layout_properties: {column: SGMVGL}
   components:
-  - type: RichText
+  - type: Link
     properties: {}
-    name: rich_text_1
-    layout_properties: {grid_position: 'UOUFNY,EQSGDP'}
+    name: link_1
+    event_bindings: {click: link_1_click}
+    layout_properties: {grid_position: 'UOUFNY,EQSGDP GLMMUQ,IWONHN'}
+  - type: Image
+    properties: {height: 147}
+    name: image_1
+    layout_properties: {grid_position: 'UOUFNY,EQSGDP DPSOJD,UAMUYF'}
   - type: RichText
     properties: {}
     name: rich_text_2
-    layout_properties: {grid_position: 'UOUFNY,NGIWHY'}
-  - name: flow_panel_1
+    layout_properties: {grid_position: 'UOUFNY,EQSGDP DPSOJD,ZYEVTX'}
+  - type: RichText
     properties: {}
-    type: FlowPanel
-    layout_properties: {grid_position: 'UOUFNY,CNRCDR'}
-    components:
-    - type: Image
-      properties: {height: 147}
-      name: image_1
-      layout_properties: {width: 36}
-    - type: RichText
-      properties: {}
-      name: rich_text_4
-    - type: RichText
-      properties: {}
-      name: rich_text_3
-    - type: Link
-      properties: {}
-      name: link_1
-      event_bindings: {click: link_1_click}
+    name: rich_text_1
+    layout_properties: {grid_position: 'UOUFNY,EQSGDP DPSOJD,AAVAFA'}
+  - type: RichText
+    properties: {}
+    name: rich_text_3
+    layout_properties: {grid_position: 'UOUFNY,EQSGDP DPSOJD,OFEDOL'}
+  - type: RichText
+    properties: {}
+    name: rich_text_4
+    layout_properties: {grid_position: 'UOUFNY,BHVWTP'}
+  - name: grid_panel_1
+    properties: {}
+    type: GridPanel
+    layout_properties: {grid_position: 'UOUFNY,RCOJOF'}
 is_package: true
