@@ -70,7 +70,7 @@ components:
     layout_properties: {grid_position: 'ZKHZWY,WYGQDE'}
     event_bindings: {click: link_2_click}
 - type: ColumnPanel
-  properties: {col_widths: '{"TPSLNC":30}', background: '', role: rounded}
+  properties: {col_widths: '{"TPSLNC":30}', background: 'rgba(133, 199, 242,0.2)'}
   name: column_panel_1
   layout_properties: {slot: default}
   components:
@@ -82,7 +82,7 @@ components:
     layout_properties: {grid_position: 'QENBTL,XQOBYU', full_width_row: true}
     components:
     - name: column_panel_4
-      properties: {role: rounded, background: ''}
+      properties: {role: rounded, background: 'rgba(255, 131, 96,0.'}
       type: ColumnPanel
       layout_properties: {grid_position: 'SCKEDX,NQZSTY'}
       components:
