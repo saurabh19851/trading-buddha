@@ -1043,7 +1043,15 @@ div.plot-container.plotly svg.main-svg {
 }
 
 .anvil-role-rounded {
-  box-shadow: 5px 5px 7px 0px rgba(0,0,0,0.1);
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;);
   border-radius: 10px;
-  background: linear-gradient(white,rgba(133, 199, 242,0.1))
+}
+
+.anvil-role-rounded:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+.anvil-role-gradient{
+  background: linear-gradient(white,rgba(137, 152, 120,0.5));
 }

@@ -70,19 +70,21 @@ components:
     layout_properties: {grid_position: 'ZKHZWY,WYGQDE'}
     event_bindings: {click: link_2_click}
 - type: ColumnPanel
-  properties: {col_widths: '{"TPSLNC":30}', background: 'rgba(133, 199, 242,0.2)'}
+  properties: {col_widths: '{"TPSLNC":30}', background: '', role: null, spacing_above: small,
+    col_spacing: medium}
   name: column_panel_1
   layout_properties: {slot: default}
   components:
   - type: ColumnPanel
     properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"NQZSTY":10,"MHJJUD":9,"UOPMPN":9,"JJMPGD":7,"FKPZLW":7,"COQXHM":7,"VRQVWX":7}',
-      spacing_below: small, background: D0A2F7}
+      wrap_on: mobile, col_spacing: huge, spacing_above: large, col_widths: '{"NQZSTY":10,"MHJJUD":9,"UOPMPN":9,"JJMPGD":7,"FKPZLW":7,"COQXHM":7,"VRQVWX":7}',
+      spacing_below: large, background: ''}
     name: stock_indices
     layout_properties: {grid_position: 'QENBTL,XQOBYU', full_width_row: true}
     components:
     - name: column_panel_4
-      properties: {role: rounded, background: 'rgba(255, 131, 96,0.'}
+      properties: {role: rounded, background: '', spacing_above: large, spacing_below: large,
+        col_spacing: large}
       type: ColumnPanel
       layout_properties: {grid_position: 'SCKEDX,NQZSTY'}
       components:
@@ -95,7 +97,8 @@ components:
         type: Label
         layout_properties: {grid_position: 'OGSAOR,XBQLJE'}
     - name: column_panel_5
-      properties: {}
+      properties: {spacing_above: large, spacing_below: large, col_spacing: huge,
+        role: rounded}
       type: ColumnPanel
       layout_properties: {grid_position: 'SCKEDX,MHJJUD'}
       components:
@@ -108,7 +111,8 @@ components:
         type: Label
         layout_properties: {grid_position: 'OPBBUY,NIOIEG'}
     - name: column_panel_6
-      properties: {}
+      properties: {spacing_above: large, spacing_below: large, col_spacing: huge,
+        role: rounded}
       type: ColumnPanel
       layout_properties: {grid_position: 'SCKEDX,UOPMPN'}
       components:
@@ -121,7 +125,8 @@ components:
         type: Label
         layout_properties: {grid_position: 'VZTSCH,JYPWFF'}
     - name: column_panel_7
-      properties: {}
+      properties: {spacing_above: large, spacing_below: large, col_spacing: huge,
+        role: rounded}
       type: ColumnPanel
       layout_properties: {grid_position: 'SCKEDX,JJMPGD'}
       components:
@@ -134,7 +139,8 @@ components:
         type: Label
         layout_properties: {grid_position: 'NSGWFQ,YLTRYQ'}
     - name: column_panel_8
-      properties: {}
+      properties: {spacing_above: large, spacing_below: large, col_spacing: huge,
+        role: rounded}
       type: ColumnPanel
       layout_properties: {grid_position: 'SCKEDX,FKPZLW'}
       components:
@@ -147,7 +153,8 @@ components:
         type: Label
         layout_properties: {grid_position: 'HARKFN,PZESWA'}
     - name: column_panel_9
-      properties: {}
+      properties: {spacing_above: large, spacing_below: large, col_spacing: huge,
+        role: rounded}
       type: ColumnPanel
       layout_properties: {grid_position: 'SCKEDX,COQXHM'}
       components:
@@ -160,7 +167,8 @@ components:
         type: Label
         layout_properties: {grid_position: 'FFJLRI,PDDICW'}
     - name: column_panel_10
-      properties: {}
+      properties: {spacing_above: large, spacing_below: large, col_spacing: huge,
+        role: rounded}
       type: ColumnPanel
       layout_properties: {grid_position: 'SCKEDX,VRQVWX'}
       components:
@@ -174,8 +182,8 @@ components:
         layout_properties: {grid_position: 'CBMDHY,DFBNZY'}
     event_bindings: {show: stock_indices_show}
   - type: ColumnPanel
-    properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    properties: {role: tonal-card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: huge, spacing_above: small, col_widths: '{}',
       spacing_below: small, background: ''}
     name: column_panel_3
     layout_properties: {grid_position: 'JMJMFK,BXCSHZ', full_width_row: true}
@@ -187,30 +195,52 @@ components:
         background: '', format: markdown}
       name: rich_text_1
       layout_properties: {grid_position: 'JWJDFB,LPIIRL', full_width_row: true}
-    - type: Plot
-      properties: {spacing_above: small, spacing_below: small, height: 308, visible: true,
-        tooltip: '', interactive: true}
-      name: sp500
-      layout_properties: {grid_position: 'OFYVYF,WINUGW', width: 403, full_width_row: true}
-    - type: Plot
-      properties: {height: 309}
-      name: nasdaq
-      layout_properties: {grid_position: 'OFYVYF,FSYOUS', width: 398, full_width_row: true}
-    - type: Plot
-      properties: {spacing_above: small, spacing_below: small, height: 450, visible: true,
-        tooltip: '', interactive: true}
-      name: dow_jones
-      layout_properties: {grid_position: 'AVZFTZ,IWYDKT', full_width_row: true}
-    - type: Plot
-      properties: {}
-      name: vix
-      layout_properties: {grid_position: 'AVZFTZ,DCDYZI', full_width_row: true}
+    - name: column_panel_11
+      properties: {spacing_below: large, spacing_above: large, col_spacing: huge,
+        role: rounded}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'OFYVYF,WINUGW'}
+      components:
+      - type: Plot
+        properties: {spacing_above: none, spacing_below: none, height: 308, visible: true,
+          tooltip: '', interactive: true}
+        name: sp500
+        layout_properties: {grid_position: 'SKGVOE,JBVPLV'}
+    - name: column_panel_12
+      properties: {role: rounded, col_spacing: huge, spacing_below: large, spacing_above: large}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'OFYVYF,FSYOUS'}
+      components:
+      - type: Plot
+        properties: {height: 309, spacing_above: none, spacing_below: none}
+        name: nasdaq
+        layout_properties: {grid_position: 'KKMWST,NKCYPN'}
+    - name: column_panel_13
+      properties: {spacing_above: large, spacing_below: large, role: rounded}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'AVZFTZ,IWYDKT'}
+      components:
+      - type: Plot
+        properties: {spacing_above: none, spacing_below: none, height: 450, visible: true,
+          tooltip: '', interactive: true}
+        name: dow_jones
+        layout_properties: {grid_position: 'SRMSTG,QTEIGE'}
+    - name: column_panel_14
+      properties: {spacing_above: large, spacing_below: large, col_spacing: huge,
+        role: rounded}
+      type: ColumnPanel
+      layout_properties: {grid_position: 'AVZFTZ,DCDYZI'}
+      components:
+      - type: Plot
+        properties: {spacing_above: none, spacing_below: none}
+        name: vix
+        layout_properties: {grid_position: 'TSPLKE,PLELJG'}
   - type: RichText
     properties: {role: rounded, align: center, tooltip: '', enable_slots: true, border: '',
       foreground: '', visible: true, font_size: null, content: Stock News, font: Playfair Display,
       spacing_above: small, spacing_below: small, data: null, background: '', format: markdown}
     name: rich_text_4
-    layout_properties: {grid_position: 'LOGQGK,TPSLNC PWCGEN,URRNDY', full_width_row: true}
+    layout_properties: {grid_position: 'PWCGEN,URRNDY', full_width_row: true}
   - type: DataGrid
     properties:
       role: rounded
@@ -229,20 +259,65 @@ components:
       spacing_below: small
       background: ''
     name: stock_news_grid
-    layout_properties: {grid_position: 'LOGQGK,TPSLNC ZWLRXM,OULMAU'}
+    layout_properties: {grid_position: 'ZWLRXM,OULMAU'}
     components:
     - type: RepeatingPanel
-      properties: {role: null, tooltip: '', border: '', foreground: '', items: null,
+      properties: {role: rounded, tooltip: '', border: '', foreground: '', items: null,
         visible: true, spacing_above: none, spacing_below: none, item_template: Home.stock_news_row,
         background: ''}
       name: stock_news_panel
       layout_properties: {}
   - type: RichText
     properties: {role: rounded, align: center, tooltip: '', enable_slots: true, border: '',
+      foreground: '', visible: true, font_size: null, content: General News, font: Playfair Display,
+      spacing_above: small, spacing_below: small, data: null, background: '', format: markdown}
+    name: rich_text_5
+    layout_properties: {grid_position: 'SPHBID,BNXTDH'}
+    components: []
+  - type: RichText
+    properties: {role: rounded, align: center, tooltip: '', enable_slots: true, border: '',
+      foreground: '', visible: true, font_size: null, content: Biggest Winners, font: '',
+      spacing_above: small, spacing_below: small, data: null, background: '', format: markdown}
+    name: rich_text_2
+    layout_properties: {grid_position: 'NRMCUR,IOEXBM'}
+    components:
+    - type: DataGrid
+      properties:
+        role: null
+        columns:
+        - {id: FYAMVF, title: Ticker, data_key: symbol, $$hashKey: 'object:3716',
+          expand: true}
+        - {id: AETXME, title: Name, data_key: name, $$hashKey: 'object:3717', expand: true}
+        - {id: SPGAUY, title: Price, data_key: price, $$hashKey: 'object:3718', expand: true}
+        - {id: LWVQVV, title: Change (%), data_key: changesPercentage, $$hashKey: 'object:3755',
+          expand: true}
+        - {id: CGNNJD, title: Change ($), data_key: change, $$hashKey: 'object:4940',
+          expand: true}
+        auto_header: true
+        tooltip: ''
+        border: ''
+        foreground: ''
+        rows_per_page: 20
+        visible: true
+        wrap_on: never
+        show_page_controls: true
+        spacing_above: small
+        spacing_below: small
+        background: ''
+      name: gainers_grid
+      layout_properties: {grid_position: 'LOGQGK,GQDRRP', full_width_row: true}
+      components:
+      - type: RepeatingPanel
+        properties: {spacing_above: none, spacing_below: none, item_template: Home.losers_row}
+        name: gainers_panel
+        layout_properties: {}
+      data_bindings: []
+  - type: RichText
+    properties: {role: rounded, align: center, tooltip: '', enable_slots: true, border: '',
       foreground: '', visible: true, font_size: null, content: Biggest Losers, font: '',
       spacing_above: small, spacing_below: small, data: null, background: '', format: markdown}
     name: rich_text_3
-    layout_properties: {grid_position: 'LOGQGK,TPSLNC DAYCRX,MCOVOC', full_width_row: true}
+    layout_properties: {grid_position: 'DAYCRX,MCOVOC', full_width_row: true}
     components:
     - type: DataGrid
       properties:
@@ -276,13 +351,6 @@ components:
           background: ''}
         name: losers_panel
         layout_properties: {}
-  - type: RichText
-    properties: {role: rounded, align: center, tooltip: '', enable_slots: true, border: '',
-      foreground: '', visible: true, font_size: null, content: General News, font: Playfair Display,
-      spacing_above: small, spacing_below: small, data: null, background: '', format: markdown}
-    name: rich_text_5
-    layout_properties: {grid_position: 'LOGQGK,SMWMXC FVBBDH,IMCDFV', full_width_row: true}
-    components: []
   - type: DataGrid
     properties:
       role: rounded
@@ -300,7 +368,7 @@ components:
       spacing_below: small
       background: ''
     name: geenral_news_grid
-    layout_properties: {grid_position: 'LOGQGK,SMWMXC KBSGZC,SQQDJB'}
+    layout_properties: {grid_position: 'JASXAS,DQTZEP'}
     components:
     - type: RepeatingPanel
       properties: {role: elevated-card, tooltip: '', border: '', foreground: '', items: null,
@@ -308,42 +376,4 @@ components:
         background: ''}
       name: general_news_panel
       layout_properties: {}
-  - type: RichText
-    properties: {role: rounded, align: center, tooltip: '', enable_slots: true, border: '',
-      foreground: '', visible: true, font_size: null, content: Biggest Winners, font: '',
-      spacing_above: small, spacing_below: small, data: null, background: '', format: markdown}
-    name: rich_text_2
-    layout_properties: {grid_position: 'LOGQGK,SMWMXC LKNBOP,CKMXIV', full_width_row: true}
-    components:
-    - type: DataGrid
-      properties:
-        role: null
-        columns:
-        - {id: FYAMVF, title: Ticker, data_key: symbol, $$hashKey: 'object:3716',
-          expand: true}
-        - {id: AETXME, title: Name, data_key: name, $$hashKey: 'object:3717', expand: true}
-        - {id: SPGAUY, title: Price, data_key: price, $$hashKey: 'object:3718', expand: true}
-        - {id: LWVQVV, title: Change (%), data_key: changesPercentage, $$hashKey: 'object:3755',
-          expand: true}
-        - {id: CGNNJD, title: Change ($), data_key: change, $$hashKey: 'object:4940',
-          expand: true}
-        auto_header: true
-        tooltip: ''
-        border: ''
-        foreground: ''
-        rows_per_page: 20
-        visible: true
-        wrap_on: never
-        show_page_controls: true
-        spacing_above: small
-        spacing_below: small
-        background: ''
-      name: gainers_grid
-      layout_properties: {grid_position: 'LOGQGK,GQDRRP', full_width_row: true}
-      components:
-      - type: RepeatingPanel
-        properties: {spacing_above: none, spacing_below: none, item_template: Home.losers_row}
-        name: gainers_panel
-        layout_properties: {}
-      data_bindings: []
 data_bindings: []
