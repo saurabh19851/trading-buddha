@@ -51,6 +51,7 @@ roles:
   components: [TextBox, TextArea, DatePicker, DropDown]
 - {name: rounded}
 - {name: gradient}
+- {name: button1}
 color_scheme:
   preset_groups:
   - name: Colour Scheme
