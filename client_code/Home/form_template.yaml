@@ -246,7 +246,7 @@ components:
       role: rounded
       columns:
       - {id: SGMVGL, title: Column 1, data_key: column_1, $$hashKey: 'object:21758',
-        expand: true}
+        expand: false, width: 1166}
       auto_header: false
       tooltip: ''
       border: ''
