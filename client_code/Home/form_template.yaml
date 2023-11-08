@@ -70,8 +70,8 @@ components:
     layout_properties: {grid_position: 'ZKHZWY,WYGQDE'}
     event_bindings: {click: link_2_click}
 - type: ColumnPanel
-  properties: {col_widths: '{}', background: '', role: null, spacing_above: small,
-    col_spacing: medium}
+  properties: {col_widths: '{"UVQSGV":35,"HVPCLE":16}', background: '', role: null,
+    spacing_above: small, col_spacing: medium}
   name: column_panel_1
   layout_properties: {slot: default}
   components:
@@ -235,38 +235,117 @@ components:
         properties: {spacing_above: none, spacing_below: none}
         name: vix
         layout_properties: {grid_position: 'TSPLKE,PLELJG'}
-  - type: RichText
-    properties: {role: rounded, align: center, tooltip: '', enable_slots: true, border: '',
-      foreground: '', visible: true, font_size: null, content: Stock News, font: Playfair Display,
-      spacing_above: small, spacing_below: small, data: null, background: '', format: markdown}
-    name: rich_text_4
-    layout_properties: {grid_position: 'PWCGEN,URRNDY', full_width_row: true}
-  - type: DataGrid
-    properties:
-      role: rounded
-      columns:
-      - {id: SGMVGL, title: Column 1, data_key: column_1, $$hashKey: 'object:21758',
-        expand: false, width: 1166}
-      auto_header: false
-      tooltip: ''
-      border: ''
-      foreground: ''
-      rows_per_page: 10
-      visible: true
-      wrap_on: never
-      show_page_controls: true
-      spacing_above: small
-      spacing_below: small
-      background: ''
-    name: stock_news_grid
-    layout_properties: {grid_position: 'ZWLRXM,OULMAU', full_width_row: true}
+  - name: column_panel_17
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'PFRMXQ,UVQSGV'}
     components:
-    - type: RepeatingPanel
-      properties: {role: rounded, tooltip: '', border: '', foreground: '', items: null,
-        visible: true, spacing_above: none, spacing_below: none, item_template: Home.stock_news_row,
-        background: ''}
-      name: stock_news_panel
-      layout_properties: {}
+    - name: label_10
+      properties: {text: Stock News, spacing_above: medium, spacing_below: medium,
+        align: center, bold: true, underline: false}
+      type: Label
+      layout_properties: {grid_position: 'JYXNKL,PROSPO'}
+    - type: DataGrid
+      properties:
+        role: tonal-data-grid
+        columns:
+        - {id: SGMVGL, title: Column 1, data_key: column_1, $$hashKey: 'object:21758',
+          expand: false, width: 709}
+        auto_header: false
+        tooltip: ''
+        border: ''
+        foreground: ''
+        rows_per_page: 10
+        visible: true
+        wrap_on: mobile
+        show_page_controls: false
+        spacing_above: small
+        spacing_below: small
+        background: ''
+      name: stock_news_grid
+      layout_properties: {grid_position: 'YLYNZM,EKVDJA'}
+      components:
+      - type: RepeatingPanel
+        properties: {role: rounded, tooltip: '', border: '', foreground: '', items: null,
+          visible: true, spacing_above: none, spacing_below: none, item_template: Home.stock_news_row,
+          background: ''}
+        name: stock_news_panel
+        layout_properties: {}
+  - name: column_panel_15
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'PFRMXQ,HVPCLE LTHEFO,UZYWHK'}
+    components:
+    - name: label_8
+      properties: {text: Biggest Gainers, role: null, spacing_above: medium, spacing_below: medium,
+        bold: true, align: center}
+      type: Label
+      layout_properties: {grid_position: 'KNDYRW,EDWWZP'}
+    - type: DataGrid
+      properties:
+        role: null
+        columns:
+        - {id: FYAMVF, title: Ticker, data_key: symbol, $$hashKey: 'object:3716',
+          expand: true}
+        - {id: LWVQVV, title: Change (%), data_key: changesPercentage, $$hashKey: 'object:3755',
+          expand: true}
+        auto_header: true
+        tooltip: ''
+        border: ''
+        foreground: ''
+        rows_per_page: 20
+        visible: true
+        wrap_on: mobile
+        show_page_controls: true
+        spacing_above: large
+        spacing_below: large
+        background: ''
+      name: gainers_grid
+      layout_properties: {grid_position: 'DHNYCF,HMUHLD'}
+      components:
+      - type: RepeatingPanel
+        properties: {spacing_above: medium, spacing_below: medium, item_template: Home.losers_row}
+        name: gainers_panel
+        layout_properties: {}
+      data_bindings: []
+  - name: column_panel_16
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'PFRMXQ,HVPCLE BQMNDA,UEOLYD'}
+    components:
+    - name: label_9
+      properties: {text: Biggest Losers, spacing_above: medium, spacing_below: medium,
+        align: center, bold: true}
+      type: Label
+      layout_properties: {grid_position: 'KEHIFP,ETOTUT'}
+    - type: DataGrid
+      properties:
+        role: null
+        columns:
+        - {id: FYAMVF, title: Ticker, data_key: symbol, $$hashKey: 'object:3716',
+          expand: true}
+        - {id: LWVQVV, title: Change (%), data_key: changesPercentage, $$hashKey: 'object:3755',
+          expand: true}
+        auto_header: true
+        tooltip: ''
+        border: ''
+        foreground: ''
+        rows_per_page: 20
+        visible: true
+        wrap_on: never
+        show_page_controls: true
+        spacing_above: small
+        spacing_below: small
+        background: ''
+      name: losers_grid
+      layout_properties: {grid_position: 'HFGQRN,OJWMOE'}
+      components:
+      - type: RepeatingPanel
+        properties: {role: null, tooltip: '', border: '', foreground: '', items: null,
+          visible: true, spacing_above: none, spacing_below: none, item_template: Home.losers_row,
+          background: ''}
+        name: losers_panel
+        layout_properties: {}
   - type: RichText
     properties: {role: rounded, align: center, tooltip: '', enable_slots: true, border: '',
       foreground: '', visible: true, font_size: null, content: General News, font: Playfair Display,
@@ -299,81 +378,4 @@ components:
         background: ''}
       name: general_news_panel
       layout_properties: {}
-  - type: RichText
-    properties: {role: rounded, align: center, tooltip: '', enable_slots: true, border: '',
-      foreground: '', visible: true, font_size: null, content: Biggest Winners, font: '',
-      spacing_above: small, spacing_below: small, data: null, background: '', format: markdown}
-    name: rich_text_2
-    layout_properties: {grid_position: 'NRMCUR,IOEXBM'}
-    components:
-    - type: DataGrid
-      properties:
-        role: null
-        columns:
-        - {id: FYAMVF, title: Ticker, data_key: symbol, $$hashKey: 'object:3716',
-          expand: true}
-        - {id: AETXME, title: Name, data_key: name, $$hashKey: 'object:3717', expand: true}
-        - {id: SPGAUY, title: Price, data_key: price, $$hashKey: 'object:3718', expand: true}
-        - {id: LWVQVV, title: Change (%), data_key: changesPercentage, $$hashKey: 'object:3755',
-          expand: true}
-        - {id: CGNNJD, title: Change ($), data_key: change, $$hashKey: 'object:4940',
-          expand: true}
-        auto_header: true
-        tooltip: ''
-        border: ''
-        foreground: ''
-        rows_per_page: 20
-        visible: true
-        wrap_on: never
-        show_page_controls: true
-        spacing_above: small
-        spacing_below: small
-        background: ''
-      name: gainers_grid
-      layout_properties: {grid_position: 'LOGQGK,GQDRRP', full_width_row: true}
-      components:
-      - type: RepeatingPanel
-        properties: {spacing_above: none, spacing_below: none, item_template: Home.losers_row}
-        name: gainers_panel
-        layout_properties: {}
-      data_bindings: []
-  - type: RichText
-    properties: {role: rounded, align: center, tooltip: '', enable_slots: true, border: '',
-      foreground: '', visible: true, font_size: null, content: Biggest Losers, font: '',
-      spacing_above: small, spacing_below: small, data: null, background: '', format: markdown}
-    name: rich_text_3
-    layout_properties: {grid_position: 'DAYCRX,MCOVOC', full_width_row: true}
-    components:
-    - type: DataGrid
-      properties:
-        role: null
-        columns:
-        - {id: FYAMVF, title: Ticker, data_key: symbol, $$hashKey: 'object:3716',
-          expand: true}
-        - {id: AETXME, title: Name, data_key: name, $$hashKey: 'object:3717', expand: true}
-        - {id: SPGAUY, title: Price, data_key: price, $$hashKey: 'object:3718', expand: true}
-        - {id: LWVQVV, title: Change (%), data_key: changespercentage, $$hashKey: 'object:3755',
-          expand: true}
-        - {id: FVMVCI, title: Change ($), data_key: change, $$hashKey: 'object:464',
-          expand: true}
-        auto_header: true
-        tooltip: ''
-        border: ''
-        foreground: ''
-        rows_per_page: 20
-        visible: true
-        wrap_on: never
-        show_page_controls: true
-        spacing_above: small
-        spacing_below: small
-        background: ''
-      name: losers_grid
-      layout_properties: {grid_position: 'LOGQGK,GQDRRP JDYRWP,BODWBN', full_width_row: true}
-      components:
-      - type: RepeatingPanel
-        properties: {role: null, tooltip: '', border: '', foreground: '', items: null,
-          visible: true, spacing_above: none, spacing_below: none, item_template: Home.losers_row,
-          background: ''}
-        name: losers_panel
-        layout_properties: {}
 data_bindings: []
