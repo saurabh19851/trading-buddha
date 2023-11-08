@@ -25,7 +25,7 @@ class Home(HomeTemplate):
     '''
     general_stock_news,general_news,gainers,losers,sp500_graph,nasdaq_graph,dowjones_graph,vix_graph=anvil.server.call('home_screen_data')
     self.stock_news_panel.items=general_stock_news
-    self.general_news_panel.items=general_news
+    #self.general_news_panel.items=general_news
     self.gainers_panel.items=gainers
     self.losers_panel.items=losers
     self.sp500.figure=sp500_graph

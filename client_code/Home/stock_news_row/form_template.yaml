@@ -12,22 +12,22 @@ components:
     name: image_1
     layout_properties: {row: VJWZWH, width_xs: 2, col_xs: 0}
   - type: Link
-    properties: {spacing_below: small, col_spacing: tiny}
+    properties: {spacing_below: small, col_spacing: tiny, bold: true}
     name: link_1
     event_bindings: {click: link_1_click}
-    layout_properties: {row: VJWZWH, width_xs: 5, col_xs: 2}
+    layout_properties: {row: VJWZWH, width_xs: 10, col_xs: 2}
   - name: ticker
-    properties: {}
+    properties: {underline: true}
     type: Label
-    layout_properties: {row: NTWJEC, width_xs: 3, col_xs: 2}
+    layout_properties: {row: NTWJEC, width_xs: 4, col_xs: 2}
   - name: date
     properties: {}
     type: Label
-    layout_properties: {row: NTWJEC, width_xs: 5, col_xs: 6}
+    layout_properties: {row: NTWJEC, width_xs: 5, col_xs: 7}
   - name: text
-    properties: {}
+    properties: {italic: true}
     type: Label
-    layout_properties: {row: HIAUFC, width_xs: 9, col_xs: 2}
+    layout_properties: {row: HIAUFC, width_xs: 10, col_xs: 2}
   - name: sentiment
     properties: {}
     type: Label
