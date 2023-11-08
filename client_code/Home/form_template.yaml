@@ -70,7 +70,7 @@ components:
     layout_properties: {grid_position: 'ZKHZWY,WYGQDE'}
     event_bindings: {click: link_2_click}
 - type: ColumnPanel
-  properties: {col_widths: '{"TPSLNC":30}', background: '', role: null, spacing_above: small,
+  properties: {col_widths: '{}', background: '', role: null, spacing_above: small,
     col_spacing: medium}
   name: column_panel_1
   layout_properties: {slot: default}
@@ -259,7 +259,7 @@ components:
       spacing_below: small
       background: ''
     name: stock_news_grid
-    layout_properties: {grid_position: 'ZWLRXM,OULMAU'}
+    layout_properties: {grid_position: 'ZWLRXM,OULMAU', full_width_row: true}
     components:
     - type: RepeatingPanel
       properties: {role: rounded, tooltip: '', border: '', foreground: '', items: null,
@@ -274,6 +274,31 @@ components:
     name: rich_text_5
     layout_properties: {grid_position: 'SPHBID,BNXTDH'}
     components: []
+  - type: DataGrid
+    properties:
+      role: rounded
+      columns:
+      - {id: TOKBFO, title: Column 1, data_key: column_1, $$hashKey: 'object:31916'}
+      auto_header: false
+      tooltip: ''
+      border: ''
+      foreground: ''
+      rows_per_page: 10
+      visible: true
+      wrap_on: never
+      show_page_controls: true
+      spacing_above: small
+      spacing_below: small
+      background: ''
+    name: geenral_news_grid
+    layout_properties: {grid_position: 'KODJNX,CCEECQ'}
+    components:
+    - type: RepeatingPanel
+      properties: {role: elevated-card, tooltip: '', border: '', foreground: '', items: null,
+        visible: true, spacing_above: none, spacing_below: none, item_template: Home.general_news_row,
+        background: ''}
+      name: general_news_panel
+      layout_properties: {}
   - type: RichText
     properties: {role: rounded, align: center, tooltip: '', enable_slots: true, border: '',
       foreground: '', visible: true, font_size: null, content: Biggest Winners, font: '',
@@ -351,29 +376,4 @@ components:
           background: ''}
         name: losers_panel
         layout_properties: {}
-  - type: DataGrid
-    properties:
-      role: rounded
-      columns:
-      - {id: TOKBFO, title: Column 1, data_key: column_1, $$hashKey: 'object:31916'}
-      auto_header: false
-      tooltip: ''
-      border: ''
-      foreground: ''
-      rows_per_page: 10
-      visible: true
-      wrap_on: never
-      show_page_controls: true
-      spacing_above: small
-      spacing_below: small
-      background: ''
-    name: geenral_news_grid
-    layout_properties: {grid_position: 'JASXAS,DQTZEP'}
-    components:
-    - type: RepeatingPanel
-      properties: {role: elevated-card, tooltip: '', border: '', foreground: '', items: null,
-        visible: true, spacing_above: none, spacing_below: none, item_template: Home.general_news_row,
-        background: ''}
-      name: general_news_panel
-      layout_properties: {}
 data_bindings: []
