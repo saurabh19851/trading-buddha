@@ -64,6 +64,10 @@ class Economy(EconomyTemplate):
     from ..Stock import Stock
     open_form('Stock')
 
+  def button_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    pass
+
 
 
 
