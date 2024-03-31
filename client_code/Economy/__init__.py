@@ -12,12 +12,6 @@ class Economy(EconomyTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     # Any code you write here will run before the form opens.
-    self.indicators.items=[('GDP','GDP'),('Real GDP','realGDP'),('nominal GDP','nominalPotentialGDP'),('Federal Funds','federalFunds'),\
-                           ('CPI','CPI'),('Inflation Rate','inflationRate'),('Inflation','inflation'),('Retail Sales','retailSales'),\
-                           ('Consumer Sentiment','consumerSentiment'),('Durable Goods','durableGoods'),('Unemployment Rate','unemploymentRate'),\
-                           ('Nonfarm payroll','totalNonfarmPayroll'),('Initial Claims','initialClaims'),('Industrial Production','industrialProductionTotalIndex'),\
-                           ('Housing Unit Starts','newPrivatelyOwnedHousingUnitsStartedTotalUnits'),('Vehicle Sales','totalVehicleSales'),\
-                           ('US Recession Probabilities','smoothedUSRecessionProbabilities')]
                           
 
 
