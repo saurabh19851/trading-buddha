@@ -8,11 +8,10 @@ components:
   name: content_panel
   layout_properties: {slot: default}
   components:
-  - name: xy_panel_1
-    properties: {height: 100}
-    type: XYPanel
-    layout_properties: {grid_position: 'PTYYPF,FWFOXZ', full_width_row: true}
-    data_bindings: []
+  - name: column_panel_1
+    properties: {role: elevated-card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'OPDOTI,FDOHRN', full_width_row: true}
 - type: FlowPanel
   properties: {}
   name: navbar_links

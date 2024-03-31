@@ -2,6 +2,8 @@ from ._anvil_designer import EconomyTemplate
 from anvil import *
 import plotly.graph_objects as go
 import anvil.server
+from anvil.js.window import jQuery
+from anvil.js import get_dom_node
 from .. import Globals
 
 
