@@ -164,10 +164,10 @@ components:
       type: Button
       layout_properties: {grid_position: 'CIEERO,YQPBUS GGTGKY,QXBVQA'}
       event_bindings: {click: button_click}
-  - type: Plot
+  - name: graph
     properties: {}
-    name: indicator_chart
-    layout_properties: {grid_position: 'ZDOKSC,HGEBNY', full_width_row: true}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'WCEPTQ,LTFBJH'}
   - type: RichText
     properties: {}
     name: rich_text_2
