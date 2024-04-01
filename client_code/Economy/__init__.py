@@ -66,15 +66,6 @@ class Economy(EconomyTemplate):
     """This method is called when the button is clicked"""
     button=event_args['sender']
     if button.text=='GDP':
-        iframe = jQuery("<iframe width='100%' height='475px'>").attr("src","https://fred.stlouisfed.org/graph/graph-landing.php?g=1jnZf&width=670&height=475")
-        iframe.appendTo(get_dom_node(self.column_panel_1)
+        iframe = jQuery("<iframe width='800px' height='600px'>").attr("src","https://fred.stlouisfed.org/graph/graph-landing.php?g=1jbWT&width=800&height=475")
+        iframe.appendTo(get_dom_node(self.graph))
     
-
-
-
-
-
-
-
-
-
