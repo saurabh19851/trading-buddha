@@ -12,8 +12,8 @@ class Economy(EconomyTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     # Any code you write here will run before the form opens.
-    iframe = jQuery("<iframe width='100%' height='475px'>").attr("src","https://fred.stlouisfed.org/graph/graph-landing.php?g=1jhCp")
-    iframe.appendTo(get_dom_node(self.column_panel_1)
+
+    
                           
 
 
@@ -64,6 +64,10 @@ class Economy(EconomyTemplate):
 
   def button_click(self, **event_args):
     """This method is called when the button is clicked"""
+    button=event_args['sender']
+    iframe = jQuery("<iframe width='100%' height='475px'>").attr("src","https://fred.stlouisfed.org/graph/graph-landing.php?g=1jhCp")
+    iframe.appendTo(get_dom_node(self.column_panel_1)
+    
     pass
 
 
