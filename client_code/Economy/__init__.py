@@ -13,7 +13,7 @@ class Economy(EconomyTemplate):
     self.init_components(**properties)
     # Any code you write here will run before the form opens.
     iframe = jQuery("<iframe width='100%' height='475px'>").attr("src","https://fred.stlouisfed.org/graph/graph-landing.php?g=1jhCp")
-    iframe.appendTo(get_dom_node(self.column_panel_1))intil
+    iframe.appendTo(get_dom_node(self.column_panel_1)
                           
 
 
