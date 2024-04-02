@@ -65,7 +65,21 @@ class Economy(EconomyTemplate):
   def button_click(self, **event_args):
     """This method is called when the button is clicked"""
     button=event_args['sender']
+    a=''
+    b="<iframe width='920px' height='550px'>"
+    iframe = jQuery(b).attr("src","https://fred.stlouisfed.org/graph/graph-landing.php?g=1jbWT&width=900&height=475")
+    iframe.appendTo(get_dom_node(self.graph))
     if button.text=='GDP':
-        iframe = jQuery("<iframe width='800px' height='600px'>").attr("src","https://fred.stlouisfed.org/graph/graph-landing.php?g=1jbWT&width=800&height=475")
-        iframe.appendTo(get_dom_node(self.graph))
+        a='https://fred.stlouisfed.org/graph/graph-landing.php?g=1jbWT'
+    elif button.text=='Real GDP':
+        a='https://fred.stlouisfed.org/graph/graph-landing.php?g=1jbWV'
+    elif button.text=='Nominal GDP':
+        a='https://fred.stlouisfed.org/graph/graph-landing.php?g=1jsj9'
+    elif button.text=='Federal Funds':
+        a='https://fred.stlouisfed.org/graph/graph-landing.php?g=1jsjm'
+    elif button.text=='CPI':
+        a='https://fred.stlouisfed.org/graph/graph-landing.php?g=1icWK'
+    elif button.text==''
+        
+        
     
