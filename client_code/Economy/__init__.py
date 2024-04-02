@@ -79,7 +79,24 @@ class Economy(EconomyTemplate):
         a='https://fred.stlouisfed.org/graph/graph-landing.php?g=1jsjm'
     elif button.text=='CPI':
         a='https://fred.stlouisfed.org/graph/graph-landing.php?g=1icWK'
-    elif button.text==''
-        
-        
+    elif button.text=='Inflation Rate':
+        a='https://fred.stlouisfed.org/graph/graph-landing.php?g=1jj5k'
+    elif button.text=='Oil Price':
+        a='https://fred.stlouisfed.org/graph/graph-landing.php?g=1jj3O'
+    elif button.text=='Manufacturing Output':
+        a='https://fred.stlouisfed.org/graph/graph-landing.php?g=1jhzI'
+    elif button.text=='Job Postings':
+        a='https://fred.stlouisfed.org/graph/graph-landing.php?g=1jhs0'
+    elif button.text=='Manufacturing Employees':
+        a='"https://fred.stlouisfed.org/graph/graph-landing.php?g=1jhi5'
+    elif button.text=='Delinquency Rate: Consumer Loans':
+        a='https://fred.stlouisfed.org/graph/graph-landing.php?g=1jfRu'
+    elif button.text=='Charge-Off: Business Loans':
+        a='https://fred.stlouisfed.org/graph/graph-landing.php?g=1jfRl'
+    elif button.text=='Financial Conditions Index':
+        a='https://fred.stlouisfed.org/graph/graph-landing.php?g=1jsmA'
+    elif button.text=='Leading Index':
+        a='https://fred.stlouisfed.org/graph/graph-landing.php?g=11Zzp' 
+    elif button.text=='Financial Stress Index':
+        a='https://fred.stlouisfed.org/graph/graph-landing.php?g=1jfDG'  
     

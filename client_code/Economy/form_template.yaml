@@ -89,23 +89,18 @@ components:
       type: Button
       layout_properties: {grid_position: 'CIEERO,NROJQW NNRUDK,UDWBCI'}
       event_bindings: {click: button_click}
-    - name: inflation
-      properties: {text: Inflation, role: null}
-      type: Button
-      layout_properties: {grid_position: 'CIEERO,NROJQW IWHRYR,WNZKMI'}
-      event_bindings: {click: button_click}
-    - name: durable_goods
-      properties: {text: Durable Goods}
+    - name: Oil_Price
+      properties: {text: Oil Price}
       type: Button
       layout_properties: {grid_position: 'CIEERO,NROJQW BRPWQS,JIXGCN'}
       event_bindings: {click: button_click}
-    - name: initial_claims
-      properties: {text: Initial Claims}
+    - name: manu_employ
+      properties: {text: Manufacturing Employees}
       type: Button
       layout_properties: {grid_position: 'CIEERO,NROJQW YXWFPQ,ELAOGK'}
       event_bindings: {click: button_click}
-    - name: vehicles
-      properties: {text: Vehicles Sales}
+    - name: fin_cond_indx
+      properties: {text: Financial Conditions Index}
       type: Button
       layout_properties: {grid_position: 'CIEERO,NROJQW MNHGIJ,EEQVMP'}
       event_bindings: {click: button_click}
@@ -119,23 +114,18 @@ components:
       type: Button
       layout_properties: {grid_position: 'CIEERO,QVAUNP PGBSDV,JCZHOZ'}
       event_bindings: {click: button_click}
-    - name: retail_Sales
-      properties: {text: Retail Sales}
+    - name: Manu_output
+      properties: {text: Manufacturing Output}
       type: Button
       layout_properties: {grid_position: 'CIEERO,QVAUNP PVUTNU,UFMTEA'}
       event_bindings: {click: button_click}
-    - name: unemployment_rate
-      properties: {text: Unemployment Rate}
-      type: Button
-      layout_properties: {grid_position: 'CIEERO,QVAUNP BWLHRB,LKCYQZ'}
-      event_bindings: {click: button_click}
-    - name: IP
-      properties: {text: Industrial Production}
+    - name: delin_credit
+      properties: {text: 'Delinquency Rate: Consumer Loans'}
       type: Button
       layout_properties: {grid_position: 'CIEERO,QVAUNP CYPKPD,HOEIEF'}
       event_bindings: {click: button_click}
-    - name: US_recess
-      properties: {text: Recession Probability}
+    - name: lead_indx
+      properties: {text: Leading Index}
       type: Button
       layout_properties: {grid_position: 'CIEERO,QVAUNP LYBHXT,KEFOZQ'}
       event_bindings: {click: button_click}
@@ -149,18 +139,18 @@ components:
       type: Button
       layout_properties: {grid_position: 'CIEERO,YQPBUS HJFPYQ,YUZPOZ'}
       event_bindings: {click: button_click}
-    - name: consumer_Sentiment
-      properties: {text: Consumer Sentiment}
+    - name: jobs_post
+      properties: {text: Job Postings}
       type: Button
       layout_properties: {grid_position: 'CIEERO,YQPBUS ZKACKD,DTEWFW'}
       event_bindings: {click: button_click}
-    - name: nonfarm_payrolls
-      properties: {text: Nonfarm Payrolls}
+    - name: charge_business
+      properties: {text: 'Charge-Off: Business Loans'}
       type: Button
       layout_properties: {grid_position: 'CIEERO,YQPBUS EDRTRK,CVLEBM'}
       event_bindings: {click: button_click}
-    - name: housing_start
-      properties: {text: Housing Starts}
+    - name: fin_stress
+      properties: {text: Financial Stress Index}
       type: Button
       layout_properties: {grid_position: 'CIEERO,YQPBUS GGTGKY,QXBVQA'}
       event_bindings: {click: button_click}
