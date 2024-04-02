@@ -104,6 +104,14 @@ components:
       type: Button
       layout_properties: {grid_position: 'CIEERO,NROJQW MNHGIJ,EEQVMP'}
       event_bindings: {click: button_click}
+    - name: consumer_senti
+      properties: {text: Consumer Sentiment}
+      type: Button
+      layout_properties: {grid_position: 'CIEERO,NROJQW RPGZPA,IFJQGV'}
+    - name: new_orders_capital
+      properties: {text: 'New Orders: Capital Goods'}
+      type: Button
+      layout_properties: {grid_position: 'CIEERO,NROJQW NDBJSP,CYYOFO'}
     - name: Real_GDP
       properties: {text: Real GDP}
       type: Button
@@ -129,6 +137,10 @@ components:
       type: Button
       layout_properties: {grid_position: 'CIEERO,QVAUNP LYBHXT,KEFOZQ'}
       event_bindings: {click: button_click}
+    - name: ir_curve
+      properties: {text: 10-Year -  Federal Fund}
+      type: Button
+      layout_properties: {grid_position: 'CIEERO,QVAUNP OGGFAU,SENIKS'}
     - name: Nominal_GDP
       properties: {text: Nominal GDP}
       type: Button
@@ -154,6 +166,11 @@ components:
       type: Button
       layout_properties: {grid_position: 'CIEERO,YQPBUS GGTGKY,QXBVQA'}
       event_bindings: {click: button_click}
+    - name: new_housing
+      properties: {text: New Housing Permits}
+      type: Button
+      layout_properties: {grid_position: 'CIEERO,YQPBUS VSFXNG,HCSIXT'}
+      event_bindings: {click: button_3_click}
   - name: graph
     properties: {col_spacing: small}
     type: ColumnPanel

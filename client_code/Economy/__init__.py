@@ -12,7 +12,6 @@ class Economy(EconomyTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     # Any code you write here will run before the form opens.
-
     
                           
 
@@ -66,9 +65,9 @@ class Economy(EconomyTemplate):
     """This method is called when the button is clicked"""
     button=event_args['sender']
     a=''
-    b="<iframe width='920px' height='550px'>"
-    iframe = jQuery(b).attr("src","https://fred.stlouisfed.org/graph/graph-landing.php?g=1jbWT&width=900&height=475")
-    iframe.appendTo(get_dom_node(self.graph))
+    b="<iframe width='100%' height='550px'>"
+    link=''
+    self.graph.clear()
     if button.text=='GDP':
         a='https://fred.stlouisfed.org/graph/graph-landing.php?g=1jbWT'
     elif button.text=='Real GDP':
@@ -98,5 +97,16 @@ class Economy(EconomyTemplate):
     elif button.text=='Leading Index':
         a='https://fred.stlouisfed.org/graph/graph-landing.php?g=11Zzp' 
     elif button.text=='Financial Stress Index':
-        a='https://fred.stlouisfed.org/graph/graph-landing.php?g=1jfDG'  
+        a='https://fred.stlouisfed.org/graph/graph-landing.php?g=1jfDG' 
+    elif button.text=='Consumer Sentiment':
+        a='https://fred.stlouisfed.org/graph/graph-landing.php?g=1jaRa' 
+    elif button.text=='10-Year - Federal Fund':
+        a='https://fred.stlouisfed.org/graph/graph-landing.php?g=1jsr9' 
+    elif button.text=='New Housing Permits':
+        a='https://fred.stlouisfed.org/graph/graph-landing.php?g=1jiYM' 
+    elif button.text=='New Orders: Capital Goods':
+        a='https://fred.stlouisfed.org/graph/graph-landing.php?g=1jj0T' 
+    link=a+b
+    iframe = jQuery(b).attr("src",a)
+    iframe.appendTo(get_dom_node(self.graph))
     
